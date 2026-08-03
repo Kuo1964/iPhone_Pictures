@@ -18,7 +18,7 @@ from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 from organize_photos import process_photos, DB_FILE, BASE_DIR
 
-PORT = 8095
+PORT = 8098
 
 class ReusableThreadingHTTPServer(ThreadingHTTPServer):
     allow_reuse_address = True
@@ -57,35 +57,44 @@ class PhotoHandler(SimpleHTTPRequestHandler):
         content_length = int(self.headers.get('Content-Length', 0))
         body = self.rfile.read(content_length).decode('utf-8') if content_length > 0 else "{}"
         
-        # API: 更新相片人物標籤
-        if parsed_path.path == "/api/update_people":
+        # API: 批量更新相片人物標籤
+        if parsed_path.path == "/api/batch_update_people":
             try:
                 data = json.loads(body)
-                photo_id = data.get("id")
-                people = data.get("people", [])
+                photo_ids = data.get("photo_ids", [])
+                person = data.get("person", "")
+                action = data.get("action", "add") # 'add' or 'remove'
                 
-                if DB_FILE.exists():
+                if photo_ids and person and DB_FILE.exists():
                     with open(DB_FILE, "r", encoding="utf-8") as f:
                         db_data = json.load(f)
                     
-                    found = False
+                    updated_count = 0
                     for photo in db_data.get("photos", []):
-                        if photo["id"] == photo_id:
-                            photo["people"] = people
-                            found = True
-                            break
-                    
-                    if found:
-                        with open(DB_FILE, "w", encoding="utf-8") as f:
-                            json.dump(db_data, f, ensure_ascii=False, indent=2)
-                        
-                        self.send_response(200)
-                        self.send_header("Content-Type", "application/json; charset=utf-8")
-                        self.end_headers()
-                        self.wfile.write(json.dumps({"status": "success", "people": people}).encode("utf-8"))
-                        return
+                        if photo["id"] in photo_ids:
+                            if "people" not in photo:
+                                photo["people"] = []
+                            if action == "add" and person not in photo["people"]:
+                                photo["people"].append(person)
+                                updated_count += 1
+                            elif action == "remove" and person in photo["people"]:
+                                photo["people"].remove(person)
+                                updated_count += 1
 
-                self.send_error(404, "Photo not found")
+                    with open(DB_FILE, "w", encoding="utf-8") as f:
+                        json.dump(db_data, f, ensure_ascii=False, indent=2)
+                    
+                    self.send_response(200)
+                    self.send_header("Content-Type", "application/json; charset=utf-8")
+                    self.end_headers()
+                    self.wfile.write(json.dumps({
+                        "status": "success", 
+                        "message": f"成功為 {updated_count} 張相片標記 [{person}]！",
+                        "updated_count": updated_count
+                    }).encode("utf-8"))
+                    return
+
+                self.send_error(400, "Invalid params")
             except Exception as e:
                 self.send_error(500, str(e))
             return
