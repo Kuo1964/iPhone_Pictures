@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人相片管理中心 | Photo Gallery</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --bg-card-hover: rgba(51, 65, 85, 0.8);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+            --accent-color: #818cf8;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        /* 頂部 Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(15, 23, 42, 0.85);
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 32px;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo i {
+            -webkit-text-fill-color: #818cf8;
+            font-size: 1.6rem;
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 480px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 16px 10px 42px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.92;
+            transform: translateY(-1px);
+        }
+
+        .badge-count {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* 控制與過濾面板 */
+        .filter-section {
+            max-width: 1400px;
+            margin: 20px auto 0 auto;
+            padding: 0 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: thin;
+        }
+
+        .filter-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            min-width: 70px;
+        }
+
+        .pill {
+            padding: 5px 13px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+
+        .pill:hover, .pill.active {
+            background: rgba(129, 140, 248, 0.25);
+            color: #fff;
+            border-color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* 年份專屬 Pill 強調 */
+        .pill-year.active {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            border-color: #a78bfa;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
+        }
+
+        /* 圖片網格展覽 */
+        main {
+            max-width: 1400px;
+            margin: 24px auto;
+            padding: 0 32px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            aspect-ratio: 4/3;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(129, 140, 248, 0.5);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.04);
+        }
+
+        /* 年份標籤 Badge (卡片右上角) */
+        .card-year-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #e0e7ff;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            z-index: 10;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 16px;
+        }
+
+        .photo-card:hover .photo-overlay {
+            opacity: 1;
+        }
+
+        .overlay-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .overlay-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tag-list {
+            display: flex;
+            gap: 6px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag-chip {
+            background: rgba(168, 85, 247, 0.3);
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            color: #e9d5ff;
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        /* 讀取與空狀態 */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state i {
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+            opacity: 0.4;
+        }
+
+        /* Lightbox 彈窗 */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(20px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            background: rgba(30, 41, 59, 0.95);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            max-width: 1100px;
+            width: 100%;
+            max-height: 90vh;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .lightbox-img-wrapper {
+            flex: 1.4;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lightbox-img-wrapper img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+
+        .lightbox-info {
+            flex: 1;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .meta-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-row i {
+            color: var(--accent-color);
+            width: 20px;
+        }
+
+        .people-tag-section {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 14px;
+            padding: 16px;
+            border: 1px solid var(--border-color);
+            margin-top: 10px;
+        }
+
+        .people-input-box {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .people-input-box input {
+            flex: 1;
+            padding: 8px 14px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: #fff;
+            outline: none;
+        }
+
+        .people-tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .people-tag-item {
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: #c7d2fe;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .people-tag-item i {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .people-tag-item i:hover {
+            opacity: 1;
+            color: #f43f5e;
+        }
+
+        @media (max-width: 850px) {
+            .lightbox-content {
+                flex-direction: column;
+            }
+            .lightbox-img-wrapper {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>照片管理中心</span>
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="搜尋年份 (如 2018)、人物、地點或日期...">
+            </div>
+
+            <div class="header-actions">
+                <span class="badge-count" id="photoCountBadge">照片計數中...</span>
+                <button class="btn btn-primary" id="importBtn">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <span>重新掃描 / 匯入</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 控制與過濾面板 -->
+    <div class="filter-section">
+        <!-- 1. 年份過濾列 -->
+        <div class="filter-group">
+            <div class="filter-label"><i class="fa-solid fa-calendar-days"></i> 年份：</div>
+            <div id="yearFilterPills" style="display: flex; gap: 8px;">
+                <div class="pill pill-year active" data-year="all">全部年份</div>
+            </div>
+        </div>
+
+        <!-- 2. 地點過濾列 -->
+        <div class="filter-group">
+            <div class="filter-label"><i class="fa-solid fa-location-dot"></i> 地點：</div>
+            <div id="locationFilterPills" style="display: flex; gap: 8px;">
+                <div class="pill active" data-location="all">全部地點</div>
+            </div>
+        </div>
+
+        <!-- 3. 人物標籤過濾列 -->
+        <div class="filter-group">
+            <div class="filter-label"><i class="fa-solid fa-user-tag"></i> 人物：</div>
+            <div id="peopleFilterPills" style="display: flex; gap: 8px;">
+                <div class="pill active" data-person="all">全部人物</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 照片展覽區 -->
+    <main>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- 動態渲染圖片卡片 -->
+        </div>
+
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <i class="fa-regular fa-image"></i>
+            <p>未找到符合條件的照片。</p>
+        </div>
+    </main>
+
+    <!-- Lightbox 詳情彈窗 -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button>
+            <div class="lightbox-img-wrapper">
+                <img id="lightboxImg" src="" alt="相片預覽">
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightboxFilename" style="word-break: break-all;">檔案名稱</h3>
+                
+                <div class="meta-row">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span id="lightboxYear" style="font-weight: 700; color: #a78bfa;">年份標記</span>
+                </div>
+
+                <div class="meta-row">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="lightboxDate">拍攝時間</span>
+                </div>
+
+                <div class="meta-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span id="lightboxLocation">拍攝地點</span>
+                </div>
+
+                <div class="meta-row">
+                    <i class="fa-regular fa-folder-open"></i>
+                    <span id="lightboxPath" style="font-size: 0.82rem; word-break: break-all;">儲存路徑</span>
+                </div>
+
+                <!-- 人物標籤管理區 -->
+                <div class="people-tag-section">
+                    <div style="font-weight: 600; font-size: 0.9rem; color: #fff;">
+                        <i class="fa-solid fa-users" style="color: var(--accent-color);"></i> 照片中的人物標籤
+                    </div>
+
+                    <div class="people-tags-container" id="modalPeopleTags">
+                        <!-- 人物 Chip -->
+                    </div>
+
+                    <div class="people-input-box">
+                        <input type="text" id="newPersonInput" placeholder="輸入人物姓名 (如：小明)...">
+                        <button class="btn btn-primary" id="addPersonBtn" style="padding: 6px 14px; font-size: 0.85rem;">新增標籤</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allPhotos = [];
+        let currentPhotoId = null;
+        let selectedYear = 'all';
+        let selectedPerson = 'all';
+        let selectedLocation = 'all';
+
+        // 初始化
+        async function fetchPhotos() {
+            try {
+                const resp = await fetch('/api/photos');
+                const data = await resp.json();
+                allPhotos = data.photos || [];
+                updateUI();
+            } catch (err) {
+                console.error("無法加載相片數據:", err);
+            }
+        }
+
+        function updateUI() {
+            renderFilters();
+            renderGallery();
+        }
+
+        // 渲染過濾器列表 (年份、地點、人物)
+        function renderFilters() {
+            const yearSet = new Set();
+            const peopleSet = new Set();
+            const locationSet = new Set();
+
+            allPhotos.forEach(p => {
+                if (p.year && p.year !== '未排序') yearSet.add(p.year);
+                if (p.people && p.people.length > 0) {
+                    p.people.forEach(person => peopleSet.add(person));
+                }
+                if (p.location) locationSet.add(p.location);
+            });
+
+            // 1. 渲染年份 Pills (降序排列：最新年份在前)
+            const sortedYears = Array.from(yearSet).sort((a, b) => b.localeCompare(a));
+            const yearContainer = document.getElementById('yearFilterPills');
+            yearContainer.innerHTML = `<div class="pill pill-year ${selectedYear === 'all' ? 'active' : ''}" data-year="all">全部年份</div>`;
+            sortedYears.forEach(y => {
+                const active = selectedYear === y ? 'active' : '';
+                yearContainer.innerHTML += `<div class="pill pill-year ${active}" data-year="${y}">${y} 年</div>`;
+            });
+
+            // 2. 渲染地點 Pills
+            const locContainer = document.getElementById('locationFilterPills');
+            locContainer.innerHTML = `<div class="pill ${selectedLocation === 'all' ? 'active' : ''}" data-location="all">全部地點</div>`;
+            Array.from(locationSet).sort().forEach(loc => {
+                const active = selectedLocation === loc ? 'active' : '';
+                locContainer.innerHTML += `<div class="pill ${active}" data-location="${loc}">${loc}</div>`;
+            });
+
+            // 3. 渲染人物 Pills
+            const peopleContainer = document.getElementById('peopleFilterPills');
+            peopleContainer.innerHTML = `<div class="pill ${selectedPerson === 'all' ? 'active' : ''}" data-person="all">全部人物</div>`;
+            Array.from(peopleSet).sort().forEach(person => {
+                const active = selectedPerson === person ? 'active' : '';
+                peopleContainer.innerHTML += `<div class="pill ${active}" data-person="${person}">${person}</div>`;
+            });
+
+            // 年份 Pill 點擊事件
+            document.querySelectorAll('[data-year]').forEach(el => {
+                el.addEventListener('click', () => {
+                    selectedYear = el.getAttribute('data-year');
+                    updateUI();
+                });
+            });
+
+            // 地點 Pill 點擊事件
+            document.querySelectorAll('[data-location]').forEach(el => {
+                el.addEventListener('click', () => {
+                    selectedLocation = el.getAttribute('data-location');
+                    updateUI();
+                });
+            });
+
+            // 人物 Pill 點擊事件
+            document.querySelectorAll('[data-person]').forEach(el => {
+                el.addEventListener('click', () => {
+                    selectedPerson = el.getAttribute('data-person');
+                    updateUI();
+                });
+            });
+
+            document.getElementById('photoCountBadge').innerText = `共 ${allPhotos.length} 張照片`;
+        }
+
+        // 渲染畫廊圖片
+        function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            const searchKeyword = document.getElementById('searchInput').value.toLowerCase().trim();
+
+            const filtered = allPhotos.filter(p => {
+                // 年份篩選
+                if (selectedYear !== 'all') {
+                    if (p.year !== selectedYear) return false;
+                }
+                // 人物篩選
+                if (selectedPerson !== 'all') {
+                    if (!p.people || !p.people.includes(selectedPerson)) return false;
+                }
+                // 地點篩選
+                if (selectedLocation !== 'all') {
+                    if (p.location !== selectedLocation) return false;
+                }
+                // 關鍵字搜尋 (匹配年份, 地點, 日期, 檔名, 人物)
+                if (searchKeyword) {
+                    const matchYear = p.year && p.year.toLowerCase().includes(searchKeyword);
+                    const matchLocation = p.location && p.location.toLowerCase().includes(searchKeyword);
+                    const matchDate = p.date && p.date.toLowerCase().includes(searchKeyword);
+                    const matchFilename = p.filename && p.filename.toLowerCase().includes(searchKeyword);
+                    const matchPeople = p.people && p.people.some(person => person.toLowerCase().includes(searchKeyword));
+                    if (!matchYear && !matchLocation && !matchDate && !matchFilename && !matchPeople) return false;
+                }
+                return true;
+            });
+
+            grid.innerHTML = '';
+            if (filtered.length === 0) {
+                document.getElementById('emptyState').style.display = 'block';
+                return;
+            } else {
+                document.getElementById('emptyState').style.display = 'none';
+            }
+
+            filtered.forEach(photo => {
+                const card = document.createElement('div');
+                card.className = 'photo-card';
+
+                const yearBadge = photo.year && photo.year !== '未排序' ? `<div class="card-year-badge"><i class="fa-regular fa-calendar"></i> ${photo.year}年</div>` : '';
+                const tagsHtml = (photo.people || []).map(person => `<span class="tag-chip"><i class="fa-solid fa-user"></i> ${person}</span>`).join('');
+
+                card.innerHTML = `
+                    ${yearBadge}
+                    <img src="/${photo.path}" alt="${photo.filename}" loading="lazy">
+                    <div class="photo-overlay">
+                        <div class="overlay-title">${photo.filename}</div>
+                        <div class="overlay-meta">
+                            <span><i class="fa-regular fa-clock"></i> ${photo.date ? photo.date.split(' ')[0] : '未知'}</span>
+                            <span><i class="fa-solid fa-location-dot"></i> ${photo.location || '未知'}</span>
+                        </div>
+                        <div class="tag-list">${tagsHtml}</div>
+                    </div>
+                `;
+
+                card.addEventListener('click', () => openLightbox(photo));
+                grid.appendChild(card);
+            });
+        }
+
+        // 開啟 Lightbox 彈窗
+        function openLightbox(photo) {
+            currentPhotoId = photo.id;
+            document.getElementById('lightboxImg').src = `/${photo.path}`;
+            document.getElementById('lightboxFilename').innerText = photo.filename;
+            document.getElementById('lightboxYear').innerText = photo.year ? `${photo.year} 年份照片` : '未知年份';
+            document.getElementById('lightboxDate').innerText = photo.date || '未知時間';
+            document.getElementById('lightboxLocation').innerText = photo.location || '未知地點';
+            document.getElementById('lightboxPath').innerText = photo.path;
+
+            renderModalPeopleTags(photo.people || []);
+            document.getElementById('lightboxModal').classList.add('active');
+        }
+
+        function renderModalPeopleTags(people) {
+            const container = document.getElementById('modalPeopleTags');
+            if (people.length === 0) {
+                container.innerHTML = `<span style="font-size: 0.82rem; color: var(--text-secondary);">暫無人物標籤</span>`;
+                return;
+            }
+
+            container.innerHTML = people.map(person => `
+                <div class="people-tag-item">
+                    <span>${person}</span>
+                    <i class="fa-solid fa-xmark" onclick="removePersonTag('${person}')"></i>
+                </div>
+            `).join('');
+        }
+
+        // 新增人物標籤
+        async function addPersonTag() {
+            const input = document.getElementById('newPersonInput');
+            const name = input.value.trim();
+            if (!name || !currentPhotoId) return;
+
+            const photo = allPhotos.find(p => p.id === currentPhotoId);
+            if (!photo) return;
+
+            if (!photo.people) photo.people = [];
+            if (!photo.people.includes(name)) {
+                photo.people.push(name);
+                await savePeopleTags(photo.id, photo.people);
+                input.value = '';
+                renderModalPeopleTags(photo.people);
+                updateUI();
+            }
+        }
+
+        // 移除人物標籤
+        async function removePersonTag(name) {
+            if (!currentPhotoId) return;
+            const photo = allPhotos.find(p => p.id === currentPhotoId);
+            if (!photo || !photo.people) return;
+
+            photo.people = photo.people.filter(p => p !== name);
+            await savePeopleTags(photo.id, photo.people);
+            renderModalPeopleTags(photo.people);
+            updateUI();
+        }
+
+        // 儲存到後端 API
+        async function savePeopleTags(photoId, people) {
+            try {
+                await fetch('/api/update_people', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: photoId, people: people })
+                });
+            } catch (err) {
+                console.error("儲存人物標籤失敗:", err);
+            }
+        }
+
+        // 一鍵重新掃描與匯入
+        document.getElementById('importBtn').addEventListener('click', async () => {
+            const btn = document.getElementById('importBtn');
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> 處理中...`;
+
+            try {
+                const resp = await fetch('/api/trigger_import', { method: 'POST' });
+                const result = await resp.json();
+                if (resp.ok && result.status === 'success') {
+                    alert(result.message || "重新掃描與匯入分類完成！");
+                } else {
+                    alert("匯入處理發生錯誤: " + (result.message || "未知錯誤"));
+                }
+                await fetchPhotos();
+            } catch (err) {
+                alert("網路請求失敗: " + err.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fa-solid fa-arrows-rotate"></i> <span>重新掃描 / 匯入</span>`;
+            }
+        });
+
+        // 搜尋框輸入監聽
+        document.getElementById('searchInput').addEventListener('input', renderGallery);
+
+        // 新增標籤按鈕觸發
+        document.getElementById('addPersonBtn').addEventListener('click', addPersonTag);
+        document.getElementById('newPersonInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') addPersonTag();
+        });
+
+        // 關閉 Modal
+        document.getElementById('lightboxClose').addEventListener('click', () => {
+            document.getElementById('lightboxModal').classList.remove('active');
+        });
+
+        // 初始化加載
+        fetchPhotos();
+    </script>
+</body>
+</html>

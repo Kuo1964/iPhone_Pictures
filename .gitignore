@@ -1,0 +1,10 @@
+# Git ignore rules for Photo Management Project
+Photos/
+*.heic
+*.HEIC
+*.jpeg
+*.jpg
+*.JPEG
+*.JPG
+.DS_Store
+geo_cache.json
