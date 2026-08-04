@@ -761,10 +761,18 @@
             document.getElementById('photoCountBadge').innerText = `共 ${allPhotos.length} 張照片`;
         }
 
-        // 渲染畫廊圖片
-        function renderGallery() {
+        let currentPage = 1;
+        const pageSize = 60;
+        let currentFilteredPhotos = [];
+
+        // 渲染畫廊圖片 (分頁與批次加載)
+        function renderGallery(resetPage = true) {
             const grid = document.getElementById('galleryGrid');
             const searchKeyword = document.getElementById('searchInput').value.toLowerCase().trim();
+
+            if (resetPage) {
+                currentPage = 1;
+            }
 
             if (isBatchMode) {
                 grid.classList.add('batch-mode');
@@ -772,7 +780,7 @@
                 grid.classList.remove('batch-mode');
             }
 
-            const filtered = allPhotos.filter(p => {
+            currentFilteredPhotos = allPhotos.filter(p => {
                 if (selectedYear !== 'all' && p.year !== selectedYear) return false;
                 if (selectedPerson !== 'all') {
                     if (!p.people || !p.people.includes(selectedPerson)) return false;
@@ -789,15 +797,23 @@
                 return true;
             });
 
-            grid.innerHTML = '';
-            if (filtered.length === 0) {
+            if (resetPage) {
+                grid.innerHTML = '';
+            }
+
+            if (currentFilteredPhotos.length === 0) {
                 document.getElementById('emptyState').style.display = 'block';
                 return;
             } else {
                 document.getElementById('emptyState').style.display = 'none';
             }
 
-            filtered.forEach(photo => {
+            // 分頁截取：僅渲染當前頁數範圍內的相片 (避免巨量 DOM 導致瀏覽器白屏)
+            const displayPhotos = currentFilteredPhotos.slice(0, currentPage * pageSize);
+
+            // 若為 resetPage，重新繪製完整當前批次；若否，增量追加
+            grid.innerHTML = '';
+            displayPhotos.forEach(photo => {
                 const card = document.createElement('div');
                 card.className = 'photo-card';
 
@@ -805,11 +821,12 @@
                 const tagsHtml = (photo.people || []).map(person => `<span class="tag-chip"><i class="fa-solid fa-heart"></i> ${person}</span>`).join('');
                 
                 const isChecked = selectedPhotoIds.has(photo.id) ? 'checked' : '';
+                const safePath = encodeURI(photo.path);
 
                 card.innerHTML = `
                     <input type="checkbox" class="card-checkbox" ${isChecked} data-id="${photo.id}">
                     ${yearBadge}
-                    <img src="/${photo.path}" alt="${photo.filename}" loading="lazy">
+                    <img src="/${safePath}" alt="${photo.filename}" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' fill=\'%23334155\' viewBox=\'0 0 16 16\'><path d=\'M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z\'/><path d=\'M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z\'/></svg>';">
                     <div class="photo-overlay">
                         <div class="overlay-title">${photo.filename}</div>
                         <div class="overlay-meta">
@@ -845,10 +862,20 @@
             });
         }
 
+        // 滾動底端加載更多相片
+        window.addEventListener('scroll', () => {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+                if (currentPage * pageSize < currentFilteredPhotos.length) {
+                    currentPage++;
+                    renderGallery(false);
+                }
+            }
+        });
+
         // 開啟 Lightbox 彈窗
         function openLightbox(photo) {
             currentPhotoId = photo.id;
-            document.getElementById('lightboxImg').src = `/${photo.path}`;
+            document.getElementById('lightboxImg').src = `/${encodeURI(photo.path)}`;
             document.getElementById('lightboxFilename').innerText = photo.filename;
             document.getElementById('lightboxYear').innerText = photo.year ? `${photo.year} 年份照片` : '未知年份';
             document.getElementById('lightboxDate').innerText = photo.date || '未知時間';

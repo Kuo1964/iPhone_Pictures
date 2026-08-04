@@ -18,7 +18,7 @@ from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 from organize_photos import process_photos, DB_FILE, BASE_DIR
 
-PORT = 8098
+PORT = 8080
 
 class ReusableThreadingHTTPServer(ThreadingHTTPServer):
     allow_reuse_address = True
@@ -29,6 +29,8 @@ class PhotoHandler(SimpleHTTPRequestHandler):
         sys.stderr.write("[%s] %s\n" % (self.log_date_time_string(), format % args))
 
     def do_GET(self):
+        # 對 URL 進行中文 unquote 解碼，確保 macOS 檔案系統正確存取
+        self.path = urllib.parse.unquote(self.path)
         parsed_path = urllib.parse.urlparse(self.path)
         
         # API: 取得所有相片資料
@@ -125,10 +127,29 @@ class PhotoHandler(SimpleHTTPRequestHandler):
 
 def run_server():
     os.chdir(BASE_DIR)
-    server_address = ('', PORT)
-    httpd = ReusableThreadingHTTPServer(server_address, PhotoHandler)
-    print(f"🚀 個人相片管理系統已啟動 (多線程非阻塞模式)！")
-    print(f"🔗 請在瀏覽器開啟: http://localhost:{PORT}")
+    ports_to_try = [8080, 8085, 8090, 8098, 8888, 9000]
+    httpd = None
+    actual_port = None
+
+    for p in ports_to_try:
+        try:
+            server_address = ('', p)
+            httpd = ReusableThreadingHTTPServer(server_address, PhotoHandler)
+            actual_port = p
+            break
+        except OSError:
+            continue
+
+    if not httpd:
+        print("❌ 嘗試所有預設連接埠皆失敗。")
+        sys.exit(1)
+
+    # 記錄目前運行的 PORT
+    with open(BASE_DIR / "server_port.txt", "w", encoding="utf-8") as f:
+        f.write(str(actual_port))
+
+    print(f"🚀 個人相片管理系統已成功啟動！")
+    print(f"🔗 請點擊開啟此連結: http://localhost:{actual_port}")
     print(f"按 Ctrl+C 可停止伺服器。")
     try:
         httpd.serve_forever()
