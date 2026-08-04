@@ -125,7 +125,7 @@ DispatchQueue.concurrentPerform(iterations: allPhotoURLs.count) { index in
     }
 }
 
-print("🎉 全庫掃描比對完全成功！共掃描 \(allPhotoURLs.count) 張照片，確鑿無誤比對出 \(matchedPhotos.count) 張太太 [太太Sharon] 的相片！")
+print("🎉 全庫掃描比對完全成功！共掃描 \(allPhotoURLs.count) 張照片，確鑿無誤比對出 \(matchedPhotos.count) 張太太 [Sharon] 的相片！")
 
 let resultURL = baseDir.appendingPathComponent("sharon_matched.json")
 if let jsonData = try? JSONEncoder().encode(matchedPhotos) {

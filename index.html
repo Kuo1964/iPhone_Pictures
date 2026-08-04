@@ -540,7 +540,7 @@
                 </button>
                 <button class="btn btn-sharon" id="sharonShortcutBtn">
                     <i class="fa-solid fa-crown"></i>
-                    <span>太太Sharon 專輯</span>
+                    <span>Sharon 專輯</span>
                 </button>
                 <div class="badge-count" id="photoCountBadge">載入中...</div>
                 <button class="btn btn-primary" id="importBtn">
@@ -705,10 +705,10 @@
                 peopleSet.delete(sophiaTag);
             }
 
-            const sharonTag = "太太Sharon";
+            const sharonTag = "Sharon";
             if (peopleSet.has(sharonTag)) {
                 const active = selectedPerson === sharonTag ? 'active' : '';
-                peopleContainer.innerHTML += `<div class="pill pill-sharon ${active}" data-person="${sharonTag}"><i class="fa-solid fa-crown" style="color:#a855f7;"></i> 太太Sharon</div>`;
+                peopleContainer.innerHTML += `<div class="pill pill-sharon ${active}" data-person="${sharonTag}"><i class="fa-solid fa-crown" style="color:#a855f7;"></i> Sharon</div>`;
                 peopleSet.delete(sharonTag);
             }
 
@@ -926,9 +926,9 @@
             updateUI();
         });
 
-        // 快捷進入「太太Sharon 專輯」
+        // 快捷進入「Sharon 專輯」
         document.getElementById('sharonShortcutBtn').addEventListener('click', () => {
-            selectedPerson = "太太Sharon";
+            selectedPerson = "Sharon";
             selectedYear = 'all';
             selectedLocation = 'all';
             document.getElementById('searchInput').value = '';
