@@ -149,10 +149,27 @@
             transform: translateY(-1px);
         }
 
+        .btn-sharon {
+            background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-sharon:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
         .pill-sophia {
             background: rgba(236, 72, 153, 0.2) !important;
             border-color: rgba(236, 72, 153, 0.6) !important;
             color: #fbcfe8 !important;
+        }
+
+        .pill-sharon {
+            background: rgba(139, 92, 246, 0.25) !important;
+            border-color: rgba(139, 92, 246, 0.6) !important;
+            color: #ddd6fe !important;
         }
 
         .badge-count {
@@ -521,6 +538,10 @@
                     <i class="fa-solid fa-heart"></i>
                     <span>郭泊彤Sophia 專輯</span>
                 </button>
+                <button class="btn btn-sharon" id="sharonShortcutBtn">
+                    <i class="fa-solid fa-crown"></i>
+                    <span>太太Sharon 專輯</span>
+                </button>
                 <div class="badge-count" id="photoCountBadge">載入中...</div>
                 <button class="btn btn-primary" id="importBtn">
                     <i class="fa-solid fa-arrows-rotate"></i>
@@ -673,9 +694,24 @@
                 locContainer.innerHTML += `<div class="pill ${active}" data-location="${loc}">${loc}</div>`;
             });
 
-            // 3. 渲染人物 Pills
+            // 3. 渲染人物 Pills (特別把 郭泊彤Sophia 與 太太Sharon 置頂高亮)
             const peopleContainer = document.getElementById('peopleFilterPills');
             peopleContainer.innerHTML = `<div class="pill ${selectedPerson === 'all' ? 'active' : ''}" data-person="all">全部人物</div>`;
+            
+            const sophiaTag = "郭泊彤Sophia";
+            if (peopleSet.has(sophiaTag)) {
+                const active = selectedPerson === sophiaTag ? 'active' : '';
+                peopleContainer.innerHTML += `<div class="pill pill-sophia ${active}" data-person="${sophiaTag}"><i class="fa-solid fa-heart" style="color:#ec4899;"></i> 郭泊彤Sophia</div>`;
+                peopleSet.delete(sophiaTag);
+            }
+
+            const sharonTag = "太太Sharon";
+            if (peopleSet.has(sharonTag)) {
+                const active = selectedPerson === sharonTag ? 'active' : '';
+                peopleContainer.innerHTML += `<div class="pill pill-sharon ${active}" data-person="${sharonTag}"><i class="fa-solid fa-crown" style="color:#a855f7;"></i> 太太Sharon</div>`;
+                peopleSet.delete(sharonTag);
+            }
+
             Array.from(peopleSet).sort().forEach(person => {
                 const active = selectedPerson === person ? 'active' : '';
                 peopleContainer.innerHTML += `<div class="pill ${active}" data-person="${person}">${person}</div>`;
@@ -884,6 +920,15 @@
         // 快捷進入「郭泊彤Sophia 專輯」
         document.getElementById('sophiaShortcutBtn').addEventListener('click', () => {
             selectedPerson = "郭泊彤Sophia";
+            selectedYear = 'all';
+            selectedLocation = 'all';
+            document.getElementById('searchInput').value = '';
+            updateUI();
+        });
+
+        // 快捷進入「太太Sharon 專輯」
+        document.getElementById('sharonShortcutBtn').addEventListener('click', () => {
+            selectedPerson = "太太Sharon";
             selectedYear = 'all';
             selectedLocation = 'all';
             document.getElementById('searchInput').value = '';
