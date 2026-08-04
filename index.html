@@ -18,7 +18,6 @@
             --bg-card-hover: rgba(51, 65, 85, 0.8);
             --border-color: rgba(255, 255, 255, 0.1);
             --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-            --pink-gradient: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
             --accent-color: #818cf8;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
@@ -58,7 +57,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
@@ -80,7 +79,7 @@
 
         .search-box {
             flex: 1;
-            max-width: 420px;
+            max-width: 480px;
             position: relative;
         }
 
@@ -112,17 +111,17 @@
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 14px;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 16px;
+            padding: 9px 18px;
             border-radius: 20px;
             font-weight: 600;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             cursor: pointer;
             border: none;
             transition: all 0.2s ease;
@@ -134,21 +133,9 @@
             box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
         }
 
-        .btn-sophia {
-            background: var(--pink-gradient);
-            color: white;
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
-        }
-
-        .btn-sophia:hover, .btn-primary:hover {
+        .btn-primary:hover {
             opacity: 0.92;
             transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background: rgba(30, 41, 59, 0.8);
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
         }
 
         .badge-count {
@@ -163,13 +150,14 @@
         .filter-section {
             max-width: 1400px;
             margin: 20px auto 0 auto;
-            padding: 16px 20px;
+            padding: 0 32px;
             display: flex;
             flex-direction: column;
             gap: 12px;
             background: rgba(30, 41, 59, 0.4);
             border-radius: 16px;
             border: 1px solid var(--border-color);
+            padding: 16px 20px;
         }
 
         .filter-group {
@@ -211,28 +199,12 @@
             font-weight: 600;
         }
 
-        .pill-sophia.active {
-            background: var(--pink-gradient);
-            border-color: #f472b6;
+        /* 年份專屬 Pill 強調 */
+        .pill-year.active {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            border-color: #a78bfa;
             color: #fff;
-            box-shadow: 0 2px 10px rgba(244, 63, 94, 0.4);
-        }
-
-        /* 多選模式頂部列 */
-        .batch-bar {
-            background: rgba(236, 72, 153, 0.15);
-            border: 1px solid rgba(236, 72, 153, 0.4);
-            border-radius: 12px;
-            padding: 12px 20px;
-            max-width: 1400px;
-            margin: 16px auto -8px auto;
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .batch-bar.active {
-            display: flex;
+            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
         }
 
         /* 圖片網格展覽 */
@@ -277,23 +249,6 @@
             transform: scale(1.04);
         }
 
-        /* 勾選 Checkbox (多選模式) */
-        .card-checkbox {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 24px;
-            height: 24px;
-            z-index: 20;
-            cursor: pointer;
-            display: none;
-            accent-color: #ec4899;
-        }
-
-        .batch-mode .card-checkbox {
-            display: block;
-        }
-
         /* 年份標籤 Badge (卡片右上角) */
         .card-year-badge {
             position: absolute;
@@ -309,6 +264,8 @@
             padding: 3px 10px;
             border-radius: 12px;
             z-index: 10;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
 
         .photo-overlay {
@@ -353,13 +310,13 @@
         }
 
         .tag-chip {
-            background: rgba(236, 72, 153, 0.3);
-            border: 1px solid rgba(236, 72, 153, 0.5);
-            color: #fbcfe8;
+            background: rgba(168, 85, 247, 0.3);
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            color: #e9d5ff;
             font-size: 0.72rem;
             padding: 2px 8px;
             border-radius: 10px;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         /* 讀取與空狀態 */
@@ -496,16 +453,15 @@
         }
 
         .people-tag-item {
-            background: rgba(236, 72, 153, 0.25);
-            border: 1px solid rgba(236, 72, 153, 0.5);
-            color: #fbcfe8;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: #c7d2fe;
             padding: 4px 12px;
             border-radius: 16px;
             font-size: 0.85rem;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-weight: 600;
         }
 
         .people-tag-item i {
@@ -540,19 +496,11 @@
 
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="searchInput" placeholder="搜尋年份、郭泊彤Sophia、地點或日期...">
+                <input type="text" id="searchInput" placeholder="搜尋年份 (如 2018)、人物、地點或日期...">
             </div>
 
             <div class="header-actions">
-                <!-- 女兒專屬快捷按鈕 -->
-                <button class="btn btn-sophia" id="sophiaShortcutBtn">
-                    <i class="fa-solid fa-heart"></i>
-                    <span>郭泊彤Sophia 專輯</span>
-                </button>
-                <button class="btn btn-secondary" id="toggleBatchBtn">
-                    <i class="fa-solid fa-square-check"></i>
-                    <span>多選打標</span>
-                </button>
+                <span class="badge-count" id="photoCountBadge">照片計數中...</span>
                 <button class="btn btn-primary" id="importBtn">
                     <i class="fa-solid fa-arrows-rotate"></i>
                     <span>重新掃描 / 匯入</span>
@@ -560,20 +508,6 @@
             </div>
         </div>
     </header>
-
-    <!-- 多選標記模式控制列 -->
-    <div class="batch-bar" id="batchBar">
-        <div style="font-weight: 600; font-size: 0.9rem;">
-            <i class="fa-solid fa-check-double" style="color: #ec4899;"></i>
-            <span>已選擇 <strong id="selectedCount" style="color: #ec4899;">0</strong> 張照片</span>
-        </div>
-        <div style="display: flex; gap: 10px;">
-            <button class="btn btn-sophia" id="batchTagSophiaBtn">
-                <i class="fa-solid fa-tag"></i> 批量設為 [郭泊彤Sophia]
-            </button>
-            <button class="btn btn-secondary" id="cancelBatchBtn">取消多選</button>
-        </div>
-    </div>
 
     <!-- 控制與過濾面板 -->
     <div class="filter-section">
@@ -655,8 +589,8 @@
                     </div>
 
                     <div class="people-input-box">
-                        <input type="text" id="newPersonInput" placeholder="輸入人物姓名 (預設：郭泊彤Sophia)...">
-                        <button class="btn btn-sophia" id="addPersonBtn" style="padding: 6px 14px; font-size: 0.85rem;">標記為 郭泊彤Sophia</button>
+                        <input type="text" id="newPersonInput" placeholder="輸入人物姓名 (如：小明)...">
+                        <button class="btn btn-primary" id="addPersonBtn" style="padding: 6px 14px; font-size: 0.85rem;">新增標籤</button>
                     </div>
                 </div>
             </div>
@@ -669,8 +603,6 @@
         let selectedYear = 'all';
         let selectedPerson = 'all';
         let selectedLocation = 'all';
-        let isBatchMode = false;
-        let selectedPhotoIds = new Set();
 
         // 初始化
         async function fetchPhotos() {
@@ -703,7 +635,7 @@
                 if (p.location) locationSet.add(p.location);
             });
 
-            // 1. 渲染年份 Pills
+            // 1. 渲染年份 Pills (降序排列：最新年份在前)
             const sortedYears = Array.from(yearSet).sort((a, b) => b.localeCompare(a));
             const yearContainer = document.getElementById('yearFilterPills');
             yearContainer.innerHTML = `<div class="pill pill-year ${selectedYear === 'all' ? 'active' : ''}" data-year="all">全部年份</div>`;
@@ -720,23 +652,15 @@
                 locContainer.innerHTML += `<div class="pill ${active}" data-location="${loc}">${loc}</div>`;
             });
 
-            // 3. 渲染人物 Pills (特別把 郭泊彤Sophia 置頂高亮)
+            // 3. 渲染人物 Pills
             const peopleContainer = document.getElementById('peopleFilterPills');
             peopleContainer.innerHTML = `<div class="pill ${selectedPerson === 'all' ? 'active' : ''}" data-person="all">全部人物</div>`;
-            
-            const sophiaTag = "郭泊彤Sophia";
-            if (peopleSet.has(sophiaTag)) {
-                const active = selectedPerson === sophiaTag ? 'active' : '';
-                peopleContainer.innerHTML += `<div class="pill pill-sophia ${active}" data-person="${sophiaTag}"><i class="fa-solid fa-heart" style="color:#ec4899;"></i> 郭泊彤Sophia</div>`;
-                peopleSet.delete(sophiaTag);
-            }
-
             Array.from(peopleSet).sort().forEach(person => {
                 const active = selectedPerson === person ? 'active' : '';
                 peopleContainer.innerHTML += `<div class="pill ${active}" data-person="${person}">${person}</div>`;
             });
 
-            // 綁定點擊事件
+            // 年份 Pill 點擊事件
             document.querySelectorAll('[data-year]').forEach(el => {
                 el.addEventListener('click', () => {
                     selectedYear = el.getAttribute('data-year');
@@ -744,6 +668,7 @@
                 });
             });
 
+            // 地點 Pill 點擊事件
             document.querySelectorAll('[data-location]').forEach(el => {
                 el.addEventListener('click', () => {
                     selectedLocation = el.getAttribute('data-location');
@@ -751,6 +676,7 @@
                 });
             });
 
+            // 人物 Pill 點擊事件
             document.querySelectorAll('[data-person]').forEach(el => {
                 el.addEventListener('click', () => {
                     selectedPerson = el.getAttribute('data-person');
@@ -761,31 +687,25 @@
             document.getElementById('photoCountBadge').innerText = `共 ${allPhotos.length} 張照片`;
         }
 
-        let currentPage = 1;
-        const pageSize = 60;
-        let currentFilteredPhotos = [];
-
-        // 渲染畫廊圖片 (分頁與批次加載)
-        function renderGallery(resetPage = true) {
+        // 渲染畫廊圖片
+        function renderGallery() {
             const grid = document.getElementById('galleryGrid');
             const searchKeyword = document.getElementById('searchInput').value.toLowerCase().trim();
 
-            if (resetPage) {
-                currentPage = 1;
-            }
-
-            if (isBatchMode) {
-                grid.classList.add('batch-mode');
-            } else {
-                grid.classList.remove('batch-mode');
-            }
-
-            currentFilteredPhotos = allPhotos.filter(p => {
-                if (selectedYear !== 'all' && p.year !== selectedYear) return false;
+            const filtered = allPhotos.filter(p => {
+                // 年份篩選
+                if (selectedYear !== 'all') {
+                    if (p.year !== selectedYear) return false;
+                }
+                // 人物篩選
                 if (selectedPerson !== 'all') {
                     if (!p.people || !p.people.includes(selectedPerson)) return false;
                 }
-                if (selectedLocation !== 'all' && p.location !== selectedLocation) return false;
+                // 地點篩選
+                if (selectedLocation !== 'all') {
+                    if (p.location !== selectedLocation) return false;
+                }
+                // 關鍵字搜尋 (匹配年份, 地點, 日期, 檔名, 人物)
                 if (searchKeyword) {
                     const matchYear = p.year && p.year.toLowerCase().includes(searchKeyword);
                     const matchLocation = p.location && p.location.toLowerCase().includes(searchKeyword);
@@ -797,36 +717,24 @@
                 return true;
             });
 
-            if (resetPage) {
-                grid.innerHTML = '';
-            }
-
-            if (currentFilteredPhotos.length === 0) {
+            grid.innerHTML = '';
+            if (filtered.length === 0) {
                 document.getElementById('emptyState').style.display = 'block';
                 return;
             } else {
                 document.getElementById('emptyState').style.display = 'none';
             }
 
-            // 分頁截取：僅渲染當前頁數範圍內的相片 (避免巨量 DOM 導致瀏覽器白屏)
-            const displayPhotos = currentFilteredPhotos.slice(0, currentPage * pageSize);
-
-            // 若為 resetPage，重新繪製完整當前批次；若否，增量追加
-            grid.innerHTML = '';
-            displayPhotos.forEach(photo => {
+            filtered.forEach(photo => {
                 const card = document.createElement('div');
                 card.className = 'photo-card';
 
                 const yearBadge = photo.year && photo.year !== '未排序' ? `<div class="card-year-badge"><i class="fa-regular fa-calendar"></i> ${photo.year}年</div>` : '';
-                const tagsHtml = (photo.people || []).map(person => `<span class="tag-chip"><i class="fa-solid fa-heart"></i> ${person}</span>`).join('');
-                
-                const isChecked = selectedPhotoIds.has(photo.id) ? 'checked' : '';
-                const safePath = encodeURI(photo.path);
+                const tagsHtml = (photo.people || []).map(person => `<span class="tag-chip"><i class="fa-solid fa-user"></i> ${person}</span>`).join('');
 
                 card.innerHTML = `
-                    <input type="checkbox" class="card-checkbox" ${isChecked} data-id="${photo.id}">
                     ${yearBadge}
-                    <img src="/${safePath}" alt="${photo.filename}" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' fill=\'%23334155\' viewBox=\'0 0 16 16\'><path d=\'M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z\'/><path d=\'M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z\'/></svg>';">
+                    <img src="/${photo.path}" alt="${photo.filename}" loading="lazy">
                     <div class="photo-overlay">
                         <div class="overlay-title">${photo.filename}</div>
                         <div class="overlay-meta">
@@ -837,45 +745,15 @@
                     </div>
                 `;
 
-                // 綁定點擊事件
-                const checkbox = card.querySelector('.card-checkbox');
-                checkbox.addEventListener('change', (e) => {
-                    e.stopPropagation();
-                    if (checkbox.checked) {
-                        selectedPhotoIds.add(photo.id);
-                    } else {
-                        selectedPhotoIds.delete(photo.id);
-                    }
-                    document.getElementById('selectedCount').innerText = selectedPhotoIds.size;
-                });
-
-                card.addEventListener('click', (e) => {
-                    if (isBatchMode) {
-                        checkbox.checked = !checkbox.checked;
-                        checkbox.dispatchEvent(new Event('change'));
-                    } else {
-                        openLightbox(photo);
-                    }
-                });
-
+                card.addEventListener('click', () => openLightbox(photo));
                 grid.appendChild(card);
             });
         }
 
-        // 滾動底端加載更多相片
-        window.addEventListener('scroll', () => {
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-                if (currentPage * pageSize < currentFilteredPhotos.length) {
-                    currentPage++;
-                    renderGallery(false);
-                }
-            }
-        });
-
         // 開啟 Lightbox 彈窗
         function openLightbox(photo) {
             currentPhotoId = photo.id;
-            document.getElementById('lightboxImg').src = `/${encodeURI(photo.path)}`;
+            document.getElementById('lightboxImg').src = `/${photo.path}`;
             document.getElementById('lightboxFilename').innerText = photo.filename;
             document.getElementById('lightboxYear').innerText = photo.year ? `${photo.year} 年份照片` : '未知年份';
             document.getElementById('lightboxDate').innerText = photo.date || '未知時間';
@@ -904,10 +782,9 @@
         // 新增人物標籤
         async function addPersonTag() {
             const input = document.getElementById('newPersonInput');
-            let name = input.value.trim();
-            if (!name) name = "郭泊彤Sophia"; // 預設帶入女兒姓名
+            const name = input.value.trim();
+            if (!name || !currentPhotoId) return;
 
-            if (!currentPhotoId) return;
             const photo = allPhotos.find(p => p.id === currentPhotoId);
             if (!photo) return;
 
@@ -933,72 +810,18 @@
             updateUI();
         }
 
-        // 儲存至後端 API
+        // 儲存到後端 API
         async function savePeopleTags(photoId, people) {
             try {
-                await fetch('/api/batch_update_people', {
+                await fetch('/api/update_people', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ photo_ids: [photoId], person: people[people.length - 1], action: 'add' })
+                    body: JSON.stringify({ id: photoId, people: people })
                 });
             } catch (err) {
                 console.error("儲存人物標籤失敗:", err);
             }
         }
-
-        // 快捷進入「郭泊彤Sophia 專輯」
-        document.getElementById('sophiaShortcutBtn').addEventListener('click', () => {
-            selectedPerson = "郭泊彤Sophia";
-            selectedYear = 'all';
-            selectedLocation = 'all';
-            document.getElementById('searchInput').value = '';
-            updateUI();
-        });
-
-        // 開啟/關閉多選打標模式
-        document.getElementById('toggleBatchBtn').addEventListener('click', () => {
-            isBatchMode = !isBatchMode;
-            document.getElementById('batchBar').classList.toggle('active', isBatchMode);
-            if (!isBatchMode) selectedPhotoIds.clear();
-            document.getElementById('selectedCount').innerText = selectedPhotoIds.size;
-            renderGallery();
-        });
-
-        document.getElementById('cancelBatchBtn').addEventListener('click', () => {
-            isBatchMode = false;
-            selectedPhotoIds.clear();
-            document.getElementById('batchBar').classList.remove('active');
-            renderGallery();
-        });
-
-        // 批量設為「郭泊彤Sophia」
-        document.getElementById('batchTagSophiaBtn').addEventListener('click', async () => {
-            if (selectedPhotoIds.size === 0) {
-                alert("請先勾選要標記的照片！");
-                return;
-            }
-
-            try {
-                const resp = await fetch('/api/batch_update_people', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        photo_ids: Array.from(selectedPhotoIds),
-                        person: "郭泊彤Sophia",
-                        action: "add"
-                    })
-                });
-                const result = await resp.json();
-                alert(result.message || "批量標記成功！");
-                
-                selectedPhotoIds.clear();
-                isBatchMode = false;
-                document.getElementById('batchBar').classList.remove('active');
-                await fetchPhotos();
-            } catch (err) {
-                alert("批量標記失敗: " + err.message);
-            }
-        });
 
         // 一鍵重新掃描與匯入
         document.getElementById('importBtn').addEventListener('click', async () => {
@@ -1009,7 +832,11 @@
             try {
                 const resp = await fetch('/api/trigger_import', { method: 'POST' });
                 const result = await resp.json();
-                alert(result.message || "處理完成！");
+                if (resp.ok && result.status === 'success') {
+                    alert(result.message || "重新掃描與匯入分類完成！");
+                } else {
+                    alert("匯入處理發生錯誤: " + (result.message || "未知錯誤"));
+                }
                 await fetchPhotos();
             } catch (err) {
                 alert("網路請求失敗: " + err.message);
@@ -1019,13 +846,16 @@
             }
         });
 
-        // 搜尋框與按鈕綁定
+        // 搜尋框輸入監聽
         document.getElementById('searchInput').addEventListener('input', renderGallery);
+
+        // 新增標籤按鈕觸發
         document.getElementById('addPersonBtn').addEventListener('click', addPersonTag);
         document.getElementById('newPersonInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') addPersonTag();
         });
 
+        // 關閉 Modal
         document.getElementById('lightboxClose').addEventListener('click', () => {
             document.getElementById('lightboxModal').classList.remove('active');
         });

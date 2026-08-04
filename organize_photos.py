@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 
 """
-個人相片自動轉檔與增量歸檔腳本 (organize_photos.py) - 增量保護版
-規則：
-1. 只處理並歸檔「全新匯入的相片」（即未在 Photos/ 目錄內的照片）。
-2. 針對 Photos/ 目錄下既有的照片與資料夾結構：【完全唯讀保護】。
-   - 絕不移動、更名、刪除或修改任何已在 Photos/ 內的手動調整目錄與檔案。
-3. 自動維護 photos_db.json 相片索引與人物標籤。
+個人相片自動轉檔與分類腳本 (organize_photos.py) - 全面重新整理版
+功能：
+1. 深度掃描工作區內的所有照片（包含 Photos 內的子目錄）。
+2. 將 HEIC/HEIF 照片無損轉換為 JPEG 格式，轉換成功後自動刪除原 HEIC 檔案。
+3. 提取 EXIF 拍攝時間與 GPS 座標，透過逆地理編碼取得中文地點名稱。
+4. 重新修正與歸檔所有照片至「Photos/YYYY/YYYY-MM_地點/」兩層資料夾結構中。
+5. 清理空白資料夾，並重新生成/更新 photos_db.json 索引資料庫。
 """
 
 import os
@@ -137,8 +138,22 @@ def convert_heic_to_jpeg(heic_path):
         print(f"❌ 轉換失敗 ({heic_path.name}): {e}")
     return None
 
+def remove_empty_folders(path):
+    """遞迴清理空資料夾"""
+    if not path.is_dir():
+        return
+    for sub in list(path.iterdir()):
+        if sub.is_dir():
+            remove_empty_folders(sub)
+    try:
+        if not list(path.iterdir()) and path != PHOTOS_DIR and path != BASE_DIR:
+            path.rmdir()
+            print(f"🧹 清理空資料夾: {path.relative_to(BASE_DIR)}")
+    except Exception:
+        pass
+
 def process_photos(source_dir=BASE_DIR):
-    """保護既有 Photos/ 目錄，僅尋找並歸檔新照片"""
+    """深度掃描並重新整理分類所有相片"""
     PHOTOS_DIR.mkdir(parents=True, exist_ok=True)
     
     # 載入原有資料庫以維護人物標籤
@@ -150,31 +165,24 @@ def process_photos(source_dir=BASE_DIR):
                 for item in old_db.get("photos", []):
                     if item.get("people"):
                         old_people_map[item["filename"]] = item["people"]
-                        old_people_map[item["id"]] = item["people"]
         except Exception:
             pass
 
-    # 1. 第一步：處理「Photos/ 目錄以外」的新 HEIC 照片
-    print("🔍 掃描全新匯入照片 (排除 Photos/ 既有目錄)...")
-    new_heic_files = [f for f in BASE_DIR.rglob("*") 
-                      if f.is_file() and f.suffix.lower() in {".heic"} and PHOTOS_DIR not in f.parents]
-    
-    for heic in new_heic_files:
+    # 1. 第一步：遞迴找出所有 HEIC 檔案並轉檔
+    print("🔍 進行全盤掃描與 HEIC 轉檔檢測...")
+    heic_files = list(BASE_DIR.rglob("*.heic")) + list(BASE_DIR.rglob("*.HEIC"))
+    for heic in heic_files:
         convert_heic_to_jpeg(heic)
 
-    # 2. 第二步：分開處理【新相片（需歸檔）】與【既有 Photos/ 內相片（只讀索引，絕不改動）】
+    # 2. 第二步：遞迴找出所有 JPEG 相片進行拍攝資訊解析與重新歸檔
     valid_exts = {".jpg", ".jpeg", ".JPG", ".JPEG"}
     all_jpegs = [f for f in BASE_DIR.rglob("*") if f.is_file() and f.suffix in valid_exts]
+    print(f"📁 開始重新比對與整理共 {len(all_jpegs)} 張 JPEG 相片...")
     
-    new_photos = [f for f in all_jpegs if PHOTOS_DIR not in f.parents]
-    existing_photos = [f for f in all_jpegs if PHOTOS_DIR in f.parents]
-    
-    print(f"📁 發現 {len(new_photos)} 張全新待歸檔照片，{len(existing_photos)} 張既有照片（保護不改動）。")
-    
-    new_imported_count = 0
-    
-    # A. 處理全新匯入照片：進行轉檔與自動歸檔移入 Photos/
-    for img_path in new_photos:
+    photos_db_list = []
+    moved_count = 0
+
+    for img_path in all_jpegs:
         meta = get_metadata_via_mdls(img_path)
         creation_date = meta["creation_date"]
         lat = meta["latitude"]
@@ -182,6 +190,7 @@ def process_photos(source_dir=BASE_DIR):
 
         year_str = "未排序"
         month_str = "未排序"
+        date_display = "未知日期"
         
         if creation_date:
             parts = creation_date.split(" ")
@@ -190,65 +199,35 @@ def process_photos(source_dir=BASE_DIR):
                 if len(d_parts) == 3:
                     year_str = d_parts[0]
                     month_str = f"{d_parts[0]}-{d_parts[1]}"
+                    date_display = f"{d_parts[0]}-{d_parts[1]}-{d_parts[2]} {parts[1]}"
 
         location_name = reverse_geocode(lat, lon)
         
-        # 歸檔目標目錄
+        # 正確目標路徑: Photos/YYYY/YYYY-MM_地點/filename.jpeg
         target_dir = PHOTOS_DIR / year_str / f"{month_str}_{location_name}"
         target_dir.mkdir(parents=True, exist_ok=True)
         
         target_path = target_dir / img_path.name
-        if target_path.exists():
-            target_path = target_dir / f"{img_path.stem}_{int(time.time())}{img_path.suffix}"
-            
-        img_path.rename(target_path)
-        new_imported_count += 1
+        
+        # 若路徑不符，進行重新歸檔移動
+        if img_path.resolve() != target_path.resolve():
+            if target_path.exists():
+                target_path = target_dir / f"{img_path.stem}_{int(time.time())}{img_path.suffix}"
+            img_path.rename(target_path)
+            moved_count += 1
 
-    # B. 建立/更新全相片庫 photos_db.json 索引（對所有 Photos/ 內照片唯讀解析）
-    final_jpegs = [f for f in PHOTOS_DIR.rglob("*") if f.is_file() and f.suffix in valid_exts]
-    photos_db_list = []
-
-    for img_path in final_jpegs:
-        rel_path = str(img_path.relative_to(BASE_DIR))
+        rel_path = str(target_path.relative_to(BASE_DIR))
         photo_id = hashlib.md5(rel_path.encode("utf-8")).hexdigest()[:12]
         
-        meta = get_metadata_via_mdls(img_path)
-        creation_date = meta["creation_date"]
-        lat = meta["latitude"]
-        lon = meta["longitude"]
-
-        # 從父資料夾名稱與路徑推斷年份與地點，完美支援用戶手動修改過的名目
-        parent_dir_name = img_path.parent.name
-        year_dir_name = img_path.parent.parent.name if img_path.parent.parent != PHOTOS_DIR else "未排序"
-
-        year_str = year_dir_name if year_dir_name.isdigit() else "未排序"
-        
-        # 如果用戶手動修改過資料夾名稱，優先採用資料夾自訂名作為地點
-        location_name = "未知地點"
-        if "_" in parent_dir_name:
-            location_name = parent_dir_name.split("_", 1)[1]
-        else:
-            location_name = reverse_geocode(lat, lon)
-
-        date_display = "未知日期"
-        if creation_date:
-            parts = creation_date.split(" ")
-            if len(parts) >= 2:
-                d_parts = parts[0].split("-")
-                if len(d_parts) == 3:
-                    date_display = f"{d_parts[0]}-{d_parts[1]}-{d_parts[2]} {parts[1]}"
-                    if year_str == "未排序":
-                        year_str = d_parts[0]
-
-        # 優先維護人物標籤
-        people_tags = old_people_map.get(photo_id) or old_people_map.get(img_path.name) or []
+        # 保留人物標籤
+        people_tags = old_people_map.get(target_path.name, [])
 
         photos_db_list.append({
             "id": photo_id,
-            "filename": img_path.name,
+            "filename": target_path.name,
             "path": rel_path,
             "year": year_str,
-            "month": parent_dir_name.split("_")[0] if "_" in parent_dir_name else "未排序",
+            "month": month_str,
             "date": date_display,
             "location": location_name,
             "latitude": lat,
@@ -256,7 +235,10 @@ def process_photos(source_dir=BASE_DIR):
             "people": people_tags
         })
 
-    # 第三步：更新 photos_db.json
+    # 3. 第三步：清理被移空的舊資料夾
+    remove_empty_folders(PHOTOS_DIR)
+
+    # 4. 第四步：重新寫入 photos_db.json
     db_data = {
         "photos": photos_db_list,
         "updated_at": time.strftime("%Y-%m-%d %H:%M:%S")
@@ -264,8 +246,8 @@ def process_photos(source_dir=BASE_DIR):
     with open(DB_FILE, "w", encoding="utf-8") as f:
         json.dump(db_data, f, ensure_ascii=False, indent=2)
 
-    print(f"✨ 增量處理完畢！新增歸檔 {new_imported_count} 張照片。")
-    print(f"📊 Photos/ 既有目錄 100% 保持原貌，總計索引 {len(photos_db_list)} 張相片。")
+    print(f"✨ 重新整理完畢！共歸檔/校正 {moved_count} 張相片位置。")
+    print(f"📊 目前資料庫總計 {len(photos_db_list)} 張相片紀錄。")
 
 if __name__ == "__main__":
     process_photos()
