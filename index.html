@@ -138,6 +138,23 @@
             transform: translateY(-1px);
         }
 
+        .btn-sophia {
+            background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+        }
+
+        .btn-sophia:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .pill-sophia {
+            background: rgba(236, 72, 153, 0.2) !important;
+            border-color: rgba(236, 72, 153, 0.6) !important;
+            color: #fbcfe8 !important;
+        }
+
         .badge-count {
             background: rgba(255, 255, 255, 0.1);
             padding: 6px 14px;
@@ -500,7 +517,11 @@
             </div>
 
             <div class="header-actions">
-                <span class="badge-count" id="photoCountBadge">照片計數中...</span>
+                <button class="btn btn-sophia" id="sophiaShortcutBtn">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>郭泊彤Sophia 專輯</span>
+                </button>
+                <div class="badge-count" id="photoCountBadge">載入中...</div>
                 <button class="btn btn-primary" id="importBtn">
                     <i class="fa-solid fa-arrows-rotate"></i>
                     <span>重新掃描 / 匯入</span>
@@ -858,6 +879,15 @@
         // 關閉 Modal
         document.getElementById('lightboxClose').addEventListener('click', () => {
             document.getElementById('lightboxModal').classList.remove('active');
+        });
+
+        // 快捷進入「郭泊彤Sophia 專輯」
+        document.getElementById('sophiaShortcutBtn').addEventListener('click', () => {
+            selectedPerson = "郭泊彤Sophia";
+            selectedYear = 'all';
+            selectedLocation = 'all';
+            document.getElementById('searchInput').value = '';
+            updateUI();
         });
 
         // 初始化加載
