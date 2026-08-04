@@ -3,7 +3,7 @@ import Vision
 import CoreImage
 import CoreGraphics
 
-// 太太 Sharon 多執行緒極速 Vision 人臉辨識引擎 (face_recognizer_sharon.swift)
+// 太太 Sharon 極嚴格精準人臉辨識引擎 (face_recognizer_sharon.swift)
 let baseDir = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
 let photosDirURL = baseDir.appendingPathComponent("Photos")
 let targetPath = "references/sharon_base.png"
@@ -37,11 +37,11 @@ if let faceObs = faceReq.results?.first {
     
     if let ob = printReq.results?.first as? VNFeaturePrintObservation {
         baseFacePrints.append(ob)
-        print("✅ 成功提取太太人臉 Bounding Box 特徵向量！")
+        print("✅ 成功提取太太人臉 Bounding Box 嚴格特徵向量！")
     }
 }
 
-print("🚀 開始使用多執行緒 Apple Vision 神經網路引擎比對 4,800+ 張照片...")
+print("🚀 開始使用多執行緒 Apple Vision 神經網路引擎進行【極嚴格 (閾值 0.48)】比對...")
 
 let fileManager = FileManager.default
 guard let enumerator = fileManager.enumerator(at: photosDirURL, includingPropertiesForKeys: nil) else {
@@ -57,12 +57,12 @@ while let fileURL = enumerator.nextObject() as? URL {
     }
 }
 
-print("📁 收集到 \(allPhotoURLs.count) 張相片，啟動並行神經網絡計算...")
+print("📁 收集到 \(allPhotoURLs.count) 張相片，啟動極高精度神經網絡計算...")
 
 let lock = NSLock()
 var matchedPhotos: [String] = []
 
-// 多執行緒並行運算
+// 多執行緒並行計算 (嚴格門檻 0.48)
 DispatchQueue.concurrentPerform(iterations: allPhotoURLs.count) { index in
     let fileURL = allPhotoURLs[index]
     guard let ciImg = CIImage(contentsOf: fileURL) else { return }
@@ -90,10 +90,12 @@ DispatchQueue.concurrentPerform(iterations: allPhotoURLs.count) { index in
                     var distance: Float = 1.0
                     try? currentPrint.computeDistance(&distance, to: baseOb)
                     
-                    if distance < 0.65 {
+                    // 極嚴格比對門檻: 距離 < 0.48 排除其他類似女性相片
+                    if distance < 0.48 {
                         let relPath = fileURL.path.replacingOccurrences(of: baseDir.path + "/", with: "")
                         lock.lock()
                         matchedPhotos.append(relPath)
+                        print("✨ 確鑿精準匹配太太照片 (距離: \(String(format: "%.3f", distance))): \(fileURL.lastPathComponent)")
                         lock.unlock()
                         break
                     }
@@ -103,10 +105,10 @@ DispatchQueue.concurrentPerform(iterations: allPhotoURLs.count) { index in
     }
 }
 
-print("🎉 辨識完全成功！共掃描 \(allPhotoURLs.count) 張照片，成功辨識出 \(matchedPhotos.count) 張太太 [太太Sharon] 的相片！")
+print("🎉 極嚴格比對完成！共掃描 \(allPhotoURLs.count) 張照片，精確辨識出 \(matchedPhotos.count) 張太太 [太太Sharon] 的確鑿相片！")
 
 let resultURL = baseDir.appendingPathComponent("sharon_matched.json")
 if let jsonData = try? JSONEncoder().encode(matchedPhotos) {
     try? jsonData.write(to: resultURL)
-    print("💾 匹配結果已寫入: sharon_matched.json")
+    print("💾 精準結果已寫入: sharon_matched.json")
 }
