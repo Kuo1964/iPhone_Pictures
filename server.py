@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-個人相片 Web 管理伺服器 (server.py) - 高效多線程與非阻塞版
-提供：
-1. 多線程 HTTP Server (ThreadingHTTPServer)
-2. 靜態網頁與圖片高效流式伺服
-3. 非同步背景掃描 (/api/trigger_import 不會阻塞網頁載入)
+個人相片 Web 管理伺服器 (server.py) - 終極穩定版
+特徵：
+1. 完全自主掌控的 send_static_file，100% 支援中文與特殊字元圖片傳輸，徹底解決 404 與 BrokenPipeError。
+2. 多線程與非阻塞架構 (ThreadingHTTPServer)。
+3. API: /api/photos, /api/batch_update_people, /api/trigger_import
 """
 
 import os
@@ -14,7 +14,7 @@ import sys
 import json
 import threading
 import urllib.parse
-from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
 from organize_photos import process_photos, DB_FILE, BASE_DIR
 
@@ -23,14 +23,60 @@ PORT = 8080
 class ReusableThreadingHTTPServer(ThreadingHTTPServer):
     allow_reuse_address = True
 
-class PhotoHandler(SimpleHTTPRequestHandler):
+class PhotoHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         # 簡化日誌輸出
         sys.stderr.write("[%s] %s\n" % (self.log_date_time_string(), format % args))
 
+    def send_static_file(self, req_path):
+        """完全自主研發的靜態檔案與圖片傳輸器，100% 支援中文與特殊路徑"""
+        clean_path = urllib.parse.unquote(req_path).lstrip('/')
+        if not clean_path:
+            clean_path = "index.html"
+            
+        file_path = (BASE_DIR / clean_path).resolve()
+        
+        # 防止目錄穿越攻擊
+        if not str(file_path).startswith(str(BASE_DIR)):
+            self.send_error(403, "Forbidden")
+            return
+            
+        if not file_path.exists() or not file_path.is_file():
+            self.send_error(404, "File not found")
+            return
+            
+        ext = file_path.suffix.lower()
+        content_type = "application/octet-stream"
+        if ext in [".html", ".htm"]:
+            content_type = "text/html; charset=utf-8"
+        elif ext in [".css"]:
+            content_type = "text/css; charset=utf-8"
+        elif ext in [".js"]:
+            content_type = "application/javascript; charset=utf-8"
+        elif ext in [".jpeg", ".jpg", ".JPG", ".JPEG"]:
+            content_type = "image/jpeg"
+        elif ext in [".png"]:
+            content_type = "image/png"
+        elif ext in [".json"]:
+            content_type = "application/json; charset=utf-8"
+            
+        try:
+            with open(file_path, "rb") as f:
+                content = f.read()
+                
+            self.send_response(200)
+            self.send_header("Content-Type", content_type)
+            self.send_header("Content-Length", str(len(content)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(content)
+        except Exception as e:
+            try:
+                self.send_error(500, str(e))
+            except Exception:
+                pass
+
     def do_GET(self):
-        # 對 URL 進行中文 unquote 解碼，確保 macOS 檔案系統正確存取
-        self.path = urllib.parse.unquote(self.path)
         parsed_path = urllib.parse.urlparse(self.path)
         
         # API: 取得所有相片資料
@@ -47,11 +93,8 @@ class PhotoHandler(SimpleHTTPRequestHandler):
                 self.wfile.write(json.dumps({"photos": [], "updated_at": ""}).encode("utf-8"))
             return
 
-        # 靜態檔案預設回傳 index.html
-        if parsed_path.path == "/":
-            self.path = "/index.html"
-            
-        return super().do_GET()
+        # 傳送靜態網頁或圖片檔案
+        self.send_static_file(parsed_path.path)
 
     def do_POST(self):
         parsed_path = urllib.parse.urlparse(self.path)
@@ -65,7 +108,7 @@ class PhotoHandler(SimpleHTTPRequestHandler):
                 data = json.loads(body)
                 photo_ids = data.get("photo_ids", [])
                 person = data.get("person", "")
-                action = data.get("action", "add") # 'add' or 'remove'
+                action = data.get("action", "add")
                 
                 if photo_ids and person and DB_FILE.exists():
                     with open(DB_FILE, "r", encoding="utf-8") as f:
@@ -111,7 +154,6 @@ class PhotoHandler(SimpleHTTPRequestHandler):
                 except Exception as e:
                     print(f"❌ 背景掃描失敗: {e}")
 
-            # 啟動獨立線程，不卡住 HTTP 請求
             threading.Thread(target=run_import_in_background, daemon=True).start()
 
             self.send_response(200)
@@ -127,7 +169,7 @@ class PhotoHandler(SimpleHTTPRequestHandler):
 
 def run_server():
     os.chdir(BASE_DIR)
-    ports_to_try = [8080, 8085, 8090, 8098, 8888, 9000]
+    ports_to_try = [8080, 8085, 8090, 8098, 9000]
     httpd = None
     actual_port = None
 
@@ -144,7 +186,6 @@ def run_server():
         print("❌ 嘗試所有預設連接埠皆失敗。")
         sys.exit(1)
 
-    # 記錄目前運行的 PORT
     with open(BASE_DIR / "server_port.txt", "w", encoding="utf-8") as f:
         f.write(str(actual_port))
 
