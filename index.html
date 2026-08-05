@@ -160,6 +160,17 @@
             transform: translateY(-1px);
         }
 
+        .btn-john {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-john:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
         .pill-sophia {
             background: rgba(236, 72, 153, 0.2) !important;
             border-color: rgba(236, 72, 153, 0.6) !important;
@@ -170,6 +181,12 @@
             background: rgba(139, 92, 246, 0.25) !important;
             border-color: rgba(139, 92, 246, 0.6) !important;
             color: #ddd6fe !important;
+        }
+
+        .pill-john {
+            background: rgba(59, 130, 246, 0.25) !important;
+            border-color: rgba(59, 130, 246, 0.6) !important;
+            color: #bfdbfe !important;
         }
 
         .badge-count {
@@ -534,13 +551,17 @@
             </div>
 
             <div class="header-actions">
-                <button class="btn btn-sophia" id="sophiaShortcutBtn">
-                    <i class="fa-solid fa-heart"></i>
-                    <span>郭泊彤Sophia 專輯</span>
+                <button class="btn btn-john" id="johnShortcutBtn">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                    <span>John 專輯</span>
                 </button>
                 <button class="btn btn-sharon" id="sharonShortcutBtn">
                     <i class="fa-solid fa-crown"></i>
                     <span>Sharon 專輯</span>
+                </button>
+                <button class="btn btn-sophia" id="sophiaShortcutBtn">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>郭泊彤Sophia 專輯</span>
                 </button>
                 <div class="badge-count" id="photoCountBadge">載入中...</div>
                 <button class="btn btn-primary" id="importBtn">
@@ -694,15 +715,15 @@
                 locContainer.innerHTML += `<div class="pill ${active}" data-location="${loc}">${loc}</div>`;
             });
 
-            // 3. 渲染人物 Pills (特別把 郭泊彤Sophia 與 太太Sharon 置頂高亮)
+            // 3. 渲染人物 Pills (特別把 John、Sharon 與 郭泊彤Sophia 置頂高亮)
             const peopleContainer = document.getElementById('peopleFilterPills');
             peopleContainer.innerHTML = `<div class="pill ${selectedPerson === 'all' ? 'active' : ''}" data-person="all">全部人物</div>`;
             
-            const sophiaTag = "郭泊彤Sophia";
-            if (peopleSet.has(sophiaTag)) {
-                const active = selectedPerson === sophiaTag ? 'active' : '';
-                peopleContainer.innerHTML += `<div class="pill pill-sophia ${active}" data-person="${sophiaTag}"><i class="fa-solid fa-heart" style="color:#ec4899;"></i> 郭泊彤Sophia</div>`;
-                peopleSet.delete(sophiaTag);
+            const johnTag = "John";
+            if (peopleSet.has(johnTag)) {
+                const active = selectedPerson === johnTag ? 'active' : '';
+                peopleContainer.innerHTML += `<div class="pill pill-john ${active}" data-person="${johnTag}"><i class="fa-solid fa-user-astronaut" style="color:#3b82f6;"></i> John</div>`;
+                peopleSet.delete(johnTag);
             }
 
             const sharonTag = "Sharon";
@@ -710,6 +731,13 @@
                 const active = selectedPerson === sharonTag ? 'active' : '';
                 peopleContainer.innerHTML += `<div class="pill pill-sharon ${active}" data-person="${sharonTag}"><i class="fa-solid fa-crown" style="color:#a855f7;"></i> Sharon</div>`;
                 peopleSet.delete(sharonTag);
+            }
+
+            const sophiaTag = "郭泊彤Sophia";
+            if (peopleSet.has(sophiaTag)) {
+                const active = selectedPerson === sophiaTag ? 'active' : '';
+                peopleContainer.innerHTML += `<div class="pill pill-sophia ${active}" data-person="${sophiaTag}"><i class="fa-solid fa-heart" style="color:#ec4899;"></i> 郭泊彤Sophia</div>`;
+                peopleSet.delete(sophiaTag);
             }
 
             Array.from(peopleSet).sort().forEach(person => {
@@ -915,6 +943,15 @@
         // 關閉 Modal
         document.getElementById('lightboxClose').addEventListener('click', () => {
             document.getElementById('lightboxModal').classList.remove('active');
+        });
+
+        // 快捷進入「John 專輯」
+        document.getElementById('johnShortcutBtn').addEventListener('click', () => {
+            selectedPerson = "John";
+            selectedYear = 'all';
+            selectedLocation = 'all';
+            document.getElementById('searchInput').value = '';
+            updateUI();
         });
 
         // 快捷進入「郭泊彤Sophia 專輯」

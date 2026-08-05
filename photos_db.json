@@ -22,7 +22,9 @@
       "location": "高雄市",
       "latitude": 22.61815333333333,
       "longitude": 120.2845,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "de2fcd731c0a",
@@ -46,7 +48,9 @@
       "location": "新城鄉",
       "latitude": 24.09460283333333,
       "longitude": 121.6219783333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "3985548c22d6",
@@ -254,7 +258,9 @@
       "location": "臺北市",
       "latitude": 25.10496383333333,
       "longitude": 121.52468,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "590b29cc8659",
@@ -266,7 +272,9 @@
       "location": "新城鄉",
       "latitude": 24.09448333333333,
       "longitude": 121.6219416666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2a62cb4b558e",
@@ -290,7 +298,9 @@
       "location": "高雄市",
       "latitude": 22.628345,
       "longitude": 120.2849716666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "4cce1daabc1d",
@@ -495,6 +505,7 @@
       "latitude": 24.09448883333333,
       "longitude": 121.6219333333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -508,7 +519,9 @@
       "location": "臺北市",
       "latitude": 25.1050555,
       "longitude": 121.524825,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "3438a479d632",
@@ -713,6 +726,7 @@
       "latitude": 24.0946,
       "longitude": 121.6219866666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -726,7 +740,9 @@
       "location": "高雄市",
       "latitude": 22.62811166666667,
       "longitude": 120.2849366666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "53ebb0bfdf72",
@@ -810,7 +826,9 @@
       "location": "秀林鄉",
       "latitude": 24.20511166666667,
       "longitude": 121.6708916666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "3b492a59b49f",
@@ -858,7 +876,9 @@
       "location": "高雄市",
       "latitude": 22.628075,
       "longitude": 120.284845,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "fe8a0acfb465",
@@ -870,7 +890,9 @@
       "location": "新城鄉",
       "latitude": 24.09453883333333,
       "longitude": 121.6220033333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "581f4a96bfa9",
@@ -944,7 +966,9 @@
       "location": "新城鄉",
       "latitude": 24.09663883333333,
       "longitude": 121.6221216666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0f4d9ca2c2b5",
@@ -1004,7 +1028,9 @@
       "location": "新城鄉",
       "latitude": 24.0946,
       "longitude": 121.6219783333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "481edea97937",
@@ -1052,7 +1078,9 @@
       "location": "新城鄉",
       "latitude": 24.0964555,
       "longitude": 121.621305,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "54a8c3ab6ce0",
@@ -1161,6 +1189,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -1189,6 +1218,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -1215,6 +1245,7 @@
       "latitude": 24.0946,
       "longitude": 121.6219783333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -1240,7 +1271,9 @@
       "location": "新城鄉",
       "latitude": 24.09649166666667,
       "longitude": 121.6212783333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0018b3b1c464",
@@ -1300,7 +1333,9 @@
       "location": "新城鄉",
       "latitude": 24.0981305,
       "longitude": 121.6240533333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "b2209f60483e",
@@ -1376,7 +1411,9 @@
       "location": "秀林鄉",
       "latitude": 24.205105,
       "longitude": 121.6708916666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "548511256535",
@@ -1537,6 +1574,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -1592,6 +1630,7 @@
       "latitude": 24.09454716666667,
       "longitude": 121.6220033333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -1668,7 +1707,9 @@
       "location": "新城鄉",
       "latitude": 24.09448333333333,
       "longitude": 121.6219416666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8adcd29e4df8",
@@ -1752,9 +1793,7 @@
       "location": "基隆市",
       "latitude": 25.15923883333333,
       "longitude": 121.7714216666667,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "48137ae32a90",
@@ -1915,6 +1954,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -1967,6 +2007,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -2018,7 +2059,9 @@
       "location": "新城鄉",
       "latitude": 24.095075,
       "longitude": 121.62168,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "7e5e4138a3a6",
@@ -2102,7 +2145,9 @@
       "location": "新城鄉",
       "latitude": 24.0944695,
       "longitude": 121.621955,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "3aa04ed09712",
@@ -2197,6 +2242,7 @@
       "latitude": 24.0945445,
       "longitude": 121.6220033333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -2222,7 +2268,9 @@
       "location": "高雄市",
       "latitude": 22.62818333333333,
       "longitude": 120.28485,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "3dfb0e4dacc7",
@@ -2456,6 +2504,7 @@
       "latitude": 24.09460283333333,
       "longitude": 121.6219866666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -2541,7 +2590,9 @@
       "location": "新城鄉",
       "latitude": 24.09448883333333,
       "longitude": 121.6219333333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8c3edb7e1908",
@@ -2673,7 +2724,9 @@
       "location": "高雄市",
       "latitude": 22.628405,
       "longitude": 120.28488,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "e365f150727d",
@@ -2710,6 +2763,7 @@
       "latitude": 24.0944695,
       "longitude": 121.621955,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -2771,7 +2825,9 @@
       "location": "臺北市",
       "latitude": 25.1049805,
       "longitude": 121.524795,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f21bfd203a36",
@@ -2784,6 +2840,7 @@
       "latitude": 24.09449166666667,
       "longitude": 121.6219416666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -2822,6 +2879,7 @@
       "latitude": 24.09455,
       "longitude": 121.6219783333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -2859,7 +2917,9 @@
       "location": "高雄市",
       "latitude": 22.62828333333333,
       "longitude": 120.2848366666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "dbe5b73a0df4",
@@ -3075,7 +3135,9 @@
       "location": "高雄市",
       "latitude": 22.62835833333333,
       "longitude": 120.2848133333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "49a02e1edda8",
@@ -3224,6 +3286,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -3252,6 +3315,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -3376,6 +3440,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -3474,7 +3539,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5c85c3015207",
@@ -3541,7 +3608,6 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon",
         "郭泊彤Sophia"
       ]
     },
@@ -3636,6 +3702,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -3687,7 +3754,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "9581949efcd5",
@@ -3714,6 +3783,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -3771,7 +3841,6 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon",
         "郭泊彤Sophia"
       ]
     },
@@ -3800,7 +3869,6 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon",
         "郭泊彤Sophia"
       ]
     },
@@ -3815,6 +3883,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -3930,6 +3999,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -4030,6 +4100,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -4161,6 +4232,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -4211,6 +4283,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -4225,6 +4298,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -4240,6 +4314,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -4254,6 +4329,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -4282,7 +4358,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "c7802384c64e",
@@ -4310,6 +4388,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -4325,6 +4404,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -4340,6 +4420,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -4755,6 +4836,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -4795,6 +4877,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -4922,7 +5005,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0b8a653f023c",
@@ -5051,7 +5136,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8b7aba46f9ec",
@@ -5124,6 +5211,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5151,6 +5239,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -5225,6 +5314,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -5250,7 +5340,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "db7df53aea56",
@@ -5262,7 +5354,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "79aa4065cda8",
@@ -5337,6 +5431,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5352,6 +5447,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -5365,7 +5461,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "92e25f33f0b5",
@@ -5444,6 +5542,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5459,6 +5558,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5514,6 +5614,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5559,7 +5660,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon",
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -5574,6 +5675,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5601,6 +5703,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5616,6 +5719,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5631,6 +5735,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5675,6 +5780,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5743,6 +5849,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5770,6 +5877,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -5835,6 +5943,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -5885,6 +5994,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -5899,6 +6009,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -5925,6 +6036,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -5950,7 +6062,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "103a9f8ced4c",
@@ -5975,6 +6089,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -6038,7 +6153,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "郭泊彤Sophia"
+        "John"
       ]
     },
     {
@@ -6052,6 +6167,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -6104,6 +6220,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -6117,7 +6234,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "ed29e4175431",
@@ -6208,7 +6327,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "6bd48d139701",
@@ -6232,7 +6353,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2c71b308feab",
@@ -6257,6 +6380,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -6332,6 +6456,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -6382,6 +6507,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -6396,6 +6522,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -6424,6 +6551,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -6462,6 +6590,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -6541,7 +6670,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "dccc1306e6d2",
@@ -6580,6 +6711,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -6646,6 +6778,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -6660,6 +6793,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -6674,6 +6808,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -6688,6 +6823,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -6702,6 +6838,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -6740,6 +6877,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -6754,6 +6892,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -6806,6 +6945,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -6820,7 +6960,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "郭泊彤Sophia"
+        "John"
       ]
     },
     {
@@ -6849,6 +6989,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -6863,6 +7004,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -6976,7 +7118,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "c1505c656f3b",
@@ -6989,6 +7133,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7015,6 +7160,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7067,6 +7213,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7157,6 +7304,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7297,6 +7445,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -7338,6 +7487,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7352,6 +7502,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7380,6 +7531,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7394,6 +7546,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -7407,7 +7560,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "e9b10df62620",
@@ -7481,7 +7636,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5385df5ddc3c",
@@ -7560,6 +7717,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7616,6 +7774,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7630,6 +7789,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7644,6 +7804,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7696,6 +7857,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -7794,6 +7956,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -7809,6 +7972,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -7824,6 +7988,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -7874,6 +8039,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -8046,6 +8212,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -8072,6 +8239,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -8491,6 +8659,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -8563,6 +8732,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -8577,6 +8747,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -8632,7 +8803,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "6ca28fabed04",
@@ -8718,9 +8891,7 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "e010010a10c2",
@@ -8788,6 +8959,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -8803,6 +8975,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -9138,6 +9311,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -9326,6 +9500,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -9414,6 +9589,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -9451,7 +9627,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "721d2bd1c644",
@@ -9760,6 +9938,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -9774,6 +9953,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -9842,6 +10022,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -10159,6 +10340,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -10186,6 +10368,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -10411,6 +10594,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -10426,6 +10610,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -10573,7 +10758,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "12be39c7545f",
@@ -10621,7 +10808,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "6c63c9180268",
@@ -10710,6 +10899,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -10835,7 +11025,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "65bc59a14475",
@@ -10917,6 +11109,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -11026,6 +11219,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -11293,6 +11487,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -11320,7 +11515,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "d8867417d393",
@@ -11375,6 +11572,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -11467,6 +11665,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -11596,6 +11795,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -11646,6 +11846,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -11906,6 +12107,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -11999,7 +12201,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "63a09429454f",
@@ -12050,6 +12254,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -12464,6 +12669,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -12528,6 +12734,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -12641,6 +12848,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -12656,6 +12864,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -12734,7 +12943,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "71c773448e18",
@@ -12885,6 +13096,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -12911,6 +13123,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -12925,8 +13138,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon",
-        "郭泊彤Sophia"
+        "Sharon"
       ]
     },
     {
@@ -13107,6 +13319,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -13134,7 +13347,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "b36a7cc9e0d2",
@@ -13267,7 +13482,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "7441ec6c5f3a",
@@ -13293,7 +13510,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "92228d40a6c3",
@@ -13373,7 +13592,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon"
+        "John"
       ]
     },
     {
@@ -13387,6 +13606,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -13477,7 +13697,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "6583893da32b",
@@ -13518,7 +13740,6 @@
       "latitude": 25.05451116666667,
       "longitude": 121.549255,
       "people": [
-        "Sharon",
         "郭泊彤Sophia"
       ]
     },
@@ -13533,6 +13754,7 @@
       "latitude": 25.04157783333333,
       "longitude": 121.5440833333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -13559,9 +13781,7 @@
       "location": "台北/基隆",
       "latitude": 25.0544555,
       "longitude": 121.5494,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "1c27582d2e63",
@@ -13598,6 +13818,7 @@
       "latitude": 25.06328883333333,
       "longitude": 121.548905,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -13679,6 +13900,7 @@
       "latitude": 25.06369716666667,
       "longitude": 121.5483083333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -13744,6 +13966,7 @@
       "latitude": 25.06328883333333,
       "longitude": 121.548905,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -13787,6 +14010,7 @@
       "latitude": 25.06369716666667,
       "longitude": 121.5483083333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -13871,6 +14095,7 @@
       "latitude": 25.04157783333333,
       "longitude": 121.5440833333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -13924,6 +14149,7 @@
       "latitude": 25.04148616666667,
       "longitude": 121.5440616666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -13939,6 +14165,7 @@
       "latitude": 25.0544555,
       "longitude": 121.54933,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -13967,6 +14194,7 @@
       "latitude": 25.06328883333333,
       "longitude": 121.548905,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -14044,6 +14272,7 @@
       "latitude": 25.05446116666667,
       "longitude": 121.54937,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -14099,6 +14328,7 @@
       "latitude": 25.04528616666667,
       "longitude": 121.548845,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -14167,6 +14397,7 @@
       "latitude": 25.06305833333333,
       "longitude": 121.5888216666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -14220,6 +14451,7 @@
       "latitude": 25.0620945,
       "longitude": 121.5870216666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -14234,7 +14466,9 @@
       "location": "台北/基隆",
       "latitude": 25.062325,
       "longitude": 121.5871966666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0128223741a8",
@@ -14386,6 +14620,7 @@
       "latitude": 25.0620945,
       "longitude": 121.5870216666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -14608,6 +14843,7 @@
       "latitude": 25.08035,
       "longitude": 121.5546283333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -14675,6 +14911,7 @@
       "latitude": 25.063075,
       "longitude": 121.5888533333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -14689,7 +14926,9 @@
       "location": "台北/基隆",
       "latitude": 25.03500833333333,
       "longitude": 121.5593866666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "854d23420cf5",
@@ -14732,6 +14971,7 @@
       "latitude": 25.06333616666667,
       "longitude": 121.548455,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -14760,6 +15000,7 @@
       "latitude": 25.04521383333333,
       "longitude": 121.54892,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -14952,6 +15193,7 @@
       "latitude": 25.0322945,
       "longitude": 121.5576083333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -15031,6 +15273,7 @@
       "latitude": 25.0322945,
       "longitude": 121.5576083333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -15057,7 +15300,9 @@
       "location": "台北/基隆",
       "latitude": 25.08035283333333,
       "longitude": 121.55513,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "9b1126eb7912",
@@ -15106,6 +15351,7 @@
       "latitude": 25.0322945,
       "longitude": 121.5576083333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -15148,6 +15394,7 @@
       "latitude": 25.08035,
       "longitude": 121.5546283333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -15234,6 +15481,7 @@
       "latitude": 25.04528616666667,
       "longitude": 121.548845,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -15285,6 +15533,7 @@
       "latitude": 25.0620945,
       "longitude": 121.5870216666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -15327,6 +15576,7 @@
       "latitude": 25.04521383333333,
       "longitude": 121.54892,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -15546,7 +15796,9 @@
       "location": "台北/基隆",
       "latitude": 25.06418616666667,
       "longitude": 121.5876783333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "bca799522710",
@@ -15630,9 +15882,7 @@
       "location": "台北/基隆",
       "latitude": 25.04406666666667,
       "longitude": 121.5421133333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "0dad9a01988a",
@@ -15796,9 +16046,7 @@
       "location": "台北/基隆",
       "latitude": 24.95625833333333,
       "longitude": 121.53643,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "73c2903e31cf",
@@ -15926,9 +16174,7 @@
       "location": "台北/基隆",
       "latitude": 24.95625,
       "longitude": 121.5364383333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "a531b1167e99",
@@ -15940,9 +16186,7 @@
       "location": "台北/基隆",
       "latitude": 25.04406666666667,
       "longitude": 121.5421616666667,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "cc2b0c1fb907",
@@ -16054,7 +16298,9 @@
       "location": "台北/基隆",
       "latitude": 25.04078616666667,
       "longitude": 121.5511033333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "6d9a9c62826b",
@@ -16093,6 +16339,7 @@
       "latitude": 24.91637,
       "longitude": 121.4336166666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -16376,6 +16623,7 @@
       "latitude": 25.0621055,
       "longitude": 121.549255,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -16390,6 +16638,7 @@
       "latitude": 25.05366383333334,
       "longitude": 121.614455,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -16415,7 +16664,9 @@
       "location": "台北/基隆",
       "latitude": 25.05440283333333,
       "longitude": 121.480995,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "46397e62ff4e",
@@ -16427,7 +16678,9 @@
       "location": "台北/基隆",
       "latitude": 25.05440283333333,
       "longitude": 121.480995,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "bb5cbac117ad",
@@ -16440,6 +16693,7 @@
       "latitude": 25.06249166666667,
       "longitude": 121.5512916666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -16454,6 +16708,7 @@
       "latitude": 25.05366383333334,
       "longitude": 121.614455,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -16468,6 +16723,7 @@
       "latitude": 25.06214166666667,
       "longitude": 121.5494533333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -16481,7 +16737,9 @@
       "location": "台北/基隆",
       "latitude": 25.0544055,
       "longitude": 121.4809883333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f2c59f20cfc3",
@@ -16529,7 +16787,9 @@
       "location": "台北/基隆",
       "latitude": 25.0544055,
       "longitude": 121.4809716666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "d76009747dae",
@@ -16541,7 +16801,9 @@
       "location": "台北/基隆",
       "latitude": 25.05379166666667,
       "longitude": 121.61493,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "ce9ab0017abf",
@@ -16769,6 +17031,7 @@
       "latitude": 25.05068883333333,
       "longitude": 121.5502616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -16795,6 +17058,7 @@
       "latitude": 25.0805555,
       "longitude": 121.6023716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -16845,6 +17109,7 @@
       "latitude": 25.0805555,
       "longitude": 121.6023716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -16871,6 +17136,7 @@
       "latitude": 25.05068883333333,
       "longitude": 121.5502616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -16884,7 +17150,9 @@
       "location": "台北/基隆",
       "latitude": 25.043225,
       "longitude": 121.5425866666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "404e703ac55a",
@@ -16923,6 +17191,7 @@
       "latitude": 25.0805555,
       "longitude": 121.6023716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -17083,6 +17352,7 @@
       "latitude": 25.05051116666667,
       "longitude": 121.5502783333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -17133,6 +17403,7 @@
       "latitude": 25.03768616666667,
       "longitude": 121.5139083333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -17441,7 +17712,7 @@
       "latitude": 25.03808616666667,
       "longitude": 121.5137333333333,
       "people": [
-        "Sharon",
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -17468,6 +17739,7 @@
       "latitude": 25.03808616666667,
       "longitude": 121.5137333333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -17523,6 +17795,7 @@
       "latitude": 25.03766383333333,
       "longitude": 121.5139383333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -17578,6 +17851,7 @@
       "latitude": 24.86923333333333,
       "longitude": 121.5476083333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -17632,6 +17906,7 @@
       "latitude": 25.04371383333333,
       "longitude": 121.5422366666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -17647,6 +17922,7 @@
       "latitude": 24.86940333333333,
       "longitude": 121.5474616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -17705,6 +17981,7 @@
       "latitude": 25.06316383333333,
       "longitude": 121.5486216666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -17760,6 +18037,7 @@
       "latitude": 25.04371383333333,
       "longitude": 121.5422366666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -17799,6 +18077,7 @@
       "latitude": 24.869355,
       "longitude": 121.54773,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -17827,6 +18106,7 @@
       "latitude": 24.86890333333333,
       "longitude": 121.5476533333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -17854,6 +18134,7 @@
       "latitude": 25.04371383333333,
       "longitude": 121.5422366666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -17869,6 +18150,7 @@
       "latitude": 25.04054166666667,
       "longitude": 121.543555,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -17884,6 +18166,7 @@
       "latitude": 24.86935333333333,
       "longitude": 121.5477216666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -17962,6 +18245,7 @@
       "latitude": 24.86932,
       "longitude": 121.5474383333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -18067,6 +18351,7 @@
       "latitude": 25.03771116666667,
       "longitude": 121.5138633333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -18124,6 +18409,7 @@
       "latitude": 25.0376805,
       "longitude": 121.513855,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -18178,6 +18464,7 @@
       "latitude": 25.06311383333333,
       "longitude": 121.5485216666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -18292,6 +18579,7 @@
       "latitude": 25.0434195,
       "longitude": 121.5423583333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -18352,6 +18640,7 @@
       "latitude": 24.86890333333333,
       "longitude": 121.5476533333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -18367,6 +18656,7 @@
       "latitude": 24.86923333333333,
       "longitude": 121.5476083333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -18446,6 +18736,7 @@
       "latitude": 25.0434195,
       "longitude": 121.5423583333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -18475,6 +18766,7 @@
       "latitude": 24.86932,
       "longitude": 121.5474383333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -18580,6 +18872,7 @@
       "latitude": 24.869355,
       "longitude": 121.54773,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -18782,7 +19075,9 @@
       "location": "新竹/台中",
       "latitude": 24.741645,
       "longitude": 121.7527383333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "26e7c44b9f5a",
@@ -18904,7 +19199,9 @@
       "location": "新竹/台中",
       "latitude": 24.74257166666667,
       "longitude": 121.7528083333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "04e03289a56c",
@@ -18942,7 +19239,9 @@
       "location": "新竹/台中",
       "latitude": 24.74284666666667,
       "longitude": 121.7533716666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "fcb316e87b41",
@@ -19002,7 +19301,9 @@
       "location": "新竹/台中",
       "latitude": 24.7416,
       "longitude": 121.7527166666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "9e9add536c41",
@@ -19112,7 +19413,9 @@
       "location": "新竹/台中",
       "latitude": 24.7416,
       "longitude": 121.7527166666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "82535cf1d969",
@@ -19125,6 +19428,7 @@
       "latitude": 24.75563333333333,
       "longitude": 121.74872,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -19139,6 +19443,7 @@
       "latitude": 24.75563333333333,
       "longitude": 121.74872,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -19153,6 +19458,7 @@
       "latitude": 24.75563333333333,
       "longitude": 121.74872,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -19168,6 +19474,7 @@
       "latitude": 24.75563333333333,
       "longitude": 121.74872,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -19195,6 +19502,7 @@
       "latitude": 24.75562833333333,
       "longitude": 121.7487333333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -19258,6 +19566,7 @@
       "latitude": 24.15172783333333,
       "longitude": 120.643805,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -19308,7 +19617,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "c461743b4f2d",
@@ -19320,7 +19631,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "40dc17de1fee",
@@ -19346,7 +19659,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2529f1989d3c",
@@ -19358,7 +19673,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "eea747f70eda",
@@ -19370,7 +19687,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2aad44e82c46",
@@ -19382,7 +19701,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8f60b6fd5038",
@@ -19418,7 +19739,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f0ccf455e723",
@@ -19443,6 +19766,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -19480,7 +19804,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "b68ebb4a7121",
@@ -19588,7 +19914,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "7837736b60c9",
@@ -19600,7 +19928,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "3b7d6a39eb8e",
@@ -19612,7 +19942,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a9c4450b7fdd",
@@ -19624,7 +19956,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "733d053734ad",
@@ -19636,7 +19970,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "1ad9e8307924",
@@ -19660,7 +19996,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "e6e872eed4ed",
@@ -19672,7 +20010,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "d6c58723e414",
@@ -19696,7 +20036,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "987764d8ac95",
@@ -19708,7 +20050,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "d57b96087c46",
@@ -19732,7 +20076,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "122aba17458c",
@@ -19744,7 +20090,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "ea15f3ba5ef5",
@@ -19768,7 +20116,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "4be105665d0f",
@@ -19780,7 +20130,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a79047857a58",
@@ -19792,7 +20144,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5957df911352",
@@ -19816,7 +20170,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8c4ed62fef70",
@@ -19828,7 +20184,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "461cdf760dfe",
@@ -19840,7 +20198,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "e968f73cdf06",
@@ -19852,7 +20212,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8f5fbf319134",
@@ -19864,7 +20226,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2c496ac3874f",
@@ -19876,7 +20240,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "6b4bf437813b",
@@ -19888,7 +20254,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "92ff6a7c537b",
@@ -19900,7 +20268,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "afe7c3a8f9c3",
@@ -19912,7 +20282,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0e1b327d1426",
@@ -19924,7 +20296,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a25fec15b5be",
@@ -19936,7 +20310,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "dfba447eab1b",
@@ -19948,7 +20324,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "ba8bc958021b",
@@ -19984,7 +20362,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5c223d17edfc",
@@ -19996,7 +20376,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "419d1d7c2bf7",
@@ -20009,8 +20391,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon",
-        "郭泊彤Sophia"
+        "Sharon"
       ]
     },
     {
@@ -20036,6 +20417,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -20105,7 +20487,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "dfed3fe20da0",
@@ -20129,7 +20513,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "34faa9b6b0c3",
@@ -20142,6 +20528,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -20155,7 +20542,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8d79c5f45205",
@@ -20240,6 +20629,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -20459,9 +20849,7 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "97b74fdb134b",
@@ -20474,6 +20862,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -20516,6 +20905,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -20530,6 +20920,7 @@
       "latitude": 25.06323333333333,
       "longitude": 121.548775,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -20560,6 +20951,7 @@
       "latitude": 25.02605,
       "longitude": 121.5510116666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -20598,6 +20990,7 @@
       "latitude": 25.02631116666667,
       "longitude": 121.5491783333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -20638,6 +21031,7 @@
       "latitude": 25.06225283333333,
       "longitude": 121.5493,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -20653,6 +21047,7 @@
       "latitude": 25.12409716666667,
       "longitude": 121.9219666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -20793,6 +21188,7 @@
       "latitude": 25.06225283333333,
       "longitude": 121.5493,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -20861,6 +21257,7 @@
       "latitude": 25.06225283333333,
       "longitude": 121.5493,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -20937,7 +21334,9 @@
       "location": "台北/基隆",
       "latitude": 25.10971666666667,
       "longitude": 121.8452133333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "ddcada91963c",
@@ -20950,6 +21349,7 @@
       "latitude": 25.06328883333333,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -21105,7 +21505,9 @@
       "location": "台北/基隆",
       "latitude": 25.12423333333333,
       "longitude": 121.9215916666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f1a9a9a27d04",
@@ -21144,6 +21546,7 @@
       "latitude": 25.07662783333333,
       "longitude": 121.5614616666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -21200,7 +21603,9 @@
       "location": "台北/基隆",
       "latitude": 25.12357783333333,
       "longitude": 121.9213333333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "3b9b3c786b0f",
@@ -21306,6 +21711,7 @@
       "latitude": 25.12409716666667,
       "longitude": 121.9219666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -21525,6 +21931,7 @@
       "latitude": 25.12409716666667,
       "longitude": 121.9219666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -21562,7 +21969,9 @@
       "location": "台北/基隆",
       "latitude": 25.12598883333333,
       "longitude": 121.9215083333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "4f9e907c6e8c",
@@ -21575,6 +21984,7 @@
       "latitude": 25.07662783333333,
       "longitude": 121.5614616666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -21590,6 +22000,7 @@
       "latitude": 25.12409716666667,
       "longitude": 121.9219666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -21604,6 +22015,7 @@
       "latitude": 25.02631116666667,
       "longitude": 121.5491783333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -21630,6 +22042,7 @@
       "latitude": 25.12409716666667,
       "longitude": 121.9219666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -21644,6 +22057,7 @@
       "latitude": 25.06225283333333,
       "longitude": 121.5493,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -21712,6 +22126,7 @@
       "latitude": 25.04636116666667,
       "longitude": 121.5331283333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -21727,6 +22142,7 @@
       "latitude": 25.04636116666667,
       "longitude": 121.5331283333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -21801,6 +22217,7 @@
       "latitude": 25.04636116666667,
       "longitude": 121.5331283333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -21966,6 +22383,7 @@
       "latitude": 25.04620833333333,
       "longitude": 121.5331283333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -21981,6 +22399,7 @@
       "latitude": 25.04636116666667,
       "longitude": 121.5331283333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22063,6 +22482,7 @@
       "latitude": 25.04620833333333,
       "longitude": 121.5331283333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22118,6 +22538,7 @@
       "latitude": 25.034175,
       "longitude": 121.5872116666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -22144,6 +22565,7 @@
       "latitude": 25.03416116666667,
       "longitude": 121.5871716666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22199,6 +22621,7 @@
       "latitude": 25.0341555,
       "longitude": 121.5871716666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22279,6 +22702,7 @@
       "latitude": 25.0341555,
       "longitude": 121.5871716666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22305,7 +22729,9 @@
       "location": "台北/基隆",
       "latitude": 25.0311695,
       "longitude": 121.5868216666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "7752108f9c3c",
@@ -22330,6 +22756,7 @@
       "latitude": 25.0341555,
       "longitude": 121.5871716666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22372,6 +22799,7 @@
       "latitude": 25.034175,
       "longitude": 121.5872116666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -22470,6 +22898,7 @@
       "latitude": 25.00938333333333,
       "longitude": 121.4697116666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22485,6 +22914,7 @@
       "latitude": 25.00938333333333,
       "longitude": 121.4697116666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22556,6 +22986,7 @@
       "latitude": 25.0529305,
       "longitude": 121.5461583333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -22584,6 +23015,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22599,6 +23031,7 @@
       "latitude": 25.04389166666667,
       "longitude": 121.5800033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22638,6 +23071,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22689,6 +23123,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -22727,6 +23162,7 @@
       "latitude": 25.01396111666667,
       "longitude": 121.4660716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -22741,6 +23177,7 @@
       "latitude": 25.04389166666667,
       "longitude": 121.5800033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22756,6 +23193,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -22770,6 +23208,7 @@
       "latitude": 25.01369445,
       "longitude": 121.4659283333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -22822,6 +23261,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -22847,7 +23287,9 @@
       "location": "台北/基隆",
       "latitude": 25.04360833333334,
       "longitude": 121.5803,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "18ebc2aaa63d",
@@ -22859,7 +23301,9 @@
       "location": "台北/基隆",
       "latitude": 25.13751666666667,
       "longitude": 121.5110383333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "35b2cdffe0ca",
@@ -22872,6 +23316,7 @@
       "latitude": 25.04357216666667,
       "longitude": 121.5802083333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -22886,6 +23331,7 @@
       "latitude": 25.04356116666667,
       "longitude": 121.5801866666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22930,6 +23376,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22945,6 +23392,7 @@
       "latitude": 25.04389166666667,
       "longitude": 121.5800033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -22960,6 +23408,7 @@
       "latitude": 25.01385,
       "longitude": 121.4659416666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -22986,6 +23435,7 @@
       "latitude": 25.0438305,
       "longitude": 121.5799033333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23000,6 +23450,7 @@
       "latitude": 25.01385,
       "longitude": 121.4659716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23041,6 +23492,7 @@
       "latitude": 25.04395,
       "longitude": 121.5799633333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -23084,6 +23536,7 @@
       "latitude": 25.013775,
       "longitude": 121.46592,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23098,6 +23551,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23111,7 +23565,9 @@
       "location": "台北/基隆",
       "latitude": 25.05577216666667,
       "longitude": 121.5479133333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "072d10682efa",
@@ -23154,6 +23610,7 @@
       "latitude": 25.04363883333333,
       "longitude": 121.5799633333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23168,6 +23625,7 @@
       "latitude": 25.04357216666667,
       "longitude": 121.5801916666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23258,6 +23716,7 @@
       "latitude": 25.06203333333333,
       "longitude": 121.547425,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23272,6 +23731,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -23287,6 +23747,7 @@
       "latitude": 25.05577216666667,
       "longitude": 121.5479133333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -23314,7 +23775,9 @@
       "location": "台北/基隆",
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "69866b68087d",
@@ -23363,6 +23826,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -23378,6 +23842,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23392,6 +23857,7 @@
       "latitude": 25.0439695,
       "longitude": 121.5799333333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -23445,6 +23911,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23473,6 +23940,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -23488,6 +23956,7 @@
       "latitude": 25.04357216666667,
       "longitude": 121.5801916666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -23516,6 +23985,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -23542,7 +24012,9 @@
       "location": "台北/基隆",
       "latitude": 25.05577216666667,
       "longitude": 121.5479133333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5a8a882d47fc",
@@ -23555,6 +24027,7 @@
       "latitude": 25.0439055,
       "longitude": 121.5795966666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -23568,7 +24041,9 @@
       "location": "台北/基隆",
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "276500b8ce70",
@@ -23659,6 +24134,7 @@
       "latitude": 25.043725,
       "longitude": 121.5799716666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -23687,6 +24163,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -23714,6 +24191,7 @@
       "latitude": 25.04360833333334,
       "longitude": 121.5802216666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -23742,6 +24220,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23756,6 +24235,7 @@
       "latitude": 25.06203333333333,
       "longitude": 121.547425,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23784,6 +24264,7 @@
       "latitude": 25.04371383333333,
       "longitude": 121.5800166666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23821,7 +24302,9 @@
       "location": "台北/基隆",
       "latitude": 25.13730283333333,
       "longitude": 121.5112083333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "6cb65ad8ba0c",
@@ -23834,6 +24317,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -23849,6 +24333,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23939,6 +24424,7 @@
       "latitude": 25.06203333333333,
       "longitude": 121.547425,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -23965,6 +24451,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -23993,6 +24480,7 @@
       "latitude": 25.04389716666667,
       "longitude": 121.5799716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24021,6 +24509,7 @@
       "latitude": 25.04357216666667,
       "longitude": 121.5802,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -24036,6 +24525,7 @@
       "latitude": 25.04389166666667,
       "longitude": 121.5800033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -24050,7 +24540,9 @@
       "location": "台北/基隆",
       "latitude": 25.05577216666667,
       "longitude": 121.5479133333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f8d30f247330",
@@ -24138,6 +24630,7 @@
       "latitude": 25.04376383333333,
       "longitude": 121.579995,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24152,6 +24645,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -24167,6 +24661,7 @@
       "latitude": 25.043775,
       "longitude": 121.5799716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24181,6 +24676,7 @@
       "latitude": 25.063375,
       "longitude": 121.5487666666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -24194,7 +24690,9 @@
       "location": "台北/基隆",
       "latitude": 25.05577216666667,
       "longitude": 121.5479133333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "dabb2f44801a",
@@ -24207,6 +24705,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24233,6 +24732,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24247,6 +24747,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24299,6 +24800,7 @@
       "latitude": 25.0549305,
       "longitude": 121.556145,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24313,6 +24815,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24327,6 +24830,7 @@
       "latitude": 25.0549305,
       "longitude": 121.556145,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24341,6 +24845,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24355,6 +24860,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24395,6 +24901,7 @@
       "latitude": 25.0549305,
       "longitude": 121.556145,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24409,6 +24916,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24423,6 +24931,7 @@
       "latitude": 25.0549305,
       "longitude": 121.556145,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24437,6 +24946,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24477,6 +24987,7 @@
       "latitude": 25.0549305,
       "longitude": 121.556145,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24491,6 +25002,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24581,6 +25093,7 @@
       "latitude": 25.0825195,
       "longitude": 121.5595866666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -24658,6 +25171,7 @@
       "latitude": 25.0824055,
       "longitude": 121.5594783333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -24834,6 +25348,7 @@
       "latitude": 25.0822445,
       "longitude": 121.5595083333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -24873,6 +25388,7 @@
       "latitude": 25.0822445,
       "longitude": 121.5595166666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -24975,9 +25491,7 @@
       "location": "台北/基隆",
       "latitude": 25.08215,
       "longitude": 121.5595783333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "0b471780d08b",
@@ -25080,6 +25594,7 @@
       "latitude": 25.08249716666667,
       "longitude": 121.5595466666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25145,6 +25660,7 @@
       "latitude": 25.0822445,
       "longitude": 121.5595083333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25278,6 +25794,7 @@
       "latitude": 25.049825,
       "longitude": 121.5588133333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -25292,6 +25809,7 @@
       "latitude": 25.08047783333333,
       "longitude": 121.5590666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -25334,6 +25852,7 @@
       "latitude": 25.08047783333333,
       "longitude": 121.5590666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -25362,6 +25881,7 @@
       "latitude": 25.08045833333333,
       "longitude": 121.5588,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -25431,6 +25951,7 @@
       "latitude": 24.46973,
       "longitude": 120.96933,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -25568,6 +26089,7 @@
       "latitude": 24.46973,
       "longitude": 120.96933,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -25796,6 +26318,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25811,6 +26334,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25826,6 +26350,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25841,6 +26366,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25856,6 +26382,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25871,6 +26398,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25886,6 +26414,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25901,6 +26430,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25942,6 +26472,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -25998,7 +26529,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "20e274072b64",
@@ -26011,6 +26544,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26025,6 +26559,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26039,6 +26574,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26095,6 +26631,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26136,7 +26673,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "b9a541d3355e",
@@ -26148,7 +26687,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8b28a2864711",
@@ -26229,6 +26770,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26256,7 +26798,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "6d56e219a0de",
@@ -26283,6 +26827,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26297,6 +26842,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26325,6 +26871,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26353,6 +26900,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26380,7 +26928,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "bb40f07c91b8",
@@ -26406,7 +26956,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "9fc86ca109b1",
@@ -26432,7 +26984,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a88d6a00a3ab",
@@ -26487,6 +27041,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26540,7 +27095,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a8de0ccbbb53",
@@ -26580,7 +27137,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "845e4c866f2f",
@@ -26661,6 +27220,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26674,7 +27234,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "908fe55b3ca2",
@@ -26743,6 +27305,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -26758,6 +27321,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26772,6 +27336,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26800,6 +27365,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26813,7 +27379,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "fff10e9fbf73",
@@ -26908,6 +27476,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26935,7 +27504,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "21bcf4a6d8cf",
@@ -26948,6 +27519,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26962,6 +27534,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26976,6 +27549,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -26989,7 +27563,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5a24e640f466",
@@ -27001,7 +27577,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "e0a3f380fda8",
@@ -27055,7 +27633,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "72f0b83b209d",
@@ -27067,7 +27647,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "89d6caf1177e",
@@ -27163,7 +27745,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "1c7378e182c6",
@@ -27215,7 +27799,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "d2969a931588",
@@ -27284,6 +27870,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -27298,6 +27885,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -27325,7 +27913,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "c6d89c865202",
@@ -27351,7 +27941,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5b6610411ae6",
@@ -27378,6 +27970,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -27448,6 +28041,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -27604,7 +28198,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "郭泊彤Sophia"
+        "John"
       ]
     },
     {
@@ -27618,6 +28212,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -28132,6 +28727,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -28307,7 +28903,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "6010395e4912",
@@ -28348,6 +28946,7 @@
       "latitude": 25.050725,
       "longitude": 121.5483866666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -28435,6 +29034,7 @@
       "latitude": 24.74236666666667,
       "longitude": 121.753425,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -28450,6 +29050,7 @@
       "latitude": 24.74252833333333,
       "longitude": 121.7534783333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -28465,6 +29066,7 @@
       "latitude": 24.74242,
       "longitude": 121.753495,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -28506,6 +29108,7 @@
       "latitude": 25.03558616666667,
       "longitude": 121.5676883333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -28533,6 +29136,7 @@
       "latitude": 25.03558616666667,
       "longitude": 121.5676883333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -28572,6 +29176,7 @@
       "latitude": 25.03655,
       "longitude": 121.56565,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -28601,6 +29206,7 @@
       "latitude": 25.03605833333333,
       "longitude": 121.566475,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -28718,6 +29324,7 @@
       "latitude": 25.035025,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -28732,6 +29339,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -28806,6 +29414,7 @@
       "latitude": 25.0340195,
       "longitude": 121.567345,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -28844,6 +29453,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -28870,6 +29480,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -28896,6 +29507,7 @@
       "latitude": 25.03655,
       "longitude": 121.56565,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -28910,6 +29522,7 @@
       "latitude": 25.035025,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -28948,6 +29561,7 @@
       "latitude": 25.035025,
       "longitude": 121.5690616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -29016,6 +29630,7 @@
       "latitude": 25.03631116666667,
       "longitude": 121.5656583333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -29030,6 +29645,7 @@
       "latitude": 25.03655,
       "longitude": 121.56565,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -29044,6 +29660,7 @@
       "latitude": 25.0357805,
       "longitude": 121.5679333333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -29095,6 +29712,7 @@
       "latitude": 25.03452783333333,
       "longitude": 121.5670866666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -29121,6 +29739,7 @@
       "latitude": 25.033825,
       "longitude": 121.56733,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -29135,6 +29754,7 @@
       "latitude": 25.0357805,
       "longitude": 121.5679333333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -29162,6 +29782,7 @@
       "latitude": 25.03631116666667,
       "longitude": 121.5656583333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -29200,6 +29821,7 @@
       "latitude": 25.12376116666667,
       "longitude": 121.4561383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -29254,6 +29876,7 @@
       "latitude": 25.12376116666667,
       "longitude": 121.4561383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -29430,7 +30053,7 @@
       "latitude": 24.16688,
       "longitude": 120.6396116666667,
       "people": [
-        "Sharon"
+        "John"
       ]
     },
     {
@@ -29493,7 +30116,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.16688666666667,
       "longitude": 120.6395633333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "72b3e4b07220",
@@ -29542,6 +30167,7 @@
       "latitude": 24.82774166666667,
       "longitude": 121.7754666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -29556,6 +30182,7 @@
       "latitude": 25.0801305,
       "longitude": 121.5583033333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -29687,6 +30314,7 @@
       "latitude": 24.829225,
       "longitude": 121.77398,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -29749,6 +30377,7 @@
       "latitude": 24.82880333333333,
       "longitude": 121.7742616666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -29864,6 +30493,7 @@
       "latitude": 25.04499716666667,
       "longitude": 121.529245,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -30090,6 +30720,7 @@
       "latitude": 25.0439195,
       "longitude": 121.5513833333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -30338,6 +30969,7 @@
       "latitude": 25.08015,
       "longitude": 121.5587466666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -30484,6 +31116,7 @@
       "latitude": 25.0439195,
       "longitude": 121.5513833333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -30603,6 +31236,7 @@
       "latitude": 25.0334,
       "longitude": 121.5607216666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -30617,6 +31251,7 @@
       "latitude": 25.0523695,
       "longitude": 121.5484166666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -30685,9 +31320,7 @@
       "location": "台北/基隆",
       "latitude": 25.0631305,
       "longitude": 121.54863,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "32487ad5f40c",
@@ -30700,6 +31333,7 @@
       "latitude": 25.05239716666667,
       "longitude": 121.54837,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -30729,6 +31363,7 @@
       "latitude": 25.05695283333333,
       "longitude": 121.6168666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -30756,7 +31391,9 @@
       "location": "台北/基隆",
       "latitude": 25.062625,
       "longitude": 121.547675,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2d125eb79400",
@@ -30808,7 +31445,9 @@
       "location": "台北/基隆",
       "latitude": 25.062575,
       "longitude": 121.5473633333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "00d30f21e441",
@@ -30821,6 +31460,7 @@
       "latitude": 25.05239716666667,
       "longitude": 121.54837,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -30849,6 +31489,7 @@
       "latitude": 25.0523695,
       "longitude": 121.5484166666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -30878,6 +31519,7 @@
       "latitude": 25.05238616666667,
       "longitude": 121.5483866666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -30892,6 +31534,7 @@
       "latitude": 25.0332695,
       "longitude": 121.5603466666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -30932,6 +31575,7 @@
       "latitude": 25.05695283333333,
       "longitude": 121.6168666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -30998,6 +31642,7 @@
       "latitude": 25.062625,
       "longitude": 121.547675,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -31092,6 +31737,7 @@
       "latitude": 25.0334,
       "longitude": 121.5607216666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31169,7 +31815,9 @@
       "location": "台北/基隆",
       "latitude": 25.062625,
       "longitude": 121.547675,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "e5d7bee0799f",
@@ -31182,6 +31830,7 @@
       "latitude": 25.062625,
       "longitude": 121.547675,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -31222,6 +31871,7 @@
       "latitude": 25.05695283333333,
       "longitude": 121.6168666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31250,6 +31900,7 @@
       "latitude": 25.0332695,
       "longitude": 121.5603466666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31264,6 +31915,7 @@
       "latitude": 25.05239716666667,
       "longitude": 121.54837,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -31306,7 +31958,9 @@
       "location": "台北/基隆",
       "latitude": 25.06255283333333,
       "longitude": 121.5472033333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5bdd36af0b57",
@@ -31371,6 +32025,7 @@
       "latitude": 25.03328616666667,
       "longitude": 121.560395,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31399,6 +32054,7 @@
       "latitude": 24.29921666666667,
       "longitude": 120.7338166666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31425,6 +32081,7 @@
       "latitude": 24.29577833333333,
       "longitude": 120.73362,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31507,6 +32164,7 @@
       "latitude": 24.299325,
       "longitude": 120.7336666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31546,7 +32204,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.2992,
       "longitude": 120.733825,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "703c6dc2ffee",
@@ -31572,7 +32232,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.23386166666667,
       "longitude": 120.8083633333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "921d18c441e6",
@@ -31585,7 +32247,7 @@
       "latitude": 24.29587833333333,
       "longitude": 120.7336283333333,
       "people": [
-        "Sharon"
+        "John"
       ]
     },
     {
@@ -31599,6 +32261,7 @@
       "latitude": 24.232905,
       "longitude": 120.8072283333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31695,6 +32358,7 @@
       "latitude": 24.29577833333333,
       "longitude": 120.73362,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31721,6 +32385,7 @@
       "latitude": 24.22896666666667,
       "longitude": 120.8098216666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31772,7 +32437,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.23311166666667,
       "longitude": 120.80722,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0986e778d475",
@@ -31797,6 +32464,7 @@
       "latitude": 24.23291166666667,
       "longitude": 120.8071966666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31811,6 +32479,7 @@
       "latitude": 24.299245,
       "longitude": 120.7336716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -31864,7 +32533,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.22979166666667,
       "longitude": 120.8088616666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "58b1b1b0b594",
@@ -32143,6 +32814,7 @@
       "latitude": 25.0620945,
       "longitude": 121.5507283333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -32539,6 +33211,7 @@
       "latitude": 25.06217216666667,
       "longitude": 121.5499883333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -32595,6 +33268,7 @@
       "latitude": 25.06158883333333,
       "longitude": 121.5421,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -32647,6 +33321,7 @@
       "latitude": 25.05956383333333,
       "longitude": 121.5332116666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -32759,6 +33434,7 @@
       "latitude": 25.05819716666667,
       "longitude": 121.5337366666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -32773,6 +33449,7 @@
       "latitude": 25.05819716666667,
       "longitude": 121.5337366666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -32787,6 +33464,7 @@
       "latitude": 25.06159166666666,
       "longitude": 121.5421,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -32851,6 +33529,7 @@
       "latitude": 25.06158883333333,
       "longitude": 121.5421,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -32915,6 +33594,7 @@
       "latitude": 25.05956383333333,
       "longitude": 121.5332116666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -32929,6 +33609,7 @@
       "latitude": 25.05819716666667,
       "longitude": 121.5337366666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -32955,6 +33636,7 @@
       "latitude": 25.06159166666666,
       "longitude": 121.5421,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -33033,6 +33715,7 @@
       "latitude": 25.13194166666667,
       "longitude": 121.549745,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -33047,6 +33730,7 @@
       "latitude": 25.13193616666667,
       "longitude": 121.549775,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -33098,9 +33782,7 @@
       "location": "台北/基隆",
       "latitude": 25.0343445,
       "longitude": 121.5652466666667,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "9ae717f473f6",
@@ -33125,6 +33807,7 @@
       "latitude": 25.13174716666667,
       "longitude": 121.549775,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -33175,6 +33858,7 @@
       "latitude": 25.02603883333333,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -33250,9 +33934,7 @@
       "location": "台北/基隆",
       "latitude": 25.03441383333333,
       "longitude": 121.5652916666667,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "29bf28e589bd",
@@ -33351,6 +34033,7 @@
       "latitude": 25.13194166666667,
       "longitude": 121.5497666666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -33524,9 +34207,7 @@
       "location": "台北/基隆",
       "latitude": 25.03114716666667,
       "longitude": 121.5295333333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "faa105ce7715",
@@ -33565,6 +34246,7 @@
       "latitude": 25.02603883333333,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -33579,6 +34261,7 @@
       "latitude": 25.1317445,
       "longitude": 121.549775,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -33728,7 +34411,9 @@
       "location": "台北/基隆",
       "latitude": 25.05308616666667,
       "longitude": 121.5511033333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "88a66fe6dfac",
@@ -33778,9 +34463,7 @@
       "location": "台北/基隆",
       "latitude": 25.0341445,
       "longitude": 121.5651866666667,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "9cb1d4b42f52",
@@ -33842,7 +34525,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.16075,
       "longitude": 120.6706083333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "7baf9e9b532d",
@@ -33866,9 +34551,7 @@
       "location": "台北/基隆",
       "latitude": 25.05946116666667,
       "longitude": 121.5408166666667,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "4c44de01efcd",
@@ -33893,6 +34576,7 @@
       "latitude": 25.06166116666667,
       "longitude": 121.5421,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -33932,6 +34616,7 @@
       "latitude": 25.0801695,
       "longitude": 121.5598966666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -34035,6 +34720,7 @@
       "latitude": 25.0801695,
       "longitude": 121.5598966666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -34049,6 +34735,7 @@
       "latitude": 25.0801695,
       "longitude": 121.5598966666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -34087,6 +34774,7 @@
       "latitude": 25.0801695,
       "longitude": 121.5598966666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -34125,6 +34813,7 @@
       "latitude": 25.05944716666666,
       "longitude": 121.5408383333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -34154,6 +34843,7 @@
       "latitude": 25.0801695,
       "longitude": 121.5598966666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -34219,6 +34909,7 @@
       "latitude": 25.08024716666667,
       "longitude": 121.55963,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -34245,6 +34936,7 @@
       "latitude": 25.0806445,
       "longitude": 121.55825,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -34271,6 +34963,7 @@
       "latitude": 25.03552783333333,
       "longitude": 121.5666716666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34285,6 +34978,7 @@
       "latitude": 25.0345805,
       "longitude": 121.5662166666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -34300,6 +34994,7 @@
       "latitude": 25.03542216666667,
       "longitude": 121.56662,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34314,6 +35009,7 @@
       "latitude": 25.03509166666667,
       "longitude": 121.5686283333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34328,6 +35024,7 @@
       "latitude": 25.0354695,
       "longitude": 121.56682,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34371,6 +35068,7 @@
       "latitude": 25.03548333333333,
       "longitude": 121.5666666666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34465,6 +35163,7 @@
       "latitude": 25.035075,
       "longitude": 121.5685883333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -34520,6 +35219,7 @@
       "latitude": 25.03721116666667,
       "longitude": 121.5665666666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34547,7 +35247,9 @@
       "location": "台北/基隆",
       "latitude": 25.03419166666667,
       "longitude": 121.5667283333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "c6bedac31e60",
@@ -34602,6 +35304,7 @@
       "latitude": 25.03549166666667,
       "longitude": 121.5666116666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34654,6 +35357,7 @@
       "latitude": 25.0341445,
       "longitude": 121.5666366666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34696,6 +35400,7 @@
       "latitude": 25.03448616666667,
       "longitude": 121.56665,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34724,6 +35429,7 @@
       "latitude": 25.0354055,
       "longitude": 121.5667416666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -34738,6 +35444,7 @@
       "latitude": 25.03473616666667,
       "longitude": 121.5662383333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -34981,6 +35688,7 @@
       "latitude": 25.03641383333333,
       "longitude": 121.56678,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35009,8 +35717,7 @@
       "latitude": 25.0363305,
       "longitude": 121.5667716666667,
       "people": [
-        "Sharon",
-        "郭泊彤Sophia"
+        "Sharon"
       ]
     },
     {
@@ -35048,6 +35755,7 @@
       "latitude": 25.0371555,
       "longitude": 121.5670916666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35116,6 +35824,7 @@
       "latitude": 25.0362555,
       "longitude": 121.5668866666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -35129,7 +35838,9 @@
       "location": "台北/基隆",
       "latitude": 25.04067783333333,
       "longitude": 121.5671216666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "993a631735b2",
@@ -35141,7 +35852,9 @@
       "location": "台北/基隆",
       "latitude": 25.0371555,
       "longitude": 121.5670916666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "110a17f57e4e",
@@ -35178,6 +35891,7 @@
       "latitude": 25.0371555,
       "longitude": 121.5670916666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -35204,6 +35918,7 @@
       "latitude": 25.0371555,
       "longitude": 121.5670916666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -35219,6 +35934,7 @@
       "latitude": 25.0371555,
       "longitude": 121.5670916666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -35259,7 +35975,9 @@
       "location": "台北/基隆",
       "latitude": 25.037425,
       "longitude": 121.5673133333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "9a03d22d7e81",
@@ -35343,7 +36061,9 @@
       "location": "臺中市",
       "latitude": 24.14601116666667,
       "longitude": 120.7137616666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "527de6fd059c",
@@ -35356,6 +36076,7 @@
       "latitude": 24.14601116666667,
       "longitude": 120.7137616666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -35493,6 +36214,7 @@
       "latitude": 22.53082166666667,
       "longitude": 120.968505,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35507,6 +36229,7 @@
       "latitude": 22.50758,
       "longitude": 120.9589383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35545,6 +36268,7 @@
       "latitude": 22.53082166666667,
       "longitude": 120.9684966666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35635,6 +36359,7 @@
       "latitude": 22.53082166666667,
       "longitude": 120.9684966666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35661,6 +36386,7 @@
       "latitude": 22.50751666666667,
       "longitude": 120.9588916666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35689,6 +36415,7 @@
       "latitude": 22.50760833333333,
       "longitude": 120.9589383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35753,6 +36480,7 @@
       "latitude": 22.53083833333333,
       "longitude": 120.968505,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35781,6 +36509,7 @@
       "latitude": 22.50759166666667,
       "longitude": 120.9589533333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35807,6 +36536,7 @@
       "latitude": 22.53082833333333,
       "longitude": 120.9685133333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35835,6 +36565,7 @@
       "latitude": 22.50751666666667,
       "longitude": 120.9588916666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35887,6 +36618,7 @@
       "latitude": 22.530825,
       "longitude": 120.968505,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -35925,6 +36657,7 @@
       "latitude": 22.50752,
       "longitude": 120.9589083333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -36015,6 +36748,7 @@
       "latitude": 22.53082166666667,
       "longitude": 120.968505,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -36100,7 +36834,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "85b74df256b3",
@@ -36125,6 +36861,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36140,6 +36877,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36183,7 +36921,9 @@
       "location": "台北/基隆",
       "latitude": 25.016425,
       "longitude": 121.540305,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "9f0b65a09961",
@@ -36196,6 +36936,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36211,6 +36952,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36266,6 +37008,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36281,6 +37024,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36325,6 +37069,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36340,6 +37085,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36355,6 +37101,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36370,6 +37117,7 @@
       "latitude": 25.01635833333333,
       "longitude": 121.5404133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -36384,7 +37132,9 @@
       "location": "台北/基隆",
       "latitude": 25.01634721666667,
       "longitude": 121.54045,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "24bf7151f537",
@@ -36504,9 +37254,7 @@
       "location": "太保市",
       "latitude": 23.47365,
       "longitude": 120.29258,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "cb4e1a99717b",
@@ -36546,9 +37294,7 @@
       "location": "太保市",
       "latitude": 23.47098,
       "longitude": 120.2934283333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "e77554e007e1",
@@ -36586,9 +37332,7 @@
       "location": "太保市",
       "latitude": 23.47143666666667,
       "longitude": 120.2921216666667,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "c0cf8461a97c",
@@ -36626,9 +37370,7 @@
       "location": "太保市",
       "latitude": 23.47098,
       "longitude": 120.29345,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "05618668e54f",
@@ -36773,6 +37515,7 @@
       "latitude": 24.82976666666667,
       "longitude": 121.7508,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -36787,6 +37530,7 @@
       "latitude": 24.82977166666667,
       "longitude": 121.7507783333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -36865,6 +37609,7 @@
       "latitude": 24.82977166666667,
       "longitude": 121.7507783333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -36879,6 +37624,7 @@
       "latitude": 24.82977166666667,
       "longitude": 121.7507333333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -37111,6 +37857,7 @@
       "latitude": 23.94526666666667,
       "longitude": 121.1877366666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -37148,7 +37895,9 @@
       "location": "仁愛鄉",
       "latitude": 23.953545,
       "longitude": 121.1778033333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f68d3682ebf8",
@@ -37346,9 +38095,7 @@
       "location": "仁愛鄉",
       "latitude": 23.95221333333333,
       "longitude": 121.180825,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "5f239aa9c6d4",
@@ -37361,6 +38108,7 @@
       "latitude": 23.95355,
       "longitude": 121.1781083333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -37423,7 +38171,7 @@
       "latitude": 23.94491333333333,
       "longitude": 121.1912083333333,
       "people": [
-        "Sharon"
+        "John"
       ]
     },
     {
@@ -37479,6 +38227,7 @@
       "latitude": 23.95352,
       "longitude": 121.1781383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -37528,9 +38277,7 @@
       "location": "仁愛鄉",
       "latitude": 23.94619666666667,
       "longitude": 121.1883083333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "f521859e4fb1",
@@ -37554,9 +38301,7 @@
       "location": "仁愛鄉",
       "latitude": 23.94618,
       "longitude": 121.186845,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "7687aaee14ee",
@@ -37622,7 +38367,9 @@
       "location": "仁愛鄉",
       "latitude": 23.94537833333333,
       "longitude": 121.1877133333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "04315ece71f8",
@@ -37647,6 +38394,7 @@
       "latitude": 23.95355333333333,
       "longitude": 121.1781083333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -37733,6 +38481,7 @@
       "latitude": 23.94527,
       "longitude": 121.187705,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -37770,7 +38519,9 @@
       "location": "仁愛鄉",
       "latitude": 23.94490833333333,
       "longitude": 121.1912083333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2b95d5eb5a99",
@@ -37797,6 +38548,7 @@
       "latitude": 23.94522833333333,
       "longitude": 121.1877533333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -37906,7 +38658,9 @@
       "location": "仁愛鄉",
       "latitude": 23.95352833333333,
       "longitude": 121.17813,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "9f9d4667637c",
@@ -37919,6 +38673,7 @@
       "latitude": 23.946045,
       "longitude": 121.19075,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -37971,6 +38726,7 @@
       "latitude": 25.14491666666667,
       "longitude": 121.558975,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -38032,7 +38788,9 @@
       "location": "臺北市",
       "latitude": 25.14485283333333,
       "longitude": 121.5587466666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "cc046bb206db",
@@ -38109,7 +38867,7 @@
       "latitude": 24.14266116666667,
       "longitude": 121.271225,
       "people": [
-        "Sharon",
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -38174,7 +38932,6 @@
       "latitude": 24.03761383333333,
       "longitude": 121.1588888333333,
       "people": [
-        "Sharon",
         "郭泊彤Sophia"
       ]
     },
@@ -38266,10 +39023,7 @@
       "location": "仁愛鄉",
       "latitude": 24.03761383333333,
       "longitude": 121.1589055,
-      "people": [
-        "Sharon",
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "1d4ad8cc6daa",
@@ -38306,6 +39060,7 @@
       "latitude": 24.14265833333333,
       "longitude": 121.271225,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -38397,7 +39152,7 @@
       "latitude": 24.03763333333333,
       "longitude": 121.158975,
       "people": [
-        "郭泊彤Sophia"
+        "John"
       ]
     },
     {
@@ -38411,6 +39166,7 @@
       "latitude": 24.14265833333333,
       "longitude": 121.271225,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -38453,6 +39209,7 @@
       "latitude": 24.0377555,
       "longitude": 121.1586695,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -38544,9 +39301,7 @@
       "location": "仁愛鄉",
       "latitude": 24.03763616666667,
       "longitude": 121.1589195,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "ddda5a5da43a",
@@ -38571,6 +39326,7 @@
       "latitude": 24.037475,
       "longitude": 121.1588361666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -38704,7 +39460,6 @@
       "latitude": 24.14266383333333,
       "longitude": 121.2712333333333,
       "people": [
-        "Sharon",
         "郭泊彤Sophia"
       ]
     },
@@ -38731,6 +39486,7 @@
       "latitude": 24.03753333333333,
       "longitude": 121.1587445,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -38849,6 +39605,7 @@
       "latitude": 24.03757783333333,
       "longitude": 121.1587138333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -38961,6 +39718,7 @@
       "latitude": 24.03763333333333,
       "longitude": 121.158975,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -38975,6 +39733,7 @@
       "latitude": 24.14265833333333,
       "longitude": 121.271225,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -38990,6 +39749,7 @@
       "latitude": 24.14265833333333,
       "longitude": 121.271225,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -39005,7 +39765,7 @@
       "latitude": 24.14266383333333,
       "longitude": 121.2712333333333,
       "people": [
-        "Sharon",
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -39020,6 +39780,7 @@
       "latitude": 24.14265833333333,
       "longitude": 121.271225,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -39034,6 +39795,7 @@
       "latitude": 24.0376195,
       "longitude": 121.1590055,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -39158,6 +39920,7 @@
       "latitude": 24.80223666666667,
       "longitude": 120.9927666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -39173,6 +39936,7 @@
       "latitude": 24.80233666666667,
       "longitude": 120.99285,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -39188,6 +39952,7 @@
       "latitude": 24.80245333333333,
       "longitude": 120.99285,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -39368,6 +40133,7 @@
       "latitude": 24.82969166666667,
       "longitude": 121.7514716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -39382,6 +40148,7 @@
       "latitude": 24.82969166666667,
       "longitude": 121.7514716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -39502,6 +40269,7 @@
       "latitude": 24.883695,
       "longitude": 121.8361583333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -39528,6 +40296,7 @@
       "latitude": 24.86211166666667,
       "longitude": 121.829475,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -39704,6 +40473,7 @@
       "latitude": 24.86206166666667,
       "longitude": 121.82968,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -39800,6 +40570,7 @@
       "latitude": 24.862075,
       "longitude": 121.8295533333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -39867,7 +40638,9 @@
       "location": "頭城鎮",
       "latitude": 24.86934666666667,
       "longitude": 121.8344883333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "1b965510a32b",
@@ -39894,6 +40667,7 @@
       "latitude": 24.883705,
       "longitude": 121.8361583333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -39960,6 +40734,7 @@
       "latitude": 24.883705,
       "longitude": 121.8361583333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -40001,7 +40776,9 @@
       "location": "恆春鎮",
       "latitude": 21.93422166666667,
       "longitude": 120.718095,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "b3f5ffdb641c",
@@ -40101,7 +40878,9 @@
       "location": "恆春鎮",
       "latitude": 21.93425333333333,
       "longitude": 120.718055,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "bfb31879c305",
@@ -40495,7 +41274,9 @@
       "location": "恆春鎮",
       "latitude": 21.93425333333333,
       "longitude": 120.718055,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "d5c8b616ccda",
@@ -40647,9 +41428,7 @@
       "location": "車城鄉",
       "latitude": 22.04184166666667,
       "longitude": 120.6982283333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "a9ba3baa0d72",
@@ -40819,9 +41598,7 @@
       "location": "車城鄉",
       "latitude": 22.04174716666667,
       "longitude": 120.6982283333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "4115ff6b9cd2",
@@ -40845,9 +41622,7 @@
       "location": "車城鄉",
       "latitude": 22.0418555,
       "longitude": 120.69825,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "3cec6e401b1e",
@@ -40953,9 +41728,7 @@
       "location": "車城鄉",
       "latitude": 22.0418445,
       "longitude": 120.6982333333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "8c0ba8d6a2f5",
@@ -40991,9 +41764,7 @@
       "location": "車城鄉",
       "latitude": 22.04185,
       "longitude": 120.69825,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "1e3a68e22bae",
@@ -41043,9 +41814,7 @@
       "location": "車城鄉",
       "latitude": 22.04183333333333,
       "longitude": 120.6982633333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "f835aeba144b",
@@ -41085,9 +41854,7 @@
       "location": "車城鄉",
       "latitude": 22.0418305,
       "longitude": 120.69825,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "0adb3a5d1606",
@@ -41149,9 +41916,7 @@
       "location": "車城鄉",
       "latitude": 22.04183333333333,
       "longitude": 120.69828,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "42bda509b1f9",
@@ -41175,9 +41940,7 @@
       "location": "車城鄉",
       "latitude": 22.04171666666667,
       "longitude": 120.69825,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "0708f296b312",
@@ -41295,9 +42058,7 @@
       "location": "車城鄉",
       "latitude": 22.04171666666667,
       "longitude": 120.69825,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "373f214d82fa",
@@ -41423,9 +42184,7 @@
       "location": "車城鄉",
       "latitude": 22.0418305,
       "longitude": 120.6982333333333,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "a34472e5b169",
@@ -42005,7 +42764,9 @@
       "location": "大武鄉",
       "latitude": 22.35212833333333,
       "longitude": 120.9017866666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f5b019a5ce93",
@@ -42104,6 +42865,7 @@
       "latitude": 23.88495833333333,
       "longitude": 121.602425,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42275,9 +43037,7 @@
       "location": "壽豐鄉",
       "latitude": 23.88500333333333,
       "longitude": 121.6023116666667,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "9c04d174dd1b",
@@ -42423,7 +43183,9 @@
       "location": "壽豐鄉",
       "latitude": 23.88481333333333,
       "longitude": 121.60247,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0ecffaeb9b2e",
@@ -42447,7 +43209,9 @@
       "location": "壽豐鄉",
       "latitude": 23.88481666666667,
       "longitude": 121.602455,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "fab02791585f",
@@ -42519,9 +43283,7 @@
       "location": "壽豐鄉",
       "latitude": 23.88491166666667,
       "longitude": 121.60247,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "4278a2f95104",
@@ -42634,6 +43396,7 @@
       "latitude": 23.88496166666667,
       "longitude": 121.6024633333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42732,6 +43495,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42746,6 +43510,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42772,6 +43537,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42786,6 +43552,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42860,6 +43627,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42874,6 +43642,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42902,6 +43671,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42916,6 +43686,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42930,6 +43701,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -42956,6 +43728,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -42970,6 +43743,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -42984,6 +43758,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -42998,6 +43773,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -43012,6 +43788,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -43027,6 +43804,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -43041,6 +43819,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -43083,6 +43862,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -43111,6 +43891,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -43126,6 +43907,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -43366,7 +44148,9 @@
       "location": "太麻里鄉",
       "latitude": 22.69202166666667,
       "longitude": 121.0073083333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "9d4cb14ec92f",
@@ -43500,9 +44284,7 @@
       "location": "太麻里鄉",
       "latitude": 22.69123333333333,
       "longitude": 121.0071861166667,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "9689fbccd74a",
@@ -43912,9 +44694,7 @@
       "location": "台北/基隆",
       "latitude": 25.06323883333333,
       "longitude": 121.5485833333333,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "53d81843d73c",
@@ -44292,7 +45072,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.1632305,
       "longitude": 120.63517,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2ca80da3de1f",
@@ -44365,6 +45147,7 @@
       "latitude": 24.16338883333333,
       "longitude": 120.6349033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -45020,6 +45803,7 @@
       "latitude": 25.0397195,
       "longitude": 121.56707,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -45046,6 +45830,7 @@
       "latitude": 25.03981116666667,
       "longitude": 121.5670916666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -45145,6 +45930,7 @@
       "latitude": 25.03980833333333,
       "longitude": 121.5670916666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -45172,6 +45958,7 @@
       "latitude": 25.03981116666667,
       "longitude": 121.5670916666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -45222,6 +46009,7 @@
       "latitude": 25.0397195,
       "longitude": 121.56707,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -45489,6 +46277,7 @@
       "latitude": 25.0397195,
       "longitude": 121.56707,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -45514,7 +46303,9 @@
       "location": "台北/基隆",
       "latitude": 25.03981116666667,
       "longitude": 121.5670916666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "59892206d778",
@@ -45550,7 +46341,9 @@
       "location": "台北/基隆",
       "latitude": 25.0397195,
       "longitude": 121.56707,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "71a60660a91a",
@@ -45575,6 +46368,7 @@
       "latitude": 25.03978616666667,
       "longitude": 121.5670866666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -45914,6 +46708,7 @@
       "latitude": 25.0389,
       "longitude": 121.5559,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -46030,6 +46825,7 @@
       "latitude": 25.0389,
       "longitude": 121.5558783333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -46119,6 +46915,7 @@
       "latitude": 25.0389,
       "longitude": 121.5559083333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -46145,6 +46942,7 @@
       "latitude": 25.06302216666667,
       "longitude": 121.5485466666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -46171,6 +46969,7 @@
       "latitude": 25.06302216666667,
       "longitude": 121.5485166666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -46196,7 +46995,9 @@
       "location": "台北/基隆",
       "latitude": 25.03889716666667,
       "longitude": 121.5559083333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "1107a2e86520",
@@ -46259,7 +47060,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0edff5c0336f",
@@ -46324,6 +47127,7 @@
       "latitude": 24.49735333333333,
       "longitude": 121.843675,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -46430,6 +47234,7 @@
       "latitude": 24.49738666666667,
       "longitude": 121.8437633333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -46444,6 +47249,7 @@
       "latitude": 24.49739666666667,
       "longitude": 121.843675,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -46520,6 +47326,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -46557,7 +47364,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "99d4b45acf27",
@@ -46570,8 +47379,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon",
-        "郭泊彤Sophia"
+        "Sharon"
       ]
     },
     {
@@ -46597,6 +47405,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -46612,7 +47421,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon"
+        "John"
       ]
     },
     {
@@ -46685,7 +47494,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5420d9671ba8",
@@ -46697,7 +47508,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "e62217c35f38",
@@ -46733,7 +47546,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "bec9d2e72b66",
@@ -46745,7 +47560,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8588bef201a9",
@@ -46769,7 +47586,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "44674c2fae1b",
@@ -46782,6 +47601,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -46808,6 +47628,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -46989,7 +47810,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "72d7cddc0479",
@@ -47193,7 +48016,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f36705817444",
@@ -47496,6 +48321,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -47704,6 +48530,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -48252,6 +49079,7 @@
       "latitude": 25.03083616666667,
       "longitude": 121.5319366666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -48432,6 +49260,7 @@
       "latitude": 25.03083616666667,
       "longitude": 121.5319366666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -48471,7 +49300,9 @@
       "location": "台北/基隆",
       "latitude": 25.080125,
       "longitude": 121.560075,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "3b7ed46a5e6f",
@@ -48496,6 +49327,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -48510,6 +49342,7 @@
       "latitude": 25.0817945,
       "longitude": 121.5590216666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -48524,6 +49357,7 @@
       "latitude": 25.080625,
       "longitude": 121.5589616666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -48538,6 +49372,7 @@
       "latitude": 25.08221116666667,
       "longitude": 121.55973,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -48552,7 +49387,9 @@
       "location": "台北/基隆",
       "latitude": 25.080125,
       "longitude": 121.560075,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "ebccd3923a03",
@@ -48564,7 +49401,9 @@
       "location": "台北/基隆",
       "latitude": 25.080125,
       "longitude": 121.560075,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f388b58936d6",
@@ -48577,6 +49416,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -48603,6 +49443,7 @@
       "latitude": 25.0824695,
       "longitude": 121.5596,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -48667,6 +49508,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -48708,7 +49550,9 @@
       "location": "台北/基隆",
       "latitude": 25.080125,
       "longitude": 121.560075,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "737913c4544b",
@@ -48744,7 +49588,9 @@
       "location": "台北/基隆",
       "latitude": 25.080125,
       "longitude": 121.560075,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a7627d65cbf9",
@@ -48819,6 +49665,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -48846,6 +49693,7 @@
       "latitude": 25.0824055,
       "longitude": 121.5598666666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -48884,6 +49732,7 @@
       "latitude": 25.08223333333333,
       "longitude": 121.559945,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -48898,7 +49747,9 @@
       "location": "台北/基隆",
       "latitude": 25.08047783333333,
       "longitude": 121.558905,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "084e8fd07154",
@@ -48923,6 +49774,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -48938,6 +49790,7 @@
       "latitude": 25.08237783333333,
       "longitude": 121.5595166666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -48989,6 +49842,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49054,6 +49908,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -49104,6 +49959,7 @@
       "latitude": 25.080125,
       "longitude": 121.560075,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49133,6 +49989,7 @@
       "latitude": 25.08140283333333,
       "longitude": 121.5587616666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -49227,6 +50084,7 @@
       "latitude": 25.063425,
       "longitude": 121.5486966666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49268,6 +50126,7 @@
       "latitude": 25.0633305,
       "longitude": 121.5487366666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49295,6 +50154,7 @@
       "latitude": 25.06323883333333,
       "longitude": 121.5486966666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49310,6 +50170,7 @@
       "latitude": 25.06282216666667,
       "longitude": 121.5489366666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49361,6 +50222,7 @@
       "latitude": 25.06345833333333,
       "longitude": 121.5486533333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49432,7 +50294,9 @@
       "location": "台北/基隆",
       "latitude": 25.03511666666667,
       "longitude": 121.5689616666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "93f869d83211",
@@ -49471,6 +50335,7 @@
       "latitude": 25.06303883333333,
       "longitude": 121.5490333333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49486,6 +50351,7 @@
       "latitude": 25.06321383333333,
       "longitude": 121.5486366666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49525,6 +50391,7 @@
       "latitude": 25.06352216666667,
       "longitude": 121.5485466666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -49626,6 +50493,7 @@
       "latitude": 25.06317216666667,
       "longitude": 121.5486133333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -49744,6 +50612,7 @@
       "latitude": 25.06313883333333,
       "longitude": 121.548875,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -49801,6 +50670,7 @@
       "latitude": 25.0631695,
       "longitude": 121.5486366666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -49865,6 +50735,7 @@
       "latitude": 25.06316116666667,
       "longitude": 121.5486133333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -49891,7 +50762,6 @@
       "latitude": 25.06267783333333,
       "longitude": 121.54905,
       "people": [
-        "Sharon",
         "郭泊彤Sophia"
       ]
     },
@@ -49906,6 +50776,7 @@
       "latitude": 25.06303883333333,
       "longitude": 121.5490333333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -50146,9 +51017,7 @@
       "location": "台北/基隆",
       "latitude": 25.13916116666667,
       "longitude": 121.545975,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "f9899884ffa3",
@@ -50201,6 +51070,7 @@
       "latitude": 25.1395305,
       "longitude": 121.5305866666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -50310,6 +51180,7 @@
       "latitude": 25.13954166666667,
       "longitude": 121.5306383333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -50517,6 +51388,7 @@
       "latitude": 25.13956383333333,
       "longitude": 121.530555,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -50626,6 +51498,7 @@
       "latitude": 25.139525,
       "longitude": 121.5306383333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -50694,7 +51567,9 @@
       "location": "台北/基隆",
       "latitude": 25.0536945,
       "longitude": 121.6168666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "46d4df618029",
@@ -50743,6 +51618,7 @@
       "latitude": 25.02646666666667,
       "longitude": 121.5490716666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -50756,7 +51632,9 @@
       "location": "台北/基隆",
       "latitude": 25.0536945,
       "longitude": 121.6168666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0d38cfa03f6a",
@@ -50781,6 +51659,7 @@
       "latitude": 25.026675,
       "longitude": 121.54957,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -50806,7 +51685,9 @@
       "location": "台北/基隆",
       "latitude": 25.0536945,
       "longitude": 121.6168666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "1c73f5349fe0",
@@ -50819,6 +51700,7 @@
       "latitude": 25.03737783333333,
       "longitude": 121.56672,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -50833,6 +51715,7 @@
       "latitude": 25.02703616666667,
       "longitude": 121.54902,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -50846,7 +51729,9 @@
       "location": "台北/基隆",
       "latitude": 25.0536945,
       "longitude": 121.6168666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "1b812b2c61ca",
@@ -50873,6 +51758,7 @@
       "latitude": 25.02619166666667,
       "longitude": 121.5486833333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -50900,7 +51786,9 @@
       "location": "台北/基隆",
       "latitude": 25.0536945,
       "longitude": 121.6168666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "54fdb41e97d8",
@@ -50913,6 +51801,7 @@
       "latitude": 25.03698883333333,
       "longitude": 121.56665,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -50926,7 +51815,9 @@
       "location": "台北/基隆",
       "latitude": 25.0536945,
       "longitude": 121.6168666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "9651b3433e1e",
@@ -50952,7 +51843,9 @@
       "location": "台北/基隆",
       "latitude": 25.0536945,
       "longitude": 121.6168666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5137e1ce35e6",
@@ -50976,7 +51869,9 @@
       "location": "台北/基隆",
       "latitude": 25.0536945,
       "longitude": 121.6168666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "aa15e5fc5140",
@@ -51000,7 +51895,9 @@
       "location": "台北/基隆",
       "latitude": 25.0536945,
       "longitude": 121.6168666666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "61a036faf523",
@@ -51084,6 +51981,7 @@
       "latitude": 24.77061166666667,
       "longitude": 121.7220166666667,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -51167,9 +52065,7 @@
       "location": "新竹/台中",
       "latitude": 24.770605,
       "longitude": 121.72197,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "2cc5841433ac",
@@ -51195,9 +52091,7 @@
       "location": "新竹/台中",
       "latitude": 24.770645,
       "longitude": 121.7219616666667,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "f4f7e56884d7",
@@ -51308,6 +52202,7 @@
       "latitude": 24.77060833333333,
       "longitude": 121.721925,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -51461,6 +52356,7 @@
       "latitude": 25.01722783333333,
       "longitude": 121.5365533333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -51526,6 +52422,7 @@
       "latitude": 25.05196116666667,
       "longitude": 121.5448133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -51541,6 +52438,7 @@
       "latitude": 25.01722216666667,
       "longitude": 121.5365666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -51556,6 +52454,7 @@
       "latitude": 25.0523695,
       "longitude": 121.54493,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -51653,6 +52552,7 @@
       "latitude": 25.05196116666667,
       "longitude": 121.5448133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -51668,6 +52568,7 @@
       "latitude": 25.01722216666667,
       "longitude": 121.5365666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -51695,6 +52596,7 @@
       "latitude": 25.01724166666667,
       "longitude": 121.536545,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -51710,6 +52612,7 @@
       "latitude": 25.05215,
       "longitude": 121.54487,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -51789,9 +52692,7 @@
       "location": "台北/基隆",
       "latitude": 25.06325833333333,
       "longitude": 121.5486216666667,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "8b97b9befcf7",
@@ -51854,7 +52755,9 @@
       "location": "台北/基隆",
       "latitude": 25.06247216666667,
       "longitude": 121.54972,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "84c36511074b",
@@ -51879,6 +52782,7 @@
       "latitude": 25.01722216666667,
       "longitude": 121.5365666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -51906,6 +52810,7 @@
       "latitude": 25.05239716666667,
       "longitude": 121.5449216666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -51920,6 +52825,7 @@
       "latitude": 25.01722216666667,
       "longitude": 121.5365666666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -51995,6 +52901,7 @@
       "latitude": 25.01724166666667,
       "longitude": 121.536545,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -52010,6 +52917,7 @@
       "latitude": 25.05197783333333,
       "longitude": 121.5446033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -52025,6 +52933,7 @@
       "latitude": 25.05191116666667,
       "longitude": 121.5450366666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -52052,6 +52961,7 @@
       "latitude": 25.05196116666667,
       "longitude": 121.5448133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -52079,6 +52989,7 @@
       "latitude": 24.38792166666667,
       "longitude": 120.7817533333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -52132,6 +53043,7 @@
       "latitude": 24.38794666666667,
       "longitude": 120.78177,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -52159,6 +53071,7 @@
       "latitude": 24.387955,
       "longitude": 120.7817783333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -52202,6 +53115,7 @@
       "latitude": 24.38775833333333,
       "longitude": 120.7817533333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -52306,6 +53220,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.54905,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -52832,6 +53747,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.54905,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -52973,7 +53889,9 @@
       "location": "台北/基隆",
       "latitude": 24.90853,
       "longitude": 121.2821366666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "4dbaf7114606",
@@ -53022,6 +53940,7 @@
       "latitude": 25.04036116666667,
       "longitude": 121.5668033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -53087,6 +54006,7 @@
       "latitude": 25.04035833333333,
       "longitude": 121.5668033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -53242,6 +54162,7 @@
       "latitude": 25.04034716666667,
       "longitude": 121.5667883333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -53257,6 +54178,7 @@
       "latitude": 25.04036383333333,
       "longitude": 121.5668033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -53310,6 +54232,7 @@
       "latitude": 25.0403695,
       "longitude": 121.56682,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -53439,6 +54362,7 @@
       "latitude": 25.05308616666667,
       "longitude": 121.5511033333333,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -53552,7 +54476,9 @@
       "location": "台北/基隆",
       "latitude": 25.03405,
       "longitude": 121.5669466666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "cc7b88877beb",
@@ -53750,7 +54676,9 @@
       "location": "台北/基隆",
       "latitude": 25.03505,
       "longitude": 121.5690616666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "41478ac19072",
@@ -53762,7 +54690,9 @@
       "location": "台北/基隆",
       "latitude": 25.03411666666667,
       "longitude": 121.56688,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "90d052963e6e",
@@ -53924,6 +54854,7 @@
       "latitude": 25.05582216666667,
       "longitude": 121.5500866666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -53953,6 +54884,7 @@
       "latitude": 25.23579666666667,
       "longitude": 121.4573133333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -53991,8 +54923,8 @@
       "latitude": 25.05582216666667,
       "longitude": 121.5500866666667,
       "people": [
-        "Sharon",
-        "郭泊彤Sophia"
+        "John",
+        "Sharon"
       ]
     },
     {
@@ -54059,7 +54991,9 @@
       "location": "台北/基隆",
       "latitude": 25.02873333333334,
       "longitude": 121.506395,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5a464b3396c2",
@@ -54155,6 +55089,7 @@
       "latitude": 25.05582216666667,
       "longitude": 121.5500866666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -54170,6 +55105,7 @@
       "latitude": 25.040725,
       "longitude": 121.5422833333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -54236,6 +55172,7 @@
       "latitude": 25.05582216666667,
       "longitude": 121.5500866666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -54250,7 +55187,9 @@
       "location": "台北/基隆",
       "latitude": 25.0826695,
       "longitude": 121.5542616666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "60c4ec74eef8",
@@ -54289,6 +55228,7 @@
       "latitude": 25.05582216666667,
       "longitude": 121.5500866666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -54538,6 +55478,7 @@
       "latitude": 25.040725,
       "longitude": 121.5422833333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -54707,6 +55648,7 @@
       "latitude": 25.040725,
       "longitude": 121.5422833333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -54735,6 +55677,7 @@
       "latitude": 24.0434445,
       "longitude": 120.695855,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -54818,7 +55761,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.144625,
       "longitude": 120.6629866666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "663139675a8b",
@@ -54884,7 +55829,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.14433333333333,
       "longitude": 120.6631,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "47e7181fcd3a",
@@ -55143,7 +56090,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.1442945,
       "longitude": 120.6631,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "bd0596fed183",
@@ -55184,6 +56133,7 @@
       "latitude": 24.04345283333333,
       "longitude": 120.6958466666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -55332,7 +56282,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.144625,
       "longitude": 120.6629866666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2c689e4b9c64",
@@ -55756,7 +56708,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.04360833333334,
       "longitude": 120.6959833333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f334cc9ef3ea",
@@ -55792,7 +56746,9 @@
       "location": "彰化/嘉義",
       "latitude": 24.0437055,
       "longitude": 120.6959216666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "760a47fe1a05",
@@ -55906,7 +56862,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5d3d01a9b072",
@@ -55947,6 +56905,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -55999,6 +56958,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -56038,6 +56998,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -56127,7 +57088,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "fdaca194bf24",
@@ -56139,7 +57102,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a73181dea051",
@@ -56235,7 +57200,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "593c0aa65b0b",
@@ -56247,7 +57214,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "aaef8047a306",
@@ -56271,7 +57240,9 @@
       "location": "未知地點",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "13825442c69e",
@@ -56412,6 +57383,7 @@
       "latitude": 25.03535,
       "longitude": 121.5643383333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -56455,6 +57427,7 @@
       "latitude": 25.03496666666667,
       "longitude": 121.562675,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -56513,6 +57486,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -56593,6 +57567,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -56622,6 +57597,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -56635,7 +57611,9 @@
       "location": "台北/基隆",
       "latitude": 25.0801195,
       "longitude": 121.551095,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "24e4848ad4aa",
@@ -56698,6 +57676,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -56748,6 +57727,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -56763,6 +57743,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.542105,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -56820,6 +57801,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.542105,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -56877,6 +57859,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -56972,6 +57955,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.542105,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57012,6 +57996,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57026,6 +58011,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.542105,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57067,6 +58053,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.542105,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57093,6 +58080,7 @@
       "latitude": 25.04406666666667,
       "longitude": 121.542105,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57195,6 +58183,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -57270,6 +58259,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57350,6 +58340,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57364,6 +58355,7 @@
       "latitude": 25.0801195,
       "longitude": 121.551095,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -57448,8 +58440,7 @@
       "latitude": 25.04405283333333,
       "longitude": 121.5421,
       "people": [
-        "Sharon",
-        "郭泊彤Sophia"
+        "Sharon"
       ]
     },
     {
@@ -57566,6 +58557,7 @@
       "latitude": 25.04061666666666,
       "longitude": 121.56723,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -57617,7 +58609,9 @@
       "location": "台北/基隆",
       "latitude": 25.0620945,
       "longitude": 121.5496,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "196d029dea45",
@@ -57698,6 +58692,7 @@
       "latitude": 25.0620945,
       "longitude": 121.5496,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -57724,6 +58719,7 @@
       "latitude": 24.79852,
       "longitude": 121.7871383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57790,6 +58786,7 @@
       "latitude": 24.79852,
       "longitude": 121.7871383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57818,6 +58815,7 @@
       "latitude": 24.79851333333333,
       "longitude": 121.7871333333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57832,6 +58830,7 @@
       "latitude": 24.79852,
       "longitude": 121.7871383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57872,6 +58871,7 @@
       "latitude": 24.79852,
       "longitude": 121.7871383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57922,6 +58922,7 @@
       "latitude": 24.79851333333333,
       "longitude": 121.7871333333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57935,7 +58936,9 @@
       "location": "新竹/台中",
       "latitude": 24.798505,
       "longitude": 121.7871033333333,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "4329fb498ac0",
@@ -57948,6 +58951,7 @@
       "latitude": 24.79852,
       "longitude": 121.7871383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57962,6 +58966,7 @@
       "latitude": 24.79852,
       "longitude": 121.7871383333333,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -57976,6 +58981,7 @@
       "latitude": 25.0819195,
       "longitude": 121.2391583333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58005,6 +59011,7 @@
       "latitude": 25.06303616666667,
       "longitude": 121.5484166666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -58019,6 +59026,7 @@
       "latitude": 25.081925,
       "longitude": 121.239145,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58034,6 +59042,7 @@
       "latitude": 25.081925,
       "longitude": 121.2391583333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58049,6 +59058,7 @@
       "latitude": 25.0818945,
       "longitude": 121.2391583333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58106,6 +59116,7 @@
       "latitude": 25.08190833333333,
       "longitude": 121.2391583333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58329,6 +59340,7 @@
       "latitude": 25.01701383333333,
       "longitude": 121.4698033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58344,6 +59356,7 @@
       "latitude": 25.01347221666667,
       "longitude": 121.4661633333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58359,6 +59372,7 @@
       "latitude": 25.01701383333333,
       "longitude": 121.4698033333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58425,6 +59439,7 @@
       "latitude": 25.0633305,
       "longitude": 121.5485916666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58535,6 +59550,7 @@
       "latitude": 25.06348333333333,
       "longitude": 121.5486216666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58550,6 +59566,7 @@
       "latitude": 25.06348333333333,
       "longitude": 121.5486216666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58618,6 +59635,7 @@
       "latitude": 25.06337783333333,
       "longitude": 121.5485916666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58645,6 +59663,7 @@
       "latitude": 25.06350833333333,
       "longitude": 121.5486133333333,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58660,6 +59679,7 @@
       "latitude": 25.06348333333333,
       "longitude": 121.5486216666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58751,6 +59771,7 @@
       "latitude": 25.06348333333333,
       "longitude": 121.5486216666667,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58793,6 +59814,7 @@
       "latitude": 25.06363333333333,
       "longitude": 121.5486,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58823,6 +59845,7 @@
       "latitude": 25.0636055,
       "longitude": 121.548605,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -58969,7 +59992,9 @@
       "location": "台北/基隆",
       "latitude": 25.06202216666667,
       "longitude": 121.5411916666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "50898daf3e44",
@@ -58994,6 +60019,7 @@
       "latitude": 25.06354166666667,
       "longitude": 121.5485616666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -59093,7 +60119,9 @@
       "location": "台北/基隆",
       "latitude": 25.06367783333333,
       "longitude": 121.5484616666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "c9b5a9c541ed",
@@ -59205,7 +60233,9 @@
       "location": "台北/基隆",
       "latitude": 25.06162216666667,
       "longitude": 121.54187,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a0b549ef8043",
@@ -59257,7 +60287,9 @@
       "location": "台北/基隆",
       "latitude": 25.0626195,
       "longitude": 121.5488366666667,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "12e7fde528aa",
@@ -59269,7 +60301,9 @@
       "location": "台北/基隆",
       "latitude": 25.06200283333333,
       "longitude": 121.54123,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "8ff87469fe5a",
@@ -59282,6 +60316,7 @@
       "latitude": 25.06316383333333,
       "longitude": 121.5484866666667,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -59466,6 +60501,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -59480,6 +60516,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -59494,6 +60531,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -59537,9 +60575,7 @@
       "location": "台大公衛",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "02615776feb4",
@@ -59576,6 +60612,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -59604,6 +60641,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -60040,9 +61078,7 @@
       "location": "司馬庫斯",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "c997723f91e7",
@@ -60587,6 +61623,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -60615,6 +61652,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -60629,6 +61667,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "郭泊彤Sophia"
       ]
     },
@@ -60657,6 +61696,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -60740,6 +61780,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -60832,9 +61873,7 @@
       "location": "台大校園畢業照",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "090a61c85854",
@@ -60861,6 +61900,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -60888,8 +61928,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon",
-        "郭泊彤Sophia"
+        "Sharon"
       ]
     },
     {
@@ -60928,9 +61967,7 @@
       "location": "台大校園畢業照",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "54945814f978",
@@ -60955,8 +61992,8 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon",
-        "郭泊彤Sophia"
+        "John",
+        "Sharon"
       ]
     },
     {
@@ -60969,9 +62006,7 @@
       "location": "台大校園畢業照",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "e5a09903c831",
@@ -61024,6 +62059,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -61065,6 +62101,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -61080,6 +62117,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61105,9 +62143,7 @@
       "location": "台大校園畢業照",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "郭泊彤Sophia"
-      ]
+      "people": []
     },
     {
       "id": "b1e85825fb9e",
@@ -61167,7 +62203,9 @@
       "location": "員山鄉金車伯朗咖啡",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "79b1acdf962c",
@@ -61179,7 +62217,9 @@
       "location": "員山鄉金車伯朗咖啡",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "e197b76e0808",
@@ -61191,7 +62231,9 @@
       "location": "員山鄉金車伯朗咖啡",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "5879b4baa188",
@@ -61353,9 +62395,7 @@
       "location": "米其林態芮",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "b7df8f6480a0",
@@ -61508,6 +62548,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61522,6 +62563,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61550,6 +62592,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61564,6 +62607,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61619,7 +62663,9 @@
       "location": "台北街頭",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "0b10d056852b",
@@ -61631,7 +62677,9 @@
       "location": "台北街頭",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "dbc41e0aca07",
@@ -61643,7 +62691,9 @@
       "location": "台北街頭",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "c903e2363701",
@@ -61656,6 +62706,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61670,6 +62721,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61683,7 +62735,9 @@
       "location": "台北街頭",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "88f034480043",
@@ -61696,6 +62750,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61710,6 +62765,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61724,6 +62780,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61738,6 +62795,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61752,6 +62810,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61794,6 +62853,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61822,6 +62882,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61836,6 +62897,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61876,6 +62938,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -61890,6 +62953,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon",
         "郭泊彤Sophia"
       ]
@@ -62025,6 +63089,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62065,6 +63130,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62078,7 +63144,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "e7bb9190bd08",
@@ -62117,6 +63185,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62142,7 +63211,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "c3b75e624ab6",
@@ -62155,6 +63226,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62182,7 +63254,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "03483dba53ba",
@@ -62195,6 +63269,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62208,7 +63283,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "52b11cf2b87b",
@@ -62233,6 +63310,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62247,6 +63325,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62260,7 +63339,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "ddad2ff73ede",
@@ -62298,7 +63379,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "2e0bb7f2e5af",
@@ -62310,7 +63393,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "28c4a29a43f0",
@@ -62323,6 +63408,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62350,7 +63436,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "67b790c6c62a",
@@ -62362,7 +63450,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "65e98f5765a3",
@@ -62403,6 +63493,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62431,6 +63522,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62445,6 +63537,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62472,9 +63565,7 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": [
-        "Sharon"
-      ]
+      "people": []
     },
     {
       "id": "565e192b5ffd",
@@ -62512,7 +63603,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "de146d889bbd",
@@ -62537,6 +63630,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62551,6 +63645,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62579,6 +63674,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62607,6 +63703,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62620,7 +63717,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "3a5d86a9fe4a",
@@ -62633,6 +63732,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62684,7 +63784,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a7960bbb28f3",
@@ -62696,7 +63798,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "abc7ba25d19a",
@@ -62732,7 +63836,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "860172e898fc",
@@ -62756,7 +63862,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "f665a8d5f338",
@@ -62769,6 +63877,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62807,6 +63916,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62833,6 +63943,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62846,7 +63957,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "cec88891218a",
@@ -62906,7 +64019,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "932a72a024f0",
@@ -62930,7 +64045,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "b5d5bb48d830",
@@ -62967,6 +64084,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62981,6 +64099,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -62995,6 +64114,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63009,7 +64129,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon"
+        "John"
       ]
     },
     {
@@ -63037,7 +64157,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon"
+        "John"
       ]
     },
     {
@@ -63051,6 +64171,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63065,6 +64186,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63078,7 +64200,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "a708fef4232e",
@@ -63091,6 +64215,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63105,6 +64230,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63119,7 +64245,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
-        "Sharon"
+        "John"
       ]
     },
     {
@@ -63133,6 +64259,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63146,7 +64273,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "ad0c714f308e",
@@ -63171,6 +64300,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63184,7 +64314,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "89b1081e2c17",
@@ -63223,6 +64355,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63249,6 +64382,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63277,6 +64411,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63291,6 +64426,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63319,6 +64455,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63332,7 +64469,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "219a4084770d",
@@ -63345,6 +64484,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63359,6 +64499,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63400,7 +64541,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "88f38e7fe1f2",
@@ -63427,6 +64570,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63441,6 +64585,7 @@
       "latitude": null,
       "longitude": null,
       "people": [
+        "John",
         "Sharon"
       ]
     },
@@ -63454,7 +64599,9 @@
       "location": "北竿鄉",
       "latitude": null,
       "longitude": null,
-      "people": []
+      "people": [
+        "John"
+      ]
     },
     {
       "id": "37d81eeba357",
