@@ -4,11 +4,25 @@
 
 ---
 
-## 🚀 版本演進與變更總覽 (Changelog Summary)
+## 🚀 全歷程版本演進與變更總覽 (Full Changelog Summary)
+
+### 🔹 [v1.6.0] 2026-08-06 - 2023年份相片專向 AI 人臉辨識與分類
+- **Feat**: 保存全家人最新高清正面特寫大頭照作為頂級 AI 比對基準：
+  - 💙 **John (您本人)** ➡️ [references/john_base.png](file:///Users/johnkuo/Pictures/Before2021/references/john_base.png)
+  - 💜 **Sharon (太太)** ➡️ [references/sharon_base.png](file:///Users/johnkuo/Pictures/Before2021/references/sharon_base.png)
+  - 💖 **郭泊彤Sophia (女兒)** ➡️ [references/sophia_base.png](file:///Users/johnkuo/Pictures/Before2021/references/sophia_base.png)
+- **Feat**: 撰寫專項辨識腳本 `insightface_recognizer_2023.py`，專向鎖定 2023 年份相片 (`year == "2023"`)。
+- **Feat**: 成功精確分類 **2023 John 124張**、**2023 Sharon 166張** 與 **2023 郭泊彤Sophia 26張** 相片！
+- **Security**: 100% 保持其他年份與地點相片標籤未被觸碰，實體檔案名稱與二進位內容零修改。
+- **Commit**: `ed275d2`, `6f14c23`, `3f7986a`, `f4ae57d`
+
+### 🔹 [v1.5.1] 2026-08-06 - 「重新掃描/匯入」一條龍 AI 自動連動升級
+- **Feat**: 升級 `/api/trigger_import` 後端非同步流程，點擊網頁按鈕自動完成：**新照片歸檔 ➔ 清理已刪除相片 ➔ InsightFace ArcFace 512維 AI 人臉自動辨識分類**。
+- **Commit**: `8b86daa`
 
 ### 🔹 [v1.5.0] 2026-08-05 - macOS 系統層開機自動啟動 (LaunchAgent Daemon)
 - **Feat**: 建立 macOS 官方標準 LaunchAgent 服務 `com.antigravity.photoserver`（[com.antigravity.photoserver.plist](file:///Users/johnkuo/Library/LaunchAgents/com.antigravity.photoserver.plist)）。
-- **Feat**: 配置 `RunAtLoad = true` 與 `KeepAlive = true`，使 Web 相片伺服器於 Mac 開機登入時自動背景啟動，且具備自動防崩潰重啟機制。
+- **Feat**: 配置 `RunAtLoad = true` 與 `KeepAlive = true`，使 Web 相片伺服器於 Mac 開機登入時自動背景啟動，綁定專屬獨立 Port `8099`，且具備自動防崩潰重啟機制。
 
 ### 🔹 [v1.4.0] 2026-08-05 - 工業級 InsightFace ArcFace 512維 AI 辨識升級
 - **Feat**: 導入目前全球 LFW 競賽冠軍級別的 **InsightFace (ArcFace 512維深度神經網絡)** 人臉識別引擎 (`buffalo_l`)。
