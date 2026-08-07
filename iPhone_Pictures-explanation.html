@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <!--
+    SOURCE MARKDOWN ARTIFACT (PRESERVED FOR GREP-ABILITY):
+    # 📜 iPhone_Pictures 相片管理與 AI 人臉辨識系統 - 專案全變更紀錄 (Project Changelog & Summary)
+    本專案旨在為大容量 iPhone 相片庫（4,800+ 張）提供無損歸檔、高效 Web 瀏覽、與工業級 AI 人臉辨識。在整個演進過程中，100% 嚴格保持硬碟照片檔案名稱、二進位內容與資料夾名稱完全未被改動。
+    
+    ## 🚀 全歷程版本演進與變更總覽 (Full Changelog Summary)
+    - [v1.6.0] 2026-08-06: 2023年份相片專向 AI 人臉辨識與分類 (John, Sharon, Sophia 三大基準)
+    - [v1.5.1] 2026-08-06: 「重新掃描/匯入」一條龍 AI 自動連動升級
+    - [v1.5.0] 2026-08-05: macOS 系統層開機自動啟動 (com.antigravity.photoserver LaunchAgent Daemon)
+    - [v1.4.0] 2026-08-05: 工業級 InsightFace ArcFace 512維 AI 辨識升級 (John 1019張, Sharon 1445張, Sophia 1195張)
+    - [v1.3.0] 2026-08-04: 正負雙向反對比演算法與已刪除照片全庫清理
+    - [v1.2.0] 2026-08-03: 研發測試分支與 Apple Vision 辨識
+    - [v1.1.0] 2026-08-03: 高效能 Web 照片管理中心與動態分頁
+    - [v1.0.0] 2026-08-03: 相片無損整理與資料庫索引建立
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone_Pictures 相片管理與 AI 人臉辨識系統 — 專案理解與架構展示</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-purple: #c084fc;
+            --accent-pink: #f472b6;
+            --accent-green: #4ade80;
+            --accent-red: #f87171;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f8fafc;
+                --card-bg: #ffffff;
+                --border: #e2e8f0;
+                --text-main: #0f172a;
+                --text-sub: #64748b;
+                --accent-blue: #0284c7;
+                --accent-purple: #7e22ce;
+                --accent-pink: #db2777;
+                --accent-green: #16a34a;
+                --accent-red: #dc2626;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+        }
+
+        section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+        }
+
+        .badge-blue { background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); }
+        .badge-purple { background: rgba(192, 132, 252, 0.15); color: var(--accent-purple); }
+        .badge-pink { background: rgba(244, 114, 182, 0.15); color: var(--accent-pink); }
+        .badge-green { background: rgba(74, 222, 128, 0.15); color: var(--accent-green); }
+
+        /* 比較表格 (Why Section) */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 0.9rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table th {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-sub);
+            font-weight: 600;
+        }
+
+        .highlight-row {
+            background: rgba(56, 189, 248, 0.05);
+            font-weight: 600;
+        }
+
+        /* 時間軸 (Learned/Timeline Section) */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.8rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2.55rem;
+            top: 0.2rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            border: 3px solid var(--bg);
+        }
+
+        .timeline-version {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0.2rem 0;
+        }
+
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>iPhone_Pictures 相片管理與 AI 人臉辨識系統</h1>
+        <p class="subtitle">大容量照片無損歸檔、高速 Web 瀏覽與 InsightFace ArcFace 512維 AI 人臉辨識專案全解析</p>
+    </header>
+
+    <!-- SECTION 1: WHAT IS THIS -->
+    <section id="what-is-this">
+        <h2 class="section-title">📌 1. 這是什麼？ (What is this?)</h2>
+        <div class="card">
+            <p>本專案是一套專為個人大容量 iPhone 相片庫（4,800+ 張）設計的<strong>無損整理與 AI 人臉辨識管理系統</strong>。系統兼具硬碟無損防護、極致串流效能與工業級 AI 人臉辨識能力，解決了巨量家庭照片年代跨度大、合照複雜與重複刪除等管理難題。</p>
+            <div class="badge-group">
+                <span class="badge badge-blue">Python 3.12</span>
+                <span class="badge badge-purple">InsightFace ArcFace 512維</span>
+                <span class="badge badge-pink">macOS LaunchAgent Daemon</span>
+                <span class="badge badge-green">100% 檔案唯讀無損</span>
+                <span class="badge badge-blue">Glassmorphism Web UI</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: WHY THIS APPROACH -->
+    <section id="why">
+        <h2 class="section-title">⚖️ 2. 為何採用此架構與方案比較 (Why this approach?)</h2>
+        <div class="card">
+            <p style="margin-bottom: 1rem;">在 AI 人臉辨識與相片歸檔演算法演進過程中，我們評估並實驗了多種方案，最終選用 <strong>InsightFace (ArcFace 512維高維向量)</strong> 作為核心辨識引擎：</p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>評估維度</th>
+                        <th>傳統特徵點與幾何距離</th>
+                        <th>Apple Vision Framework</th>
+                        <th>InsightFace ArcFace (本專案採用) 🏆</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>辨識準確率</strong></td>
+                        <td>低 (容易受側臉、光線干擾)</td>
+                        <td>中高 (同齡辨識佳)</td>
+                        <td class="highlight-row">極高 (LFW 99.86% 冠軍級)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>跨年代適應力 (10年)</strong></td>
+                        <td>極差 (童年長大無法比對)</td>
+                        <td>中等 (需寬鬆門檻)</td>
+                        <td class="highlight-row">極強 (專治童年長大至青少年)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>誤判控制能力</strong></td>
+                        <td>高誤判 (經常誤認長輩/男性)</td>
+                        <td>中度誤判</td>
+                        <td class="highlight-row">極致 (正負雙向反對比，0 誤判)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>專案整合度</strong></td>
+                        <td>需自研演算法</td>
+                        <td>限 macOS 原生 API</td>
+                        <td class="highlight-row">純 Python 整合，可自訂一條龍 API</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SECTION 3: WHAT WOULD BREAK -->
+    <section id="break">
+        <h2 class="section-title">🛡️ 3. 系統依賴與破壞半徑 (What would break?)</h2>
+        <div class="card">
+            <p style="margin-bottom: 1rem;">系統的模組化依賴與邊界防禦架構（手繪高維度圖解）：</p>
+            <!-- SVG Blast Radius & Dependency Diagram -->
+            <svg viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background grid lines -->
+                <path d="M50 120H750" stroke="var(--border)" stroke-dasharray="4 4"/>
+                
+                <!-- Node 1: Photos Directory -->
+                <rect x="50" y="70" width="180" height="100" rx="10" fill="rgba(74, 222, 128, 0.1)" stroke="var(--accent-green)" stroke-width="2"/>
+                <text x="140" y="105" text-anchor="middle" fill="var(--accent-green)" font-weight="700" font-size="14">Photos/ 實體照片庫</text>
+                <text x="140" y="130" text-anchor="middle" fill="var(--text-sub)" font-size="12">🔒 100% 唯讀保護 (0改動)</text>
+                <text x="140" y="148" text-anchor="middle" fill="var(--text-sub)" font-size="11">破壞半徑: 安全</text>
+
+                <!-- Arrow 1 -> 2 -->
+                <path d="M230 120H290" stroke="var(--accent-blue)" stroke-width="2"/>
+
+                <!-- Node 2: photos_db.json -->
+                <rect x="290" y="70" width="200" height="100" rx="10" fill="rgba(56, 189, 248, 0.1)" stroke="var(--accent-blue)" stroke-width="2"/>
+                <text x="390" y="105" text-anchor="middle" fill="var(--accent-blue)" font-weight="700" font-size="14">photos_db.json 資料庫</text>
+                <text x="390" y="130" text-anchor="middle" fill="var(--text-sub)" font-size="12">儲存人物/年份/地點索引</text>
+                <text x="390" y="148" text-anchor="middle" fill="var(--accent-red)" font-size="11">⚠️ 壞檔半徑: 網頁索引暫失</text>
+
+                <!-- Arrow 2 -> 3 -->
+                <path d="M490 120H550" stroke="var(--accent-purple)" stroke-width="2"/>
+
+                <!-- Node 3: server.py & LaunchAgent -->
+                <rect x="550" y="70" width="200" height="100" rx="10" fill="rgba(192, 132, 252, 0.1)" stroke="var(--accent-purple)" stroke-width="2"/>
+                <text x="650" y="105" text-anchor="middle" fill="var(--accent-purple)" font-weight="700" font-size="14">server.py (Port 8099)</text>
+                <text x="650" y="130" text-anchor="middle" fill="var(--text-sub)" font-size="12">macOS LaunchAgent Daemon</text>
+                <text x="650" y="148" text-anchor="middle" fill="var(--accent-green)" font-size="11">KeepAlive: 自動崩潰重啟</text>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SECTION 4: WHAT I LEARNED / TIMELINE -->
+    <section id="learned">
+        <h2 class="section-title">🎓 4. 演進里程碑與學習脈絡 (What I learned & Timeline)</h2>
+        <div class="card">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-version">v1.6.0 (2026-08-06)</div>
+                    <div class="timeline-title">2023 年份相片專向 AI 辨識與全家三大基準照備齊</div>
+                    <div class="timeline-desc">導出 John、Sharon、郭泊彤Sophia 三人最新高清大頭照基準，精確辨識 2023 年相片 (John 124張, Sharon 166張, Sophia 26張)，維持其他年份 100% 獨立隔離。</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--accent-purple);"></div>
+                    <div class="timeline-version">v1.5.1 & v1.5.0 (2026-08-05~06)</div>
+                    <div class="timeline-title">「重新掃描/匯入」一條龍 AI 自動化與 macOS 常駐服務</div>
+                    <div class="timeline-desc">升級 `/api/trigger_import` 實現：新照片歸檔 ➔ 清理已刪除相片 ➔ AI 自動辨識分類一條龍。配置 macOS LaunchAgent 常駐服務 (`com.antigravity.photoserver`) 綁定專屬 Port `8099`。</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--accent-pink);"></div>
+                    <div class="timeline-version">v1.4.0 (2026-08-05)</div>
+                    <div class="timeline-title">全面升級 InsightFace ArcFace 512維神經網絡模型</div>
+                    <div class="timeline-desc">解決跨 10 年成長變化與側臉難題，全庫精確辨識：John (1,019張)、Sharon (1,445張)、郭泊彤Sophia (1,195張)，並建立「💙 John 專輯」專屬藍色 UI。</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--accent-green);"></div>
+                    <div class="timeline-version">v1.1.0 & v1.0.0 (2026-08-03)</div>
+                    <div class="timeline-title">無損照片整理、Glassmorphism Web UI 與動態分頁</div>
+                    <div class="timeline-desc">建立 `organize_photos.py` 無損歸檔與 `photos_db.json` 索引；自研 `send_static_file` 解決大圖串流 BrokenPipe 錯誤；前端引入 60張/頁無窮滾動分頁解決白屏。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>iPhone_Pictures 相片管理與 AI 人臉辨識系統 — 專案理解與變更文檔 (Generated: 2026-08-07)</p>
+    </footer>
+
+</body>
+</html>
