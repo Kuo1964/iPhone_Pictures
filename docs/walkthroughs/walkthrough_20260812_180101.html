@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 PhotoRepository 深層模組重構成果報告 (Walkthrough 2026-08-12)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(18, 24, 38, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-purple: #c084fc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 50%);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .back-btn {
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .back-btn:hover {
+            background: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            transform: translateX(-3px);
+        }
+        .content-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        h1 { font-family: 'Outfit', sans-serif; color: #fff; font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--accent-blue); padding-bottom: 0.5rem; }
+        h2 { font-family: 'Outfit', sans-serif; color: var(--accent-blue); font-size: 1.4rem; margin-top: 1.8rem; margin-bottom: 1rem; }
+        h3 { color: var(--accent-purple); font-size: 1.1rem; margin-top: 1.2rem; margin-bottom: 0.6rem; }
+        p { margin-bottom: 1rem; color: #cbd5e1; }
+        ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: #cbd5e1; }
+        li { margin-bottom: 0.4rem; }
+        pre { background: #05070d; padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); overflow-x: auto; margin-bottom: 1.5rem; }
+        code { font-family: monospace; color: #38bdf8; font-size: 0.9rem; }
+        a { color: var(--accent-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <button onclick="closeOrGoBack()" class="back-btn">← 返回專案歷程報告 (Return to Overview)</button>
+        </div>
+        <div class="content-card">
+            <h1>📜 PhotoRepository 深層模組重構成果報告 (Walkthrough 2026-08-12)</h1>
+<p>已成功完成 <strong>`PhotoRepository` 深層資料庫存取層解耦重構與原子寫入防護</strong>！</p>
+<p>---</p>
+<h2>🛠️ 重構成果與架構優化報告</h2>
+<p>1. <strong>建立 PhotoRepository 深層模組 (`photo_repository.py`)</strong>：</p>
+<ul>
+<li>建立了深層模組 <a href="file:///Users/johnkuo/Pictures/Before2021/photo_repository.py">photo_repository.py</a>，將 `open()`、`json.load()` 與 `json.dump()` 檔案操作細節 100% 封裝。</li>
+<li>對外提供高階、高內聚 API：`get_all_photos()`, `get_photo_by_id()`, `upsert_photos()`, `update_people_tags()`, `delete_photos_by_path()`。</li>
+<li><strong>併發與安全防護</strong>：內建 `threading.Lock()` 防範多執行緒寫入衝突；採用 <strong>原子寫入機制 (Atomic Write: 先寫入 `.tmp` 檔案後經 `os.replace` 原子覆蓋)</strong>，徹底消除崩潰損壞 `photos_db.json` 的風險。</li>
+</ul>
+<p>2. <strong>單元測試全數過關 (`test_photo_repository.py`)</strong>：</p>
+<ul>
+<li>撰寫了專屬單元測試 <a href="file:///Users/johnkuo/Pictures/Before2021/test_photo_repository.py">test_photo_repository.py</a>，涵蓋資料讀取、原子寫入、標籤更新與多執行緒併發寫入。</li>
+<li>測試結果：`Ran 3 tests in 0.004s - OK` 綠燈過關。</li>
+</ul>
+<p>3. <strong>呼叫端無縫重構</strong>：</p>
+<ul>
+<li>重構 <a href="file:///Users/johnkuo/Pictures/Before2021/server.py">server.py</a>：`/api/photos` 改由 `PhotoRepository` 提供數據服務。</li>
+<li>重構 <a href="file:///Users/johnkuo/Pictures/Before2021/face_recognizer.py">face_recognizer.py</a>：AI 人臉標籤改由 `PhotoRepository.update_people_tags()` 原子寫入。</li>
+<li>重構 <a href="file:///Users/johnkuo/Pictures/Before2021/organize_photos.py">organize_photos.py</a>：歸檔索引改由 `PhotoRepository.upsert_photos()` 寫入。</li>
+</ul>
+<p>4. <strong>100% 檔案唯讀與服務重啟</strong>：</p>
+<ul>
+<li><strong>0 個實體照片檔案內容、檔名被修改</strong>。</li>
+<li>macOS LaunchAgent 開機常駐服務（Port `8099`）重啟正常運作 (`HTTP/1.0 200 OK`)。</li>
+</ul>
+<p>---</p>
+<h2>📜 永續歷史歸檔紀錄 (Archived Artifacts)</h2>
+<ul>
+<li><strong>實施計畫存檔</strong>：<a href="file:///Users/johnkuo/Pictures/Before2021/implementation_plan_repository_20260812.md">implementation_plan_repository_20260812.md</a> (標註日期 2026-08-12 歸檔)</li>
+<li><strong>重構成果報告存檔</strong>：<a href="file:///Users/johnkuo/Pictures/Before2021/walkthrough_repository_20260812.md">walkthrough_repository_20260812.md</a> (標註日期 2026-08-12 歸檔)</li>
+</ul>
+<p>---</p>
+<h2>🔗 系統與服務狀態</h2>
+<ul>
+<li><strong>當前分支</strong>：`main` (已同步至 GitHub `origin/main`)</li>
+<li><strong>Web 管理中心入口</strong>：👉 <strong><a href="http://localhost:8099">http://localhost:8099</a></strong></li>
+</ul>
+        </div>
+    </div>
+    <script>
+        function closeOrGoBack() {
+            if (window.opener && !window.opener.closed) {
+                window.close();
+            } else {
+                window.location.href = "../../project_changelog.html";
+            }
+        }
+    </script>
+</body>
+</html>

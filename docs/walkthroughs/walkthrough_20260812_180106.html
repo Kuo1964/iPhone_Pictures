@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 iPhone_Pictures v1.7.0 正式版合併與發布成果報告 (Walkthrough 2026-08-12)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(18, 24, 38, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-purple: #c084fc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 50%);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .back-btn {
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .back-btn:hover {
+            background: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            transform: translateX(-3px);
+        }
+        .content-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        h1 { font-family: 'Outfit', sans-serif; color: #fff; font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--accent-blue); padding-bottom: 0.5rem; }
+        h2 { font-family: 'Outfit', sans-serif; color: var(--accent-blue); font-size: 1.4rem; margin-top: 1.8rem; margin-bottom: 1rem; }
+        h3 { color: var(--accent-purple); font-size: 1.1rem; margin-top: 1.2rem; margin-bottom: 0.6rem; }
+        p { margin-bottom: 1rem; color: #cbd5e1; }
+        ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: #cbd5e1; }
+        li { margin-bottom: 0.4rem; }
+        pre { background: #05070d; padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); overflow-x: auto; margin-bottom: 1.5rem; }
+        code { font-family: monospace; color: #38bdf8; font-size: 0.9rem; }
+        a { color: var(--accent-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <button onclick="closeOrGoBack()" class="back-btn">← 返回專案歷程報告 (Return to Overview)</button>
+        </div>
+        <div class="content-card">
+            <h1>🚀 iPhone_Pictures v1.7.0 正式版合併與發布成果報告 (Walkthrough 2026-08-12)</h1>
+<p>已成功將獨立測試分支 `feature/fix-2024-ui-and-import` 上驗證完成的所有重構與修繕成果<strong>正式合併至 `main` 主程式，並發布 `v1.7.0` Release Milestone 標籤</strong>！</p>
+<p>---</p>
+<h2>🛠️ v1.7.0 發布內容與變更總覽</h2>
+<p>1. <strong>通用 AI 辨識模組正式主線上線 (`face_recognizer.py`)</strong>：</p>
+<ul>
+<li>通用 AI 辨識引擎 <a href="file:///Users/johnkuo/Pictures/Before2021/face_recognizer.py">face_recognizer.py</a> 已成為 `main` 主程式的核心人臉辨識模組。</li>
+<li>集中管理全家三人（John, Sharon, 郭泊彤Sophia）的高清 512維 ArcFace 特徵向量與相似度門檻 (0.40)。</li>
+<li>完全消除代碼重複，並移除過度特化的舊腳本。</li>
+</ul>
+<p>2. <strong>前端 UI 自動換行完全解鎖 (`index.html`)</strong>：</p>
+<ul>
+<li>解鎖 `#yearFilterPills` 與 `#peopleFilterPills` 子容器樣式，支援 `flex-wrap: wrap;`。</li>
+<li>在 `main` 主程式下，<strong>`2026年`、`2025年`、`2024年`</strong> 等所有年份按鈕與人物標籤按鈕 100% 自動多行優雅換行呈現。</li>
+</ul>
+<p>3. <strong>一條龍非同步 API 與開機自啟服務 (`server.py`)</strong>：</p>
+<ul>
+<li>`/api/trigger_import` 正式調用通用 AI 辨識模組，重啟 macOS LaunchAgent 開機常駐服務 `com.antigravity.photoserver`，主程式於 Port `8099` 穩定運作。</li>
+</ul>
+<p>4. <strong>100% 檔案與目錄唯讀保護鐵律</strong>：</p>
+<ul>
+<li><strong>0 個實體照片檔案內容、檔名被修改</strong>。</li>
+<li><strong>0 個資料夾名稱被修改</strong>。</li>
+</ul>
+<p>---</p>
+<h2>📜 永續歷史歸檔紀錄 (Archived Artifacts)</h2>
+<ul>
+<li><strong>合併計畫存檔</strong>：<a href="file:///Users/johnkuo/.gemini/antigravity/brain/33f3714f-3594-40b1-a123-fcf72480db7e/implementation_plan.md">implementation_plan.md</a> (已獲用戶批准)</li>
+<li><strong>測試分支報告存檔</strong>：<a href="file:///Users/johnkuo/Pictures/Before2021/walkthrough_20260812.md">walkthrough_20260812.md</a> (標註日期 2026-08-12)</li>
+<li><strong>v1.7.0 合併報告存檔</strong>：<a href="file:///Users/johnkuo/Pictures/Before2021/walkthrough_merge_v1.7.0_20260812.md">walkthrough_merge_v1.7.0_20260812.md</a> (標註日期 2026-08-12)</li>
+</ul>
+<p>---</p>
+<h2>🏷️ Release & Branch 狀態</h2>
+<ul>
+<li><strong>當前分支</strong>：`main` (已同步至 GitHub `origin/main`)</li>
+<li><strong>發布 Tag</strong>：👉 <strong>`v1.7.0`</strong> (<a href="https://github.com/Kuo1964/iPhone_Pictures/releases/tag/v1.7.0">GitHub Release Link</a>)</li>
+<li><strong>Web 管理中心入口</strong>：👉 <strong><a href="http://localhost:8099">http://localhost:8099</a></strong></li>
+</ul>
+        </div>
+    </div>
+    <script>
+        function closeOrGoBack() {
+            if (window.opener && !window.opener.closed) {
+                window.close();
+            } else {
+                window.location.href = "../../project_changelog.html";
+            }
+        }
+    </script>
+</body>
+</html>

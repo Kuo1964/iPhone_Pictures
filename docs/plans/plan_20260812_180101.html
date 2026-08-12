@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 JSON 資料庫存取層解耦 (PhotoRepository 深層模組) 重構計畫 (Implementation Plan 2026-08-12)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(18, 24, 38, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-purple: #c084fc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 50%);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .back-btn {
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .back-btn:hover {
+            background: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            transform: translateX(-3px);
+        }
+        .content-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        h1 { font-family: 'Outfit', sans-serif; color: #fff; font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--accent-blue); padding-bottom: 0.5rem; }
+        h2 { font-family: 'Outfit', sans-serif; color: var(--accent-blue); font-size: 1.4rem; margin-top: 1.8rem; margin-bottom: 1rem; }
+        h3 { color: var(--accent-purple); font-size: 1.1rem; margin-top: 1.2rem; margin-bottom: 0.6rem; }
+        p { margin-bottom: 1rem; color: #cbd5e1; }
+        ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: #cbd5e1; }
+        li { margin-bottom: 0.4rem; }
+        pre { background: #05070d; padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); overflow-x: auto; margin-bottom: 1.5rem; }
+        code { font-family: monospace; color: #38bdf8; font-size: 0.9rem; }
+        a { color: var(--accent-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <button onclick="closeOrGoBack()" class="back-btn">← 返回專案歷程報告 (Return to Overview)</button>
+        </div>
+        <div class="content-card">
+            <h1>📋 JSON 資料庫存取層解耦 (PhotoRepository 深層模組) 重構計畫 (Implementation Plan 2026-08-12)</h1>
+<p>本計畫旨在解決目前 `server.py`、`face_recognizer.py` 與 `organize_photos.py` 中直接讀寫 `photos_db.json` 導致的架構摩擦問題。透過建立<strong>深層模組 `photo_repository.py` (PhotoRepository)</strong>，將檔案 I/O、併發鎖 (ThreadLock) 與原子寫入 (Atomic Write) 徹底封裝，提供極簡且強固的資料存取介面。</p>
+<p>---</p>
+<h2>⚠️ User Review Required (用戶審核項目)</h2>
+<p>> [!IMPORTANT]</p>
+<p>> <strong>本重構計畫包含以下核心設計：</strong></p>
+<p>> 1. <strong>深層模組封裝</strong>：建立 `PhotoRepository` 類別，隱藏所有 `json.load()` 與 `json.dump()` 檔案操作細節。</p>
+<p>> 2. <strong>併發與安全防護 (Concurrency & Safety)</strong>：導入 `threading.Lock()` 防止多執行緒同時寫入衝突，並採用<strong>原子寫入機制 (Atomic Write: 寫入 `.tmp` 檔案後經 `os.replace` 覆蓋)</strong>，徹底防止系統崩潰導致 `photos_db.json` 損壞。</p>
+<p>> 3. <strong>100% 唯讀保障</strong>：實體照片檔名、內容與資料夾名稱 100% 保持零改動。</p>
+<p>> 4. <strong>歷史歸檔</strong>：計畫與修復成果將分別標註日期歸檔存檔。</p>
+<p>---</p>
+<h2>🛠️ 擬議變更內容 (Proposed Changes)</h2>
+<h3>1. 建立 PhotoRepository 深層模組</h3>
+<p>#### <a href="file:///Users/johnkuo/Pictures/Before2021/photo_repository.py">NEW] [photo_repository.py</a></p>
+<ul>
+<li><strong>類別設計</strong>：`PhotoRepository(db_path="photos_db.json")`</li>
+<li><strong>提供 API 介面</strong>：</li>
+<li>`get_all_photos() -> list[dict]`：讀取並傳回所有相片紀錄。</li>
+<li>`get_photo_by_id(photo_id: str) -> dict | None`：依 ID 尋找相片。</li>
+<li>`upsert_photos(new_photos: list[dict]) -> int`：增量插入或更新相片索引。</li>
+<li>`update_people_tags(matches_map: dict[str, list[str]]) -> int`：批量高效更新 John, Sharon, Sophia 人物標籤。</li>
+<li>`delete_photos_by_path(deleted_paths: list[str]) -> int`：刪除無效照片紀錄。</li>
+<li><strong>內部實作機制</strong>：</li>
+<li>封裝 `_load()` 與 `_save_atomic()`。</li>
+<li>`_save_atomic()` 先寫入 `photos_db.json.tmp`，完成後調用 `os.replace` 進行原子性更換。</li>
+<li>內建 `threading.Lock()` 確保安全。</li>
+</ul>
+<p>---</p>
+<h3>2. 重構各呼叫模組 (Refactoring Call Sites)</h3>
+<p>#### <a href="file:///Users/johnkuo/Pictures/Before2021/server.py">MODIFY] [server.py</a></p>
+<ul>
+<li>將 API Handler 中直接讀寫 JSON 的邏輯替換為 `PhotoRepository` 的高階 API 呼叫。</li>
+</ul>
+<p>#### <a href="file:///Users/johnkuo/Pictures/Before2021/face_recognizer.py">MODIFY] [face_recognizer.py</a></p>
+<ul>
+<li>人臉比對完成後，由原本的直接 JSON 寫入改為調用 `repo.update_people_tags(matches_map)` 進行批量原子更新。</li>
+</ul>
+<p>#### <a href="file:///Users/johnkuo/Pictures/Before2021/organize_photos.py">MODIFY] [organize_photos.py</a></p>
+<ul>
+<li>相片歸檔完成後，改為調用 `repo.upsert_photos()` 寫入索引。</li>
+</ul>
+<p>---</p>
+<h2>🧪 驗證計畫 (Verification Plan)</h2>
+<h3>單元測試與自動化測試</h3>
+<p>1. 為 `photo_repository.py` 撰寫專屬單元測試 `test_photo_repository.py`：</p>
+<ul>
+<li>測試多執行緒併發讀寫。</li>
+<li>測試原子寫入 (Atomic Write) 中斷防禦。</li>
+<li>測試 `update_people_tags` 的正確性。</li>
+<li>執行命令：`python3 -m unittest test_photo_repository.py`</li>
+</ul>
+<h3>手動與一條龍驗證</h3>
+<p>1. 執行 `python3 face_recognizer.py` 驗證標籤可經由 `PhotoRepository` 原子更新。</p>
+<p>2. 測試 `/api/photos` 與 `/api/trigger_import` 端點運作正常。</p>
+<p>---</p>
+<h2>📜 歷史歸檔計畫 (Archiving Protocol)</h2>
+<ul>
+<li><strong>實施計畫存檔</strong>：`implementation_plan_repository_20260812.md`</li>
+<li><strong>成果報告存檔</strong>：`walkthrough_repository_20260812.md`</li>
+<li>報告將永久標註日期 `2026-08-12` 歸檔保存。</li>
+</ul>
+        </div>
+    </div>
+    <script>
+        function closeOrGoBack() {
+            if (window.opener && !window.opener.closed) {
+                window.close();
+            } else {
+                window.location.href = "../../project_changelog.html";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone_Pictures 相片管理與 AI 人臉辨識系統 - 專案變更紀錄與歷程報告</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(18, 24, 38, 0.65);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover-border: rgba(56, 189, 248, 0.3);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-purple: #c084fc;
+            --accent-green: #4ade80;
+            --accent-rose: #fb7185;
+            --timeline-line: linear-gradient(180deg, #38bdf8 0%, #a855f7 50%, rgba(15, 23, 42, 0.1) 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 60%, rgba(168, 85, 247, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header Style */
+        header {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #38bdf8, #a855f7, #fb7185);
+        }
+
+        .project-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-top: 0.2rem;
+        }
+
+        /* Filter Controls */
+        .controls {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-muted);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: var(--timeline-line);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2rem;
+            top: 1.5rem;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--bg-color);
+            border: 3px solid var(--accent-blue);
+            box-shadow: 0 0 12px var(--accent-blue);
+            z-index: 2;
+        }
+
+        /* Card Style */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.8rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover {
+            border-color: var(--card-hover-border);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .card-title-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-feat {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(59, 130, 246, 0.2));
+            color: var(--accent-blue);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .badge-fix {
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.2), rgba(225, 29, 72, 0.2));
+            color: var(--accent-rose);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .badge-refactor {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(147, 51, 234, 0.2));
+            color: var(--accent-purple);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .badge-docs {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.2));
+            color: var(--accent-green);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .timestamp-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .timestamp-local {
+            font-weight: 600;
+            color: #cbd5e1;
+        }
+
+        .timestamp-utc {
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+
+        .card-desc {
+            color: #e2e8f0;
+            font-size: 0.98rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .details-list {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1.2rem;
+            list-style-type: none;
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        .details-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .details-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .details-list li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        .links-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            flex-wrap: wrap;
+        }
+
+        .doc-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .doc-link-plan {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        .doc-link-plan:hover {
+            background: rgba(56, 189, 248, 0.25);
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .doc-link-walkthrough {
+            background: rgba(168, 85, 247, 0.1);
+            color: var(--accent-purple);
+            border: 1px solid rgba(168, 85, 247, 0.25);
+        }
+
+        .doc-link-walkthrough:hover {
+            background: rgba(168, 85, 247, 0.25);
+            box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px dashed var(--card-border);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 640px) {
+            header { padding: 1.5rem; }
+            .project-title { font-size: 1.8rem; }
+            .timestamp-group { align-items: flex-start; margin-top: 0.5rem; }
+            .card-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="project-title">iPhone_Pictures 相片管理與 AI 人臉辨識系統</h1>
+            <p class="project-desc">大容量 iPhone 相片無損歸檔、高速 Web 瀏覽與 InsightFace ArcFace 512維 AI 人臉辨識系統</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">總變更紀錄</span>
+                    <span class="stat-value" id="total-count">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">最後更新時間</span>
+                    <span class="stat-value" id="last-updated" style="font-size: 1rem;">2026-08-12 18:01</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">架構報告版本</span>
+                    <span class="stat-value">v2.0 (Glassmorphic)</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <button class="filter-btn active" onclick="filterItems('all')">全部變更 (All)</button>
+            <button class="filter-btn" onclick="filterItems('feat')">✨ 新功能 (Features)</button>
+            <button class="filter-btn" onclick="filterItems('fix')">🐛 錯誤修復 (Fixes)</button>
+            <button class="filter-btn" onclick="filterItems('refactor')">⚡ 重構優化 (Refactors)</button>
+            <button class="filter-btn" onclick="filterItems('docs')">📝 文件變更 (Docs)</button>
+        </div>
+
+        <main class="timeline" id="timeline-container">
+
+            <article class="timeline-item" data-type="feat">
+                <div class="timeline-dot"></div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <span class="badge badge-feat">✨ FEAT</span>
+                            <h2 class="card-title">Release v1.7.0: 整合通用 AI 人臉辨識模組、解鎖 UI 換行與發布正式標籤</h2>
+                        </div>
+                        <div class="timestamp-group">
+                            <span class="timestamp-local">2026-08-12 18:01</span>
+                            <span class="timestamp-utc">2026-08-12 10:01 UTC</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">將 feature/fix-2024-ui-and-import 測試分支的所有成果安全合併至 main 主程式，發布 v1.7.0 正式里程碑標籤，並重啟 macOS LaunchAgent 開機常駐服務 (Port 8099)</p>
+                    <ul class="details-list"><li>建立通用 AI 人臉辨識模組 face_recognizer.py，移除重複腳本</li><li>解鎖 index.html 中 #yearFilterPills 與 #peopleFilterPills 多行 flex-wrap: wrap 自動換行</li><li>全量完成 2024/2025 年照片全家三人 AI 人臉辨識與標籤分類</li><li>無縫重啟 com.antigravity.photoserver LaunchAgent 常駐服務</li></ul>
+                    <div class="links-group"><a href="docs/walkthroughs/walkthrough_20260812_180106.html" class="doc-link doc-link-walkthrough">🧪 查看 Walkthrough 測試紀錄</a></div>
+                </div>
+            </article>
+
+
+            <article class="timeline-item" data-type="refactor">
+                <div class="timeline-dot"></div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <span class="badge badge-refactor">⚡ REFACTOR</span>
+                            <h2 class="card-title">Refactor: 導入 PhotoRepository 深層模組解耦資料庫存取與原子寫入防護</h2>
+                        </div>
+                        <div class="timestamp-group">
+                            <span class="timestamp-local">2026-08-12 18:01</span>
+                            <span class="timestamp-utc">2026-08-12 10:01 UTC</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">建立 PhotoRepository 深層模組，徹底封裝 open()/json.load()/json.dump()，導入 threading.Lock() 併發鎖與原子寫入 (.tmp -> os.replace) 防禦</p>
+                    <ul class="details-list"><li>建立 photo_repository.py 封裝 DB 操作 API</li><li>撰寫 test_photo_repository.py 進行單元測試 (3/3 OK 綠燈過關)</li><li>重構 server.py、face_recognizer.py 與 organize_photos.py 呼叫 PhotoRepository</li><li>100% 保持實體照片內容、檔名與資料夾名稱零修改</li></ul>
+                    <div class="links-group"><a href="docs/plans/plan_20260812_180101.html" class="doc-link doc-link-plan">📄 查看 Implementation Plan</a><a href="docs/walkthroughs/walkthrough_20260812_180101.html" class="doc-link doc-link-walkthrough">🧪 查看 Walkthrough 測試紀錄</a></div>
+                </div>
+            </article>
+
+            <!-- 變更條目動態插入區 -->
+            <div class="empty-state" id="empty-state">
+                <p>尚無變更紀錄。請使用 update_changelog.py 寫入初次變更！</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function filterItems(type) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const items = document.querySelectorAll('.timeline-item');
+            items.forEach(item => {
+                if (type === 'all' || item.dataset.type === type) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function updateStats() {
+            const items = document.querySelectorAll('.timeline-item');
+            document.getElementById('total-count').textContent = items.length;
+            const emptyState = document.getElementById('empty-state');
+            if (emptyState) {
+                emptyState.style.display = items.length === 0 ? 'block' : 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', updateStats);
+    </script>
+</body>
+</html>
