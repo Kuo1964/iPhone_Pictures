@@ -241,13 +241,9 @@ def process_photos(source_dir=BASE_DIR):
             "people": people_tags
         })
 
-    # 更新 photos_db.json
-    db_data = {
-        "photos": photos_db_list,
-        "updated_at": time.strftime("%Y-%m-%d %H:%M:%S")
-    }
-    with open(DB_FILE, "w", encoding="utf-8") as f:
-        json.dump(db_data, f, ensure_ascii=False, indent=2)
+    # 經由 PhotoRepository 原子更新相片紀錄
+    from photo_repository import default_repository
+    default_repository.upsert_photos(photos_db_list)
 
     print(f"✅ 索引構建完畢！共索引 {len(photos_db_list)} 張照片。所有原檔名稱與內容 100% 保留未改動。")
 

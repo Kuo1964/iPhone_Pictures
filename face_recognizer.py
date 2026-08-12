@@ -6,23 +6,21 @@ InsightFace (ArcFace 512維深度特徵) 全家三人通用精準人臉辨識引
 特色：
 1. 支援通用辨識與專向年份辨識: run_face_recognition(target_year=None)。
 2. 集中管理人物配置 (John, Sharon, 郭泊彤Sophia) 與全家三大高清基準大頭照。
-3. 支援 Sophia 雙重多時期特徵向量 (長大大頭照 + 幼童照)。
+3. 導入 PhotoRepository 深層模組進行原子更新與併發防禦。
 4. 100% 唯讀保護實體相片，0 個檔名、二進位內容與資料夾名稱被修改。
 """
 
 import os
 import sys
-import json
 import time
 import cv2
 import numpy as np
 from pathlib import Path
 import insightface
 from insightface.app import FaceAnalysis
+from photo_repository import default_repository
 
 BASE_DIR = Path(__file__).resolve().parent
-PHOTOS_DIR = BASE_DIR / "Photos"
-DB_FILE = BASE_DIR / "photos_db.json"
 
 # ==========================================
 # 🎯 全家三人頂級 AI 基準照片配置與相似度門檻
@@ -83,15 +81,8 @@ def run_face_recognition(target_year=None):
                         person_embeddings[person_name].append(faces[0].embedding)
         print(f"  {config['icon']} 成功提取 [{person_name}] {len(person_embeddings[person_name])} 組 512維特徵向量！")
 
-    # 2. 讀取 DB 並篩選目標相片
-    if not DB_FILE.exists():
-        print("❌ 找不到 photos_db.json！")
-        return
-
-    with open(DB_FILE, "r", encoding="utf-8") as f:
-        db_data = json.load(f)
-
-    all_photos = db_data.get("photos", [])
+    # 2. 經由 PhotoRepository 讀取 DB
+    all_photos = default_repository.get_all_photos()
     if target_year:
         target_photos = [p for p in all_photos if p.get("year") == str(target_year)]
     else:
@@ -99,7 +90,8 @@ def run_face_recognition(target_year=None):
 
     print(f"\n📁 鎖定辨識相片總計 {len(target_photos)} 張 (目標年份: {target_year or '全部'})，開始 AI 計算...")
 
-    match_stats = {config["label"]: 0 for config in BASE_CONFIGS}
+    # matches_map 結構: {"John": [path1, path2], "Sharon": [...], ...}
+    matches_map = {config["label"]: [] for config in BASE_CONFIGS}
     scanned = 0
     t0 = time.time()
 
@@ -121,13 +113,6 @@ def run_face_recognition(target_year=None):
         if not faces:
             continue
 
-        if "people" not in photo:
-            photo["people"] = []
-
-        # 重設舊標籤
-        managed_tags = [config["label"] for config in BASE_CONFIGS]
-        photo["people"] = [p for p in photo["people"] if p not in managed_tags]
-
         for face in faces:
             emb = face.embedding
             for config in BASE_CONFIGS:
@@ -137,27 +122,26 @@ def run_face_recognition(target_year=None):
                 for ref_emb in embs:
                     sim = compute_cosine_similarity(emb, ref_emb)
                     if sim > SIMILARITY_THRESHOLD:
-                        if person_label not in photo["people"]:
-                            photo["people"].append(person_label)
-                            match_stats[person_label] += 1
+                        if rel_path not in matches_map[person_label]:
+                            matches_map[person_label].append(rel_path)
                             print(f"  {icon} [{person_label} 匹配] {photo['filename']} (相似度: {sim:.3f})")
                         break
 
         if scanned % 500 == 0:
             print(f"⏳ 已完成相片辨識 {scanned} / {len(target_photos)} 張 ({time.time() - t0:.1f} 秒)...")
 
-    # 3. 寫回 photos_db.json
-    with open(DB_FILE, "w", encoding="utf-8") as f:
-        json.dump(db_data, f, ensure_ascii=False, indent=2)
+    # 3. 經由 PhotoRepository 原子寫入同步人臉標籤
+    updated = default_repository.update_people_tags(matches_map)
 
     print(f"\n🎉 AI 人臉辨識分類完全成功！耗時 {time.time() - t0:.1f} 秒")
     for config in BASE_CONFIGS:
         person_label = config["label"]
         icon = config["icon"]
-        print(f"  ├─ {icon} {person_label} 確鑿相片: {match_stats[person_label]} 張")
+        count = len(matches_map[person_label])
+        print(f"  ├─ {icon} {person_label} 確鑿相片: {count} 張")
+    print(f"💾 已由 PhotoRepository 完成原子性寫入同步 ({updated} 張相片更新)。")
     print("  🔒 100% 保留實體檔案與檔名，0 個檔案內容被修改。")
 
 if __name__ == "__main__":
-    # 若有帶參數傳入年份 (例如: python3 face_recognizer.py 2024)，則進行專向辨識
     target_y = sys.argv[1] if len(sys.argv) > 1 else None
     run_face_recognition(target_y)

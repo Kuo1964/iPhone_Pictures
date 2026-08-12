@@ -38,11 +38,9 @@ class PhotoHandler(SimpleHTTPRequestHandler):
             self.send_header("Cache-Control", "no-cache")
             self.end_headers()
             
-            if DB_FILE.exists():
-                with open(DB_FILE, "r", encoding="utf-8") as f:
-                    self.wfile.write(f.read().encode("utf-8"))
-            else:
-                self.wfile.write(json.dumps({"photos": [], "updated_at": ""}).encode("utf-8"))
+            from photo_repository import default_repository
+            photos = default_repository.get_all_photos()
+            self.wfile.write(json.dumps({"photos": photos}, ensure_ascii=False).encode("utf-8"))
             return
 
         # 靜態檔案預設回傳 index.html
