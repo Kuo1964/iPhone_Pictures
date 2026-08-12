@@ -138,6 +138,57 @@
             transform: translateY(-1px);
         }
 
+        .btn-sophia {
+            background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+        }
+
+        .btn-sophia:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .btn-sharon {
+            background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-sharon:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .btn-john {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-john:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .pill-sophia {
+            background: rgba(236, 72, 153, 0.2) !important;
+            border-color: rgba(236, 72, 153, 0.6) !important;
+            color: #fbcfe8 !important;
+        }
+
+        .pill-sharon {
+            background: rgba(139, 92, 246, 0.25) !important;
+            border-color: rgba(139, 92, 246, 0.6) !important;
+            color: #ddd6fe !important;
+        }
+
+        .pill-john {
+            background: rgba(59, 130, 246, 0.25) !important;
+            border-color: rgba(59, 130, 246, 0.6) !important;
+            color: #bfdbfe !important;
+        }
+
         .badge-count {
             background: rgba(255, 255, 255, 0.1);
             padding: 6px 14px;
@@ -164,9 +215,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            overflow-x: auto;
+            flex-wrap: wrap;
             padding-bottom: 4px;
-            scrollbar-width: thin;
         }
 
         .filter-label {
@@ -500,7 +550,19 @@
             </div>
 
             <div class="header-actions">
-                <span class="badge-count" id="photoCountBadge">照片計數中...</span>
+                <button class="btn btn-john" id="johnShortcutBtn">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                    <span>John 專輯</span>
+                </button>
+                <button class="btn btn-sharon" id="sharonShortcutBtn">
+                    <i class="fa-solid fa-crown"></i>
+                    <span>Sharon 專輯</span>
+                </button>
+                <button class="btn btn-sophia" id="sophiaShortcutBtn">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>郭泊彤Sophia 專輯</span>
+                </button>
+                <div class="badge-count" id="photoCountBadge">載入中...</div>
                 <button class="btn btn-primary" id="importBtn">
                     <i class="fa-solid fa-arrows-rotate"></i>
                     <span>重新掃描 / 匯入</span>
@@ -514,7 +576,7 @@
         <!-- 1. 年份過濾列 -->
         <div class="filter-group">
             <div class="filter-label"><i class="fa-solid fa-calendar-days"></i> 年份：</div>
-            <div id="yearFilterPills" style="display: flex; gap: 8px;">
+            <div id="yearFilterPills" style="display: flex; gap: 8px; flex-wrap: wrap;">
                 <div class="pill pill-year active" data-year="all">全部年份</div>
             </div>
         </div>
@@ -522,7 +584,7 @@
         <!-- 2. 地點過濾列 -->
         <div class="filter-group">
             <div class="filter-label"><i class="fa-solid fa-location-dot"></i> 地點：</div>
-            <div id="locationFilterPills" style="display: flex; gap: 8px;">
+            <div id="locationFilterPills" style="display: flex; gap: 8px; flex-wrap: wrap;">
                 <div class="pill active" data-location="all">全部地點</div>
             </div>
         </div>
@@ -530,7 +592,7 @@
         <!-- 3. 人物標籤過濾列 -->
         <div class="filter-group">
             <div class="filter-label"><i class="fa-solid fa-user-tag"></i> 人物：</div>
-            <div id="peopleFilterPills" style="display: flex; gap: 8px;">
+            <div id="peopleFilterPills" style="display: flex; gap: 8px; flex-wrap: wrap;">
                 <div class="pill active" data-person="all">全部人物</div>
             </div>
         </div>
@@ -652,9 +714,31 @@
                 locContainer.innerHTML += `<div class="pill ${active}" data-location="${loc}">${loc}</div>`;
             });
 
-            // 3. 渲染人物 Pills
+            // 3. 渲染人物 Pills (特別把 John、Sharon 與 郭泊彤Sophia 置頂高亮)
             const peopleContainer = document.getElementById('peopleFilterPills');
             peopleContainer.innerHTML = `<div class="pill ${selectedPerson === 'all' ? 'active' : ''}" data-person="all">全部人物</div>`;
+            
+            const johnTag = "John";
+            if (peopleSet.has(johnTag)) {
+                const active = selectedPerson === johnTag ? 'active' : '';
+                peopleContainer.innerHTML += `<div class="pill pill-john ${active}" data-person="${johnTag}"><i class="fa-solid fa-user-astronaut" style="color:#3b82f6;"></i> John</div>`;
+                peopleSet.delete(johnTag);
+            }
+
+            const sharonTag = "Sharon";
+            if (peopleSet.has(sharonTag)) {
+                const active = selectedPerson === sharonTag ? 'active' : '';
+                peopleContainer.innerHTML += `<div class="pill pill-sharon ${active}" data-person="${sharonTag}"><i class="fa-solid fa-crown" style="color:#a855f7;"></i> Sharon</div>`;
+                peopleSet.delete(sharonTag);
+            }
+
+            const sophiaTag = "郭泊彤Sophia";
+            if (peopleSet.has(sophiaTag)) {
+                const active = selectedPerson === sophiaTag ? 'active' : '';
+                peopleContainer.innerHTML += `<div class="pill pill-sophia ${active}" data-person="${sophiaTag}"><i class="fa-solid fa-heart" style="color:#ec4899;"></i> 郭泊彤Sophia</div>`;
+                peopleSet.delete(sophiaTag);
+            }
+
             Array.from(peopleSet).sort().forEach(person => {
                 const active = selectedPerson === person ? 'active' : '';
                 peopleContainer.innerHTML += `<div class="pill ${active}" data-person="${person}">${person}</div>`;
@@ -858,6 +942,33 @@
         // 關閉 Modal
         document.getElementById('lightboxClose').addEventListener('click', () => {
             document.getElementById('lightboxModal').classList.remove('active');
+        });
+
+        // 快捷進入「John 專輯」
+        document.getElementById('johnShortcutBtn').addEventListener('click', () => {
+            selectedPerson = "John";
+            selectedYear = 'all';
+            selectedLocation = 'all';
+            document.getElementById('searchInput').value = '';
+            updateUI();
+        });
+
+        // 快捷進入「郭泊彤Sophia 專輯」
+        document.getElementById('sophiaShortcutBtn').addEventListener('click', () => {
+            selectedPerson = "郭泊彤Sophia";
+            selectedYear = 'all';
+            selectedLocation = 'all';
+            document.getElementById('searchInput').value = '';
+            updateUI();
+        });
+
+        // 快捷進入「Sharon 專輯」
+        document.getElementById('sharonShortcutBtn').addEventListener('click', () => {
+            selectedPerson = "Sharon";
+            selectedYear = 'all';
+            selectedLocation = 'all';
+            document.getElementById('searchInput').value = '';
+            updateUI();
         });
 
         // 初始化加載

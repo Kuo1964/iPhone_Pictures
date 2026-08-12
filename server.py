@@ -90,15 +90,35 @@ class PhotoHandler(SimpleHTTPRequestHandler):
                 self.send_error(500, str(e))
             return
 
-        # API: 觸發掃描歸檔新照片（非阻塞背景執行緒）
+        # API: 觸發掃描歸檔新照片與 AI 人臉辨識分類（非阻塞背景執行緒）
         if parsed_path.path == "/api/trigger_import":
             def run_import_in_background():
                 try:
-                    print("🔄 背景非同步開始重新掃描歸檔...")
+                    print("\n🚀 啟動【全套自動化相片匯入與 AI 人臉辨識流程】...")
+                    
+                    # 步驟 1: 增量掃描匯入新照片檔
+                    print("📁 [步驟 1/3] 增量掃描與歸檔新照片...")
                     process_photos(BASE_DIR)
-                    print("✅ 背景非同步掃描歸檔完成！")
+                    
+                    # 步驟 2: 清理已刪除照片索引
+                    print("🗑️ [步驟 2/3] 自動清理已手動刪除的照片索引...")
+                    try:
+                        from rescan_and_purge_deleted import purge_and_rescan
+                        purge_and_rescan()
+                    except Exception as pe:
+                        print(f"⚠️ 清理已刪除相片微調提示: {pe}")
+
+                    # 步驟 3: 啟動 InsightFace ArcFace 512維 AI 人臉辨識與分類
+                    print("🤖 [步驟 3/3] 啟動 InsightFace ArcFace 512維 AI 人臉辨識與分類 (John, Sharon, 郭泊彤Sophia)...")
+                    try:
+                        from face_recognizer import run_face_recognition
+                        run_face_recognition()
+                    except Exception as ie:
+                        print(f"❌ AI 人臉辨識執行失敗: {ie}")
+
+                    print("🎉 【全套自動化匯入與 AI 人臉辨識分類完畢！】\n")
                 except Exception as e:
-                    print(f"❌ 背景掃描失敗: {e}")
+                    print(f"❌ 背景掃描與辨識失敗: {e}")
 
             # 啟動獨立線程，不卡住 HTTP 請求
             threading.Thread(target=run_import_in_background, daemon=True).start()
@@ -108,7 +128,7 @@ class PhotoHandler(SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps({
                 "status": "success", 
-                "message": "後端已開始非同步重新掃描與歸檔照片！網頁可繼續順暢使用。"
+                "message": "後端已開始非同步重新掃描照片與 AI 人臉辨識分類！網頁可繼續順暢使用。"
             }).encode("utf-8"))
             return
 
@@ -116,7 +136,7 @@ class PhotoHandler(SimpleHTTPRequestHandler):
 
 def run_server():
     os.chdir(BASE_DIR)
-    ports_to_try = [8080, 8085, 8090, 8095, 9000]
+    ports_to_try = [8099, 8085, 8090, 8095, 9000]
     httpd = None
     actual_port = None
 
