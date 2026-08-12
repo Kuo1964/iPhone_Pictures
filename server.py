@@ -111,8 +111,8 @@ class PhotoHandler(SimpleHTTPRequestHandler):
                     # 步驟 3: 啟動 InsightFace ArcFace 512維 AI 人臉辨識與分類
                     print("🤖 [步驟 3/3] 啟動 InsightFace ArcFace 512維 AI 人臉辨識與分類 (John, Sharon, 郭泊彤Sophia)...")
                     try:
-                        from insightface_recognizer import run_insightface_recognition
-                        run_insightface_recognition()
+                        from face_recognizer import run_face_recognition
+                        run_face_recognition()
                     except Exception as ie:
                         print(f"❌ AI 人臉辨識執行失敗: {ie}")
 
