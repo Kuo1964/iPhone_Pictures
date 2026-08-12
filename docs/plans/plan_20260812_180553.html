@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 HTTP Route 與非同步工作流解耦 (ImportPipeline 深層模組) 重構計畫 (Implementation Plan 2026-08-12)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(18, 24, 38, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-purple: #c084fc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 50%);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .back-btn {
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .back-btn:hover {
+            background: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            transform: translateX(-3px);
+        }
+        .content-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        h1 { font-family: 'Outfit', sans-serif; color: #fff; font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--accent-blue); padding-bottom: 0.5rem; }
+        h2 { font-family: 'Outfit', sans-serif; color: var(--accent-blue); font-size: 1.4rem; margin-top: 1.8rem; margin-bottom: 1rem; }
+        h3 { color: var(--accent-purple); font-size: 1.1rem; margin-top: 1.2rem; margin-bottom: 0.6rem; }
+        p { margin-bottom: 1rem; color: #cbd5e1; }
+        ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: #cbd5e1; }
+        li { margin-bottom: 0.4rem; }
+        pre { background: #05070d; padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); overflow-x: auto; margin-bottom: 1.5rem; }
+        code { font-family: monospace; color: #38bdf8; font-size: 0.9rem; }
+        a { color: var(--accent-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <button onclick="closeOrGoBack()" class="back-btn">← 返回專案歷程報告 (Return to Overview)</button>
+        </div>
+        <div class="content-card">
+            <h1>📋 HTTP Route 與非同步工作流解耦 (ImportPipeline 深層模組) 重構計畫 (Implementation Plan 2026-08-12)</h1>
+<p>本計畫旨在解決目前 `server.py` 的 `/api/trigger_import` Handler 中直接硬編碼 `threading.Thread` 匿名執行緒與順序步驟所導致的架構摩擦。透過建立<strong>深層模組 `import_pipeline.py` (ImportPipeline)</strong>，將多階段工作流排程、線程管理、狀態追蹤 (Status Tracking) 與例外捕獲徹底封裝。</p>
+<p>---</p>
+<h2>⚠️ User Review Required (用戶審核項目)</h2>
+<p>> [!IMPORTANT]</p>
+<p>> <strong>本重構計畫包含以下核心設計：</strong></p>
+<p>> 1. <strong>深層工作流模組封裝</strong>：建立 `ImportPipeline` 類別，隱藏多執行緒啟動與多階段執行的內部細節。</p>
+<p>> 2. <strong>狀態追蹤與即時查詢</strong>：提供 `get_status()` API，維護任務狀態 (`idle`, `running`, `stage_1_organizing`, `stage_2_purging`, `stage_3_recognizing`, `completed`, `failed`) 與詳細日誌，徹底解決未知的背景執行狀態。</p>
+<p>> 3. <strong>例外安全防護</strong>：全階段捕獲 Exception 並紀錄於狀態中，解決過去 Swallow Exception 的氣味。</p>
+<p>> 4. <strong>100% 唯讀保障</strong>：實體照片檔名、內容與資料夾名稱 100% 保持零改動。</p>
+<p>> 5. <strong>歷史歸檔</strong>：計畫與修復成果將分別標註日期歸檔存檔。</p>
+<p>---</p>
+<h2>🛠️ 擬議變更內容 (Proposed Changes)</h2>
+<h3>1. 建立 ImportPipeline 深層模組與單元測試</h3>
+<p>#### <a href="file:///Users/johnkuo/Pictures/Before2021/import_pipeline.py">NEW] [import_pipeline.py</a></p>
+<ul>
+<li><strong>類別設計</strong>：`ImportPipeline()`</li>
+<li><strong>提供 API 介面</strong>：</li>
+<li>`start_import_async() -> bool`：非同步啟動一條龍匯入與 AI 人臉辨識工作流。</li>
+<li>`get_status() -> dict`：傳回即時任務狀態 JSON（含階段名稱、開始時間、耗時、狀態碼、錯誤資訊）。</li>
+<li>`run_import_sync() -> dict`：同步順序執行（供單元測試與 CLI 使用）。</li>
+<li><strong>內部實作機制</strong>：</li>
+<li>封裝 Stage 1: 照片無損歸檔 (`organize_photos`) ➔ Stage 2: 已刪除照片清理 (`rescan_and_purge_deleted`) ➔ Stage 3: AI 人臉辨識 (`face_recognizer`)。</li>
+<li>內建 `threading.Lock()` 確保同一時間僅有一個匯入工作流在執行（防範重複觸發）。</li>
+</ul>
+<p>#### <a href="file:///Users/johnkuo/Pictures/Before2021/test_import_pipeline.py">NEW] [test_import_pipeline.py</a></p>
+<ul>
+<li>撰寫 Pipeline 單元測試，驗證狀態轉變、非同步鎖與例外捕獲。</li>
+</ul>
+<p>---</p>
+<h3>2. 重構 server.py (Refactoring API Handler)</h3>
+<p>#### <a href="file:///Users/johnkuo/Pictures/Before2021/server.py">MODIFY] [server.py</a></p>
+<ul>
+<li>重構 `/api/trigger_import` Handler：改簡化為單行呼叫 `default_pipeline.start_import_async()`。</li>
+<li>新增 `/api/import_status` API 端點：供前端即時查詢背景匯入與 AI 辨識進度。</li>
+</ul>
+<p>---</p>
+<h2>🧪 驗證計畫 (Verification Plan)</h2>
+<h3>單元測試與自動化測試</h3>
+<p>1. 執行專屬單元測試：`python3 -m unittest test_import_pipeline.py`</p>
+<p>2. 驗證非同步防重複觸發機制與狀態轉換。</p>
+<h3>手動與端到端驗證</h3>
+<p>1. 測試呼叫 API：`curl -X POST http://localhost:8099/api/trigger_import`</p>
+<p>2. 測試查詢狀態 API：`curl http://localhost:8099/api/import_status`</p>
+<p>3. 驗證 Web 介面上「重新掃描/匯入」運作完全正常。</p>
+<p>---</p>
+<h2>📜 歷史歸檔計畫 (Archiving Protocol)</h2>
+<ul>
+<li><strong>實施計畫存檔</strong>：`implementation_plan_pipeline_20260812.md`</li>
+<li><strong>成果報告存檔</strong>：`walkthrough_pipeline_20260812.md`</li>
+<li>報告將永久標註日期 `2026-08-12` 歸檔保存。</li>
+</ul>
+        </div>
+    </div>
+    <script>
+        function closeOrGoBack() {
+            if (window.opener && !window.opener.closed) {
+                window.close();
+            } else {
+                window.location.href = "../../project_changelog.html";
+            }
+        }
+    </script>
+</body>
+</html>

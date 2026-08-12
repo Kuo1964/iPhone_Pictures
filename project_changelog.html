@@ -386,7 +386,7 @@
                 </div>
                 <div class="stat-card">
                     <span class="stat-label">最後更新時間</span>
-                    <span class="stat-value" id="last-updated" style="font-size: 1rem;">2026-08-12 18:01</span>
+                    <span class="stat-value" id="last-updated" style="font-size: 1rem;">2026-08-12 18:05</span>
                 </div>
                 <div class="stat-card">
                     <span class="stat-label">架構報告版本</span>
@@ -404,6 +404,26 @@
         </div>
 
         <main class="timeline" id="timeline-container">
+
+            <article class="timeline-item" data-type="refactor">
+                <div class="timeline-dot"></div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <span class="badge badge-refactor">⚡ REFACTOR</span>
+                            <h2 class="card-title">Refactor: 導入 ImportPipeline 深層模組解耦工作流與部署進度查詢 API</h2>
+                        </div>
+                        <div class="timestamp-group">
+                            <span class="timestamp-local">2026-08-12 18:05</span>
+                            <span class="timestamp-utc">2026-08-12 10:05 UTC</span>
+                        </div>
+                    </div>
+                    <p class="card-desc">建立 ImportPipeline 深層工作流模組，封裝一條龍多階段處理，新增 /api/import_status 即時狀態查詢 API，徹底消除 Swallow Exception 與競態衝突</p>
+                    <ul class="details-list"><li>建立 import_pipeline.py 封裝多階段工作流</li><li>新增 /api/import_status 進度查詢端點</li><li>撰寫 test_import_pipeline.py 單元測試 (2/2 OK 綠燈過關)</li><li>100% 保持實體照片內容、檔名與資料夾名稱零修改</li></ul>
+                    <div class="links-group"><a href="docs/plans/plan_20260812_180553.html" class="doc-link doc-link-plan">📄 查看 Implementation Plan</a><a href="docs/walkthroughs/walkthrough_20260812_180553.html" class="doc-link doc-link-walkthrough">🧪 查看 Walkthrough 測試紀錄</a></div>
+                </div>
+            </article>
+
 
             <article class="timeline-item" data-type="feat">
                 <div class="timeline-dot"></div>

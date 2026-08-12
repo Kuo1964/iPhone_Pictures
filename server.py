@@ -43,6 +43,18 @@ class PhotoHandler(SimpleHTTPRequestHandler):
             self.wfile.write(json.dumps({"photos": photos}, ensure_ascii=False).encode("utf-8"))
             return
 
+        # API: 查詢背景匯入與 AI 辨識即時進度狀態
+        if parsed_path.path == "/api/import_status":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Cache-Control", "no-cache")
+            self.end_headers()
+
+            from import_pipeline import default_pipeline
+            status = default_pipeline.get_status()
+            self.wfile.write(json.dumps(status, ensure_ascii=False).encode("utf-8"))
+            return
+
         # 靜態檔案預設回傳 index.html
         if parsed_path.path == "/":
             self.path = "/index.html"
@@ -88,46 +100,24 @@ class PhotoHandler(SimpleHTTPRequestHandler):
                 self.send_error(500, str(e))
             return
 
-        # API: 觸發掃描歸檔新照片與 AI 人臉辨識分類（非阻塞背景執行緒）
+        # API: 觸發掃描歸檔新照片與 AI 人臉辨識分類（經由 ImportPipeline 模組處理）
         if parsed_path.path == "/api/trigger_import":
-            def run_import_in_background():
-                try:
-                    print("\n🚀 啟動【全套自動化相片匯入與 AI 人臉辨識流程】...")
-                    
-                    # 步驟 1: 增量掃描匯入新照片檔
-                    print("📁 [步驟 1/3] 增量掃描與歸檔新照片...")
-                    process_photos(BASE_DIR)
-                    
-                    # 步驟 2: 清理已刪除照片索引
-                    print("🗑️ [步驟 2/3] 自動清理已手動刪除的照片索引...")
-                    try:
-                        from rescan_and_purge_deleted import purge_and_rescan
-                        purge_and_rescan()
-                    except Exception as pe:
-                        print(f"⚠️ 清理已刪除相片微調提示: {pe}")
-
-                    # 步驟 3: 啟動 InsightFace ArcFace 512維 AI 人臉辨識與分類
-                    print("🤖 [步驟 3/3] 啟動 InsightFace ArcFace 512維 AI 人臉辨識與分類 (John, Sharon, 郭泊彤Sophia)...")
-                    try:
-                        from face_recognizer import run_face_recognition
-                        run_face_recognition()
-                    except Exception as ie:
-                        print(f"❌ AI 人臉辨識執行失敗: {ie}")
-
-                    print("🎉 【全套自動化匯入與 AI 人臉辨識分類完畢！】\n")
-                except Exception as e:
-                    print(f"❌ 背景掃描與辨識失敗: {e}")
-
-            # 啟動獨立線程，不卡住 HTTP 請求
-            threading.Thread(target=run_import_in_background, daemon=True).start()
+            from import_pipeline import default_pipeline
+            started = default_pipeline.start_import_async()
 
             self.send_response(200)
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self.end_headers()
-            self.wfile.write(json.dumps({
-                "status": "success", 
-                "message": "後端已開始非同步重新掃描照片與 AI 人臉辨識分類！網頁可繼續順暢使用。"
-            }).encode("utf-8"))
+            if started:
+                self.wfile.write(json.dumps({
+                    "status": "success", 
+                    "message": "後端已開始非同步重新掃描照片與 AI 人臉辨識分類！"
+                }).encode("utf-8"))
+            else:
+                self.wfile.write(json.dumps({
+                    "status": "warning", 
+                    "message": "背景工作流正在執行中，請勿重複觸發。"
+                }).encode("utf-8"))
             return
 
         self.send_error(404, "API not found")
