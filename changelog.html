@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone_Pictures 相片管理系統 - 專案全變更紀錄 (Changelog & Summary)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --bg-gradient: radial-gradient(circle at 50% 0%, #1a233a 0%, #0b0f19 75%);
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-hover: rgba(255, 255, 255, 0.08);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --card-radius: 16px;
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-color);
+            background-image: var(--bg-gradient);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* 頂部 Header 樣式 */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            backdrop-filter: blur(12px);
+            transition: var(--transition-smooth);
+            margin-bottom: 25px;
+        }
+
+        .nav-back:hover {
+            background: var(--glass-hover);
+            transform: translateY(-2px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 680px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* 統計指標數據卡片 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--card-radius);
+            padding: 20px;
+            backdrop-filter: blur(12px);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .stat-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* 人物標籤色彩 */
+        .color-john { color: var(--accent-blue); }
+        .color-sharon { color: var(--accent-purple); }
+        .color-sophia { color: var(--accent-pink); }
+        .color-green { color: var(--accent-green); }
+
+        /* 版本時間軸 Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-blue) 0%, var(--accent-purple) 50%, var(--glass-border) 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 24px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--bg-color);
+            border: 3px solid var(--accent-blue);
+            transition: var(--transition-smooth);
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            border-color: var(--accent-purple);
+        }
+
+        .timeline-item:hover::before {
+            transform: scale(1.3);
+            box-shadow: 0 0 12px currentColor;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--card-radius);
+            padding: 28px;
+            backdrop-filter: blur(16px);
+            transition: var(--transition-smooth);
+        }
+
+        .card:hover {
+            background: var(--glass-hover);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .version-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 14px;
+        }
+
+        .version-title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .version-tag {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-latest {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+
+        .badge-stable {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .version-date {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 18px;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .feature-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-blue);
+            font-size: 0.8rem;
+        }
+
+        .highlight-box {
+            background: rgba(0, 0, 0, 0.25);
+            border-left: 3px solid var(--accent-blue);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin: 12px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .commit-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .commit-chip {
+            font-family: monospace;
+            font-size: 0.78rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        /* 檔案安全維護原則區塊 */
+        .policy-section {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.7) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: var(--card-radius);
+            padding: 30px;
+            margin-top: 50px;
+            backdrop-filter: blur(16px);
+        }
+
+        .policy-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .policy-item h4 {
+            color: var(--accent-blue);
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .policy-item p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 20px 12px; }
+            .card { padding: 20px; }
+            .timeline { padding-left: 20px; }
+            .timeline-item::before { left: -21px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 頂部導覽與標題 -->
+        <header>
+            <a href="index.html" class="nav-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                返回相片管理系統主頁
+            </a>
+            <h1>📜 iPhone_Pictures 專案全歷程變更紀錄</h1>
+            <p class="subtitle">記錄無損相片歸檔、高效 Web 瀏覽與 InsightFace ArcFace 512維深度 AI 人臉辨識系統的完整演進歷程。</p>
+
+            <!-- 核心指標數據卡片 -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value color-green">4,800+</div>
+                    <div class="stat-label">硬碟原始相片 (100% 唯讀無損)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value color-john">1,019+</div>
+                    <div class="stat-label">💙 John (您本人) 辨識標籤</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value color-sharon">1,445+</div>
+                    <div class="stat-label">💜 Sharon (太太) 辨識標籤</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value color-sophia">1,195+</div>
+                    <div class="stat-label">💖 郭泊彤Sophia (女兒) 標籤</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 版本演進時間軸 -->
+        <div class="timeline">
+
+            <!-- v1.6.0 -->
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="version-header">
+                        <div class="version-title-group">
+                            <span class="version-tag">🔹 [v1.6.0] 2023 & 2024 年份相片專向 AI 分類與全家基準檔</span>
+                            <span class="badge badge-latest">Latest</span>
+                        </div>
+                        <span class="version-date">2026-08-06 ~ 08-07</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>高清基準特寫建立</strong>：保存全家人最新高清正面特寫大頭照作為頂級 AI 比對基準：
+                            <span class="commit-chip">references/john_base.png</span>
+                            <span class="commit-chip">references/sharon_base.png</span>
+                            <span class="commit-chip">references/sophia_base.png</span>
+                        </li>
+                        <li><strong>專向辨識腳本研發</strong>：撰寫 <code style="color:#a5b4fc">insightface_recognizer_2023.py</code>，專向鎖定 2023 與 2024 年份相片。</li>
+                        <li><strong>極高精準辨識成果</strong>：成功分類 2023 年份 John 124張、Sharon 166張與 Sophia 26張相片，並修正 2024 年份 UI 自動換行與人物分類。</li>
+                        <li><strong>全庫零感染保護</strong>：100% 保持其他年份與地點相片標籤未被觸碰，實體檔案名稱與二進位內容零修改。</li>
+                    </ul>
+                    <div class="commit-tags">
+                        <span class="commit-chip">Commit: 2161534</span>
+                        <span class="commit-chip">Commit: eaecb31</span>
+                        <span class="commit-chip">Commit: f4ae57d</span>
+                        <span class="commit-chip">Commit: 3f7986a</span>
+                        <span class="commit-chip">Commit: 6f14c23</span>
+                        <span class="commit-chip">Commit: ed275d2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.5.1 -->
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="version-header">
+                        <div class="version-title-group">
+                            <span class="version-tag">🔹 [v1.5.1] 「重新掃描/匯入」一條龍 AI 自動連動升級</span>
+                        </div>
+                        <span class="version-date">2026-08-06</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>自動化連動 API</strong>：升級 <code style="color:#a5b4fc">/api/trigger_import</code> 後端非同步流程。</li>
+                        <li><strong>點擊即觸發</strong>：使用者於網頁端點擊單一按鈕即可自動完成：<strong>新照片歸檔 ➔ 清理已刪除相片 ➔ InsightFace ArcFace 512維 AI 人臉自動辨識分類</strong>。</li>
+                    </ul>
+                    <div class="commit-tags">
+                        <span class="commit-chip">Commit: 8b86daa</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.5.0 -->
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="version-header">
+                        <div class="version-title-group">
+                            <span class="version-tag">🔹 [v1.5.0] macOS 系統層開機自動啟動 (LaunchAgent Daemon)</span>
+                        </div>
+                        <span class="version-date">2026-08-05</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>標準 LaunchAgent 服務</strong>：建立 macOS 官方標準 LaunchAgent 服務配置文件 <code style="color:#a5b4fc">com.antigravity.photoserver.plist</code>。</li>
+                        <li><strong>開機登入自動啟動</strong>：配置 <code style="color:#a5b4fc">RunAtLoad = true</code> 與 <code style="color:#a5b4fc">KeepAlive = true</code>，相片伺服器於 Mac 開機時自動背景啟動，綁定專屬 Port <code style="color:#60a5fa">8099</code>，具備自動防崩潰重啟機制。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- v1.4.0 -->
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="version-header">
+                        <div class="version-title-group">
+                            <span class="version-tag">🔹 [v1.4.0] 工業級 InsightFace ArcFace 512維 AI 辨識升級</span>
+                            <span class="badge badge-stable">Major Milestone</span>
+                        </div>
+                        <span class="version-date">2026-08-05</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>冠軍級 AI 神經網絡引擎</strong>：導入目前全球 LFW 競賽冠軍級別的 InsightFace (ArcFace 512維深度神經網絡) 模型 (<code style="color:#a5b4fc">buffalo_l</code>)。</li>
+                        <li><strong>突破跨年齡與變換難題</strong>：克服從小女孩到青少年年齡跨度大、角度側臉與髮型眼鏡變化的難題。</li>
+                        <li><strong>全家三大專輯建立</strong>：
+                            <ul>
+                                <li>💙 <strong>John (您本人)</strong>：成功辨識 <strong>1,019 張</strong>，新增藍色標籤專輯。</li>
+                                <li>💜 <strong>Sharon (太太)</strong>：成功辨識 <strong>1,445 張</strong>。</li>
+                                <li>💖 <strong>郭泊彤Sophia (女兒)</strong>：成功辨識 <strong>1,195 張</strong>。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="commit-tags">
+                        <span class="commit-chip">Commit: 3083157</span>
+                        <span class="commit-chip">Commit: 2de89aa</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.3.0 -->
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="version-header">
+                        <div class="version-title-group">
+                            <span class="version-tag">🔹 [v1.3.0] 正負雙向反對比演算法與已刪除照片全庫清理</span>
+                        </div>
+                        <span class="version-date">2026-08-04</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>雙向特徵反對比機制</strong>：導入正向與負向雙重特徵反對比機制，徹底防止任何男性與長輩照片被誤判。</li>
+                        <li><strong>無效相片清理</strong>：撰寫 <code style="color:#a5b4fc">rescan_and_purge_deleted.py</code> 腳本，成功將用戶手動在硬碟刪除的 481 張無效照片從 Web 索引中徹底移除。</li>
+                        <li><strong>標籤重構</strong>：統一將人物標籤「太太Sharon」更新更名為「Sharon」。</li>
+                    </ul>
+                    <div class="commit-tags">
+                        <span class="commit-chip">Commit: 790938c</span>
+                        <span class="commit-chip">Commit: 5ee0394</span>
+                        <span class="commit-chip">Commit: 71d8d04</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.1.0 ~ v1.2.0 -->
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="version-header">
+                        <div class="version-title-group">
+                            <span class="version-tag">🔹 [v1.1.0 ~ v1.2.0] 高效能 Web 管理中心與獨立 Git 測試分支</span>
+                        </div>
+                        <span class="version-date">2026-08-03</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>現代化 UI 打造</strong>：打造現代化 Glassmorphism 響應式 Web 介面 (<code style="color:#a5b4fc">index.html</code>)。</li>
+                        <li><strong>中文 URL 404 解決</strong>：使用 <code style="color:#a5b4fc">urllib.parse.unquote</code> 徹底解決中文資料夾名稱與路徑 URL 404 問題。</li>
+                        <li><strong>高效無窮滾動</strong>：導入前端無窮滾動分頁 (Infinite Scroll Pagination, 60張/頁)，防止巨量 DOM 引發頁面卡頓或白屏。</li>
+                        <li><strong>自研流處理</strong>：自研 <code style="color:#a5b4fc">send_static_file</code> 替代預設 HTTP Handler，解決大圖串流 BrokenPipe 錯誤。</li>
+                    </ul>
+                    <div class="commit-tags">
+                        <span class="commit-chip">Commit: 0016076</span>
+                        <span class="commit-chip">Commit: 656f3ac</span>
+                        <span class="commit-chip">Commit: 4c09e35</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- v1.0.0 -->
+            <div class="timeline-item">
+                <div class="card">
+                    <div class="version-header">
+                        <div class="version-title-group">
+                            <span class="version-tag">🔹 [v1.0.0] 相片無損整理與資料庫索引建立</span>
+                        </div>
+                        <span class="version-date">2026-08-03</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>無損歸檔腳本</strong>：撰寫 <code style="color:#a5b4fc">organize_photos.py</code> 腳本，自動掃描分類舊相片。</li>
+                        <li><strong>JSON 索引資料庫</strong>：建立 <code style="color:#a5b4fc">photos_db.json</code> 索引資料庫，儲存相片拍攝年份、月份、地點與人物標籤。</li>
+                        <li><strong>保護鐵律確立</strong>：確立「100% 檔案唯讀與增量保護鐵律」，保證無損整理。</li>
+                    </ul>
+                    <div class="commit-tags">
+                        <span class="commit-chip">Commit: aa457d1</span>
+                        <span class="commit-chip">Commit: ec0cf0d</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 檔案安全與維護原則 -->
+        <div class="policy-section">
+            <div class="policy-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                🔒 檔案安全與系統維護鐵律
+            </div>
+            <div class="policy-grid">
+                <div class="policy-item">
+                    <h4>1. 實體相片絕對唯讀保護</h4>
+                    <p>所有 AI 標籤與分類資訊均記錄於 <code style="color:#a5b4fc">photos_db.json</code>，<code style="color:#a5b4fc">Photos/</code> 目錄下的 4,800+ 張原始圖片二進位內容與檔名 100% 未被改動。</p>
+                </div>
+                <div class="policy-item">
+                    <h4>2. 資料夾名稱零修改</h4>
+                    <p>分類目錄結構與資料夾名稱維持用戶原始設定，絕不進行強制重新命名或更動。</p>
+                </div>
+                <div class="policy-item">
+                    <h4>3. 系統 Git 版本控管與備份</h4>
+                    <p>全專案變更均已被 Git 完整版本控管並遠端備份至 GitHub。</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Generated by project-changelog Skill • iPhone_Pictures AI 相片管理系統</p>
+        </footer>
+    </div>
+</body>
+</html>
